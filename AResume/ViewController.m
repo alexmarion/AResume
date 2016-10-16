@@ -62,7 +62,8 @@
         }
         else
         {
-            NSURL *clientTrackerURL = [[NSBundle mainBundle] URLForResource:@"magazine" withExtension:@"wtc" subdirectory:@"Assets"];
+            
+            NSURL *clientTrackerURL = [[NSBundle mainBundle] URLForResource:@"magazine" withExtension:@"wtc"];
             self.clientTracker = [self.wikitudeSDK.trackerManager create2DClientTrackerFromURL:clientTrackerURL extendedTargets:nil andDelegate:self];
         }
     }];
