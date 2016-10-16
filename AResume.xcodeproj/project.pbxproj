@@ -14,6 +14,16 @@
 		C35E5D201DB36D60008C8939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35E5D1F1DB36D60008C8939 /* Assets.xcassets */; };
 		C35E5D231DB36D60008C8939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35E5D211DB36D60008C8939 /* LaunchScreen.storyboard */; };
 		C35E5D2E1DB36D60008C8939 /* AResumeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C35E5D2D1DB36D60008C8939 /* AResumeTests.m */; };
+		C35E5D391DB36F46008C8939 /* WikitudeNativeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E5D381DB36F46008C8939 /* WikitudeNativeSDK.framework */; };
+		C35E5D4B1DB36F76008C8939 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = C35E5D3A1DB36F76008C8939 /* Assets */; };
+		C35E5D4C1DB36F76008C8939 /* StrokedRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = C35E5D3C1DB36F76008C8939 /* StrokedRectangle.m */; };
+		C35E5D4D1DB36F76008C8939 /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C35E5D3D1DB36F76008C8939 /* FragmentShader.glsl */; };
+		C35E5D4E1DB36F76008C8939 /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C35E5D3E1DB36F76008C8939 /* VertexShader.glsl */; };
+		C35E5D4F1DB36F76008C8939 /* ExternalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C35E5D411DB36F76008C8939 /* ExternalRenderer.m */; };
+		C35E5D501DB36F76008C8939 /* WTCameraControlsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C35E5D451DB36F76008C8939 /* WTCameraControlsModel.m */; };
+		C35E5D511DB36F76008C8939 /* ExternalEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C35E5D491DB36F76008C8939 /* ExternalEAGLView.m */; };
+		C35E5D521DB372F3008C8939 /* WikitudeNativeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E5D381DB36F46008C8939 /* WikitudeNativeSDK.framework */; };
+		C35E5D531DB372F3008C8939 /* WikitudeNativeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C35E5D381DB36F46008C8939 /* WikitudeNativeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +35,20 @@
 			remoteInfo = AResume;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C35E5D541DB372F3008C8939 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C35E5D531DB372F3008C8939 /* WikitudeNativeSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C35E5D101DB36D60008C8939 /* AResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +64,19 @@
 		C35E5D291DB36D60008C8939 /* AResumeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AResumeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35E5D2D1DB36D60008C8939 /* AResumeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AResumeTests.m; sourceTree = "<group>"; };
 		C35E5D2F1DB36D60008C8939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C35E5D381DB36F46008C8939 /* WikitudeNativeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WikitudeNativeSDK.framework; sourceTree = "<group>"; };
+		C35E5D3A1DB36F76008C8939 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = "../../../Downloads/WikitudeSDK_NativeAPI_iOS_1-4-0_2016_09_13_14_44_27/Examples/Native Examples/Assets"; sourceTree = "<group>"; };
+		C35E5D3B1DB36F76008C8939 /* StrokedRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrokedRectangle.h; path = Renderables/StrokedRectangle.h; sourceTree = "<group>"; };
+		C35E5D3C1DB36F76008C8939 /* StrokedRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrokedRectangle.m; path = Renderables/StrokedRectangle.m; sourceTree = "<group>"; };
+		C35E5D3D1DB36F76008C8939 /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FragmentShader.glsl; path = Renderables/FragmentShader.glsl; sourceTree = "<group>"; };
+		C35E5D3E1DB36F76008C8939 /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = VertexShader.glsl; path = Renderables/VertexShader.glsl; sourceTree = "<group>"; };
+		C35E5D401DB36F76008C8939 /* ExternalRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalRenderer.h; sourceTree = "<group>"; };
+		C35E5D411DB36F76008C8939 /* ExternalRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExternalRenderer.m; sourceTree = "<group>"; };
+		C35E5D441DB36F76008C8939 /* WTCameraControlsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCameraControlsModel.h; sourceTree = "<group>"; };
+		C35E5D451DB36F76008C8939 /* WTCameraControlsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCameraControlsModel.m; sourceTree = "<group>"; };
+		C35E5D461DB36F76008C8939 /* WikitudeLicense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikitudeLicense.h; sourceTree = "<group>"; };
+		C35E5D481DB36F76008C8939 /* ExternalEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalEAGLView.h; path = Views/ExternalEAGLView.h; sourceTree = "<group>"; };
+		C35E5D491DB36F76008C8939 /* ExternalEAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExternalEAGLView.m; path = Views/ExternalEAGLView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35E5D521DB372F3008C8939 /* WikitudeNativeSDK.framework in Frameworks */,
+				C35E5D391DB36F46008C8939 /* WikitudeNativeSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,10 @@
 		C35E5D121DB36D60008C8939 /* AResume */ = {
 			isa = PBXGroup;
 			children = (
+				C35E5D3A1DB36F76008C8939 /* Assets */,
+				C35E5D431DB36F76008C8939 /* CoreServices */,
+				C35E5D471DB36F76008C8939 /* Model */,
+				C35E5D4A1DB36F76008C8939 /* Views */,
 				C35E5D161DB36D60008C8939 /* AppDelegate.h */,
 				C35E5D171DB36D60008C8939 /* AppDelegate.m */,
 				C35E5D191DB36D60008C8939 /* ViewController.h */,
@@ -89,6 +132,7 @@
 				C35E5D1F1DB36D60008C8939 /* Assets.xcassets */,
 				C35E5D211DB36D60008C8939 /* LaunchScreen.storyboard */,
 				C35E5D241DB36D60008C8939 /* Info.plist */,
+				C35E5D381DB36F46008C8939 /* WikitudeNativeSDK.framework */,
 				C35E5D131DB36D60008C8939 /* Supporting Files */,
 			);
 			path = AResume;
@@ -111,6 +155,57 @@
 			path = AResumeTests;
 			sourceTree = "<group>";
 		};
+		C35E5D3F1DB36F76008C8939 /* Renderables */ = {
+			isa = PBXGroup;
+			children = (
+				C35E5D3B1DB36F76008C8939 /* StrokedRectangle.h */,
+				C35E5D3C1DB36F76008C8939 /* StrokedRectangle.m */,
+				C35E5D3D1DB36F76008C8939 /* FragmentShader.glsl */,
+				C35E5D3E1DB36F76008C8939 /* VertexShader.glsl */,
+			);
+			name = Renderables;
+			sourceTree = "<group>";
+		};
+		C35E5D421DB36F76008C8939 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				C35E5D401DB36F76008C8939 /* ExternalRenderer.h */,
+				C35E5D411DB36F76008C8939 /* ExternalRenderer.m */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		C35E5D431DB36F76008C8939 /* CoreServices */ = {
+			isa = PBXGroup;
+			children = (
+				C35E5D3F1DB36F76008C8939 /* Renderables */,
+				C35E5D421DB36F76008C8939 /* Renderer */,
+			);
+			name = CoreServices;
+			path = "../../../Downloads/WikitudeSDK_NativeAPI_iOS_1-4-0_2016_09_13_14_44_27/Examples/Native Examples/CoreServices";
+			sourceTree = "<group>";
+		};
+		C35E5D471DB36F76008C8939 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C35E5D441DB36F76008C8939 /* WTCameraControlsModel.h */,
+				C35E5D451DB36F76008C8939 /* WTCameraControlsModel.m */,
+				C35E5D461DB36F76008C8939 /* WikitudeLicense.h */,
+			);
+			name = Model;
+			path = "../../../Downloads/WikitudeSDK_NativeAPI_iOS_1-4-0_2016_09_13_14_44_27/Examples/Native Examples/Model";
+			sourceTree = "<group>";
+		};
+		C35E5D4A1DB36F76008C8939 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C35E5D481DB36F76008C8939 /* ExternalEAGLView.h */,
+				C35E5D491DB36F76008C8939 /* ExternalEAGLView.m */,
+			);
+			name = Views;
+			path = "../../../Downloads/WikitudeSDK_NativeAPI_iOS_1-4-0_2016_09_13_14_44_27/Examples/Native Examples";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +216,7 @@
 				C35E5D0C1DB36D60008C8939 /* Sources */,
 				C35E5D0D1DB36D60008C8939 /* Frameworks */,
 				C35E5D0E1DB36D60008C8939 /* Resources */,
+				C35E5D541DB372F3008C8939 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,8 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35E5D231DB36D60008C8939 /* LaunchScreen.storyboard in Resources */,
+				C35E5D4B1DB36F76008C8939 /* Assets in Resources */,
+				C35E5D4E1DB36F76008C8939 /* VertexShader.glsl in Resources */,
 				C35E5D201DB36D60008C8939 /* Assets.xcassets in Resources */,
 				C35E5D1E1DB36D60008C8939 /* Main.storyboard in Resources */,
+				C35E5D4D1DB36F76008C8939 /* FragmentShader.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +316,11 @@
 			files = (
 				C35E5D1B1DB36D60008C8939 /* ViewController.m in Sources */,
 				C35E5D181DB36D60008C8939 /* AppDelegate.m in Sources */,
+				C35E5D4C1DB36F76008C8939 /* StrokedRectangle.m in Sources */,
+				C35E5D511DB36F76008C8939 /* ExternalEAGLView.m in Sources */,
+				C35E5D501DB36F76008C8939 /* WTCameraControlsModel.m in Sources */,
 				C35E5D151DB36D60008C8939 /* main.m in Sources */,
+				C35E5D4F1DB36F76008C8939 /* ExternalRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +386,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -330,6 +434,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -342,6 +447,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -352,7 +458,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L239Q4U4LQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AResume",
+				);
 				INFOPLIST_FILE = AResume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AResume.AResume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,7 +475,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L239Q4U4LQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AResume",
+				);
 				INFOPLIST_FILE = AResume/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AResume.AResume;
 				PRODUCT_NAME = "$(TARGET_NAME)";

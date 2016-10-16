@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExternalEAGLView.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet ExternalEAGLView                    *eaglView;
 
 @end
 
