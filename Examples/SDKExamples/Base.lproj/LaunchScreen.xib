@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,23 +13,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOJ-pM-ZfA">
-                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="7rH-br-JyU"/>
                     </constraints>
                     <items>
-                        <navigationItem title="Wikitude SDK" id="6fF-C6-bEU"/>
+                        <navigationItem id="6fF-C6-bEU"/>
                     </items>
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ala-h6-qCp">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
-                    <color key="backgroundColor" red="0.9647059440612793" green="0.9647059440612793" blue="0.9647059440612793" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.95564931631088257" green="0.95562070608139038" blue="0.95563691854476929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="0gE-O2-TWc"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.92549026010000002" green="0.92549026010000002" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.90689957141876221" green="0.90592563152313232" blue="0.93599307537078857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="KOJ-pM-ZfA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Net-ER-nAa"/>
                 <constraint firstItem="ala-h6-qCp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UuU-hi-DtN"/>

@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="iNp-qF-6Ii" kind="show" id="r9h-Lk-O2b"/>
+                                    <segue destination="iNp-qF-6Ii" kind="show" identifier="ARESUME_SEGUE" id="r9h-Lk-O2b"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
