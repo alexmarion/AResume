@@ -25,7 +25,7 @@ var World = {
 
 			A function is attached to the onLoaded trigger to receive a notification once the 3D model is fully loaded. Depending on the size of the model and where it is stored (locally or remotely) it might take some time to completely load and it is recommended to inform the user about the loading time.
 		*/
-		this.modelCar = new AR.Model("assets/profilePic.wt3", {
+		this.modelProfile = new AR.Model("assets/profilePic.wt3", {
 			onLoaded: this.loadingStep,
 			/*
 				The drawables are made clickable by setting their onClick triggers. Click triggers can be set in the options of the drawable when the drawable is created. Thus, when the 3D model onClick: this.toggleAnimateModel is set in the options it is then passed to the AR.Model constructor. Similar the button's onClick: this.toggleAnimateModel trigger is set in the options passed to the AR.ImageDrawable constructor. toggleAnimateModel() is therefore called when the 3D model or the button is clicked.
@@ -40,34 +40,35 @@ var World = {
 			},
 			translate: {
 				x: 0.0,
-				y: 0.05,
-				z: 0.0
+				y: 0.0,
+				z: 0.5
 			},
 			rotate: {
-				roll: -25
+				tilt: -10
 			}
 		});
 
 		/*
 			As a next step, an appearing animation is created. For more information have a closer look at the function implementation.
 		*/
-		this.appearingAnimation = this.createAppearingAnimation(this.modelCar, 0.045);
+		this.appearingAnimation = this.createAppearingAnimation(this.modelProfile, 0.45);
 
 		/*
-			The rotation animation for the 3D model is created by defining an AR.PropertyAnimation for the rotate.roll property.
+			The rotation animation for the 3D model is created by defining an AR.PropertyAnimation for the rotate.heading property.
 		*/
-		this.rotationAnimation = new AR.PropertyAnimation(this.modelCar, "rotate.roll", -25, 335, 10000);
+		this.rotationAnimation = new AR.PropertyAnimation(this.modelProfile, "rotate.heading", -25, 335, 10000);
 
 		/*
 			Additionally to the 3D model an image that will act as a button is added to the image target. This can be accomplished by loading an AR.ImageResource and creating a drawable from it.
 		*/
+        /*
 		var imgRotate = new AR.ImageResource("assets/rotateButton.png");
 		var buttonRotate = new AR.ImageDrawable(imgRotate, 0.2, {
 			offsetX: 0.35,
 			offsetY: 0.45,
 			onClick: this.toggleAnimateModel
 		});
-
+         */
 		/*
 			To receive a notification once the image target is inside the field of vision the onEnterFieldOfVision trigger of the AR.Trackable2DObject is used. In the example the function appear() is attached. Within the appear function the previously created AR.AnimationGroup is started by calling its start() function which plays the animation once.
 
@@ -75,7 +76,7 @@ var World = {
 		*/
 		var trackable = new AR.Trackable2DObject(this.tracker, "*", {
 			drawables: {
-				cam: [this.modelCar, buttonRotate]
+				cam: [this.modelProfile]
 			},
 			onEnterFieldOfVision: this.appear,
 			onExitFieldOfVision: this.disappear
@@ -83,14 +84,14 @@ var World = {
 	},
 
 	loadingStep: function loadingStepFn() {
-		if (!World.loaded && World.tracker.isLoaded() && World.modelCar.isLoaded()) {
+		if (!World.loaded && World.tracker.isLoaded() && World.modelProfile.isLoaded()) {
 			World.loaded = true;
 			
 			if ( World.trackableVisible && !World.appearingAnimation.isRunning() ) {
 				World.appearingAnimation.start();
 			}
 			
-			
+			/*
 			var cssDivLeft = " style='display: table-cell;vertical-align: middle; text-align: right; width: 50%; padding-right: 15px;'";
 			var cssDivRight = " style='display: table-cell;vertical-align: middle; text-align: left;'";
 			document.getElementById('loadingMessage').innerHTML =
@@ -101,7 +102,7 @@ var World = {
 			setTimeout(function() {
 				var e = document.getElementById('loadingMessage');
 				e.parentElement.removeChild(e);
-			}, 10000);
+			}, 10000);*/
 		}
 	},
 
@@ -128,18 +129,28 @@ var World = {
 		World.trackableVisible = true;
 		if ( World.loaded ) {
 			// Resets the properties to the initial values.
+            document.getElementById('displayMessageLeft').innerHTML =
+            "<b><div>Education: UW</div>" +
+            "<div>GPA: 4.00</div></b>";
+            document.getElementById('displayMessageRight').innerHTML =
+            "<b><div>Experience</div>" +
+            "<div>Microsoft, 2014 - 2015</div></b>";
 			World.resetModel();
-			World.appearingAnimation.start();		
+			World.appearingAnimation.start();
+            World.rotationAnimation.start(-1);
+            World.rotating = true;
 		}
 	},
 	disappear: function disappearFn() {
+        document.getElementById('displayMessageLeft').innerHTML = "";
+        document.getElementById('displayMessageRight').innerHTML = "";
 		World.trackableVisible = false;
 	},
 
 	resetModel: function resetModelFn() {
 		World.rotationAnimation.stop();
 		World.rotating = false;
-		World.modelCar.rotate.roll = -25;
+		World.modelProfile.rotate.tilt = -25;
 	},
 
 	toggleAnimateModel: function toggleAnimateModelFn() {

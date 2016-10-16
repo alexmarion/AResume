@@ -11,3 +11,34 @@
 	opacity: 0.7;
 	display: table;
 }
+
+.left_msg {
+    -webkit-text-fill-color: #43ABC9;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #093145;
+    font-size: 14px;
+    position: absolute;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 16px;
+    text-align: left;
+    top: 0;
+    left: 10px;
+    display: table;
+}
+
+
+.right_msg {
+    -webkit-text-fill-color: #43ABC9;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #093145;
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 14px;
+    text-align: right;
+    top: 0;
+    right: 10px;
+    display: table;
+}
