@@ -1,0 +1,2633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VideoDrawable - Wikitude SDK API Reference</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">  -->
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!--<script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="Wikitude SDK API Reference">Wikitude SDK API Reference</h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 5.3.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/ActionArea.html">ActionArea</a></li>
+            
+                <li><a href="../classes/ActionRange.html">ActionRange</a></li>
+            
+                <li><a href="../classes/AnimatedImageDrawable.html">AnimatedImageDrawable</a></li>
+            
+                <li><a href="../classes/Animation.html">Animation</a></li>
+            
+                <li><a href="../classes/AnimationGroup.html">AnimationGroup</a></li>
+            
+                <li><a href="../classes/ARchitectObject.html">ARchitectObject</a></li>
+            
+                <li><a href="../classes/ARObject.html">ARObject</a></li>
+            
+                <li><a href="../classes/BaseTracker.html">BaseTracker</a></li>
+            
+                <li><a href="../classes/BoundingRectangle.html">BoundingRectangle</a></li>
+            
+                <li><a href="../classes/Circle.html">Circle</a></li>
+            
+                <li><a href="../classes/ClientTracker.html">ClientTracker</a></li>
+            
+                <li><a href="../classes/CloudTracker.html">CloudTracker</a></li>
+            
+                <li><a href="../classes/CONST.html">CONST</a></li>
+            
+                <li><a href="../classes/context.html">context</a></li>
+            
+                <li><a href="../classes/Drawable.html">Drawable</a></li>
+            
+                <li><a href="../classes/Drawable2D.html">Drawable2D</a></li>
+            
+                <li><a href="../classes/GeoLocation.html">GeoLocation</a></li>
+            
+                <li><a href="../classes/GeoObject.html">GeoObject</a></li>
+            
+                <li><a href="../classes/hardware.html">hardware</a></li>
+            
+                <li><a href="../classes/HtmlDrawable.html">HtmlDrawable</a></li>
+            
+                <li><a href="../classes/ImageDrawable.html">ImageDrawable</a></li>
+            
+                <li><a href="../classes/ImageResource.html">ImageResource</a></li>
+            
+                <li><a href="../classes/Label.html">Label</a></li>
+            
+                <li><a href="../classes/Location.html">Location</a></li>
+            
+                <li><a href="../classes/logger.html">logger</a></li>
+            
+                <li><a href="../classes/Model.html">Model</a></li>
+            
+                <li><a href="../classes/ModelAnimation.html">ModelAnimation</a></li>
+            
+                <li><a href="../classes/Positionable.html">Positionable</a></li>
+            
+                <li><a href="../classes/PropertyAnimation.html">PropertyAnimation</a></li>
+            
+                <li><a href="../classes/radar.html">radar</a></li>
+            
+                <li><a href="../classes/RelativeLocation.html">RelativeLocation</a></li>
+            
+                <li><a href="../classes/Sound.html">Sound</a></li>
+            
+                <li><a href="../classes/Style.html">Style</a></li>
+            
+                <li><a href="../classes/Trackable2DObject.html">Trackable2DObject</a></li>
+            
+                <li><a href="../classes/Tracker.html">Tracker</a></li>
+            
+                <li><a href="../classes/VideoDrawable.html">VideoDrawable</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/AR.html">AR</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>VideoDrawable Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/Drawable2D.html" class="crosslink">Drawable2D</a>
+        </div>
+    
+
+    
+
+    
+        
+            Module: <a href="../modules/AR.html">AR</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>VideoDrawable encapsulates a video to be used as visual
+             representation of an ARObject. The video must be encoded using the H.264 video compression standard.
+<br/><br/>
+The default anchor settings for a VideoDrawable are as follows:</p>
+<p><ul></p>
+<p><li>horizontal anchor: AR.CONST.HORIZONTAL_ANCHOR.CENTER</li></p>
+<p><li>vertical anchor: AR.CONST.VERTICAL_ANCHOR.MIDDLE</li>
+</ul></p>
+<p>
+VideoDrawables can be rendered with transparent pixels. See <a target="_blank" href="http://www.wikitude.com/external/doc/documentation/3.2/web/video.html#transparentvideo">here</a> for details.
+
+On creation, setup parameters can be passed to customize the properties of
+the VideoDrawable.
+</p>
+
+<div class="paragraph">Example:</div>
+
+<pre class="prettyprint">
+ var video = new AR.VideoDrawable("assets/video.mp4", 0.5, {
+   offsetX: 0.2,
+   offsetY: 0.2
+   });
+</pre>
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_VideoDrawable" class="method item">
+    <h3 class="name"><code>VideoDrawable</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>uri</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>height</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">options</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">uri</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The URI to the video.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">height</code>
+                        <span class="type">Float</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The height of the VideoDrawable, in <a
+           href="../modules/AR.html">SDUs</a>. The height is set at creation
+           time, width is calculated according to the aspect ratio of the
+           video.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">options</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Setup-Parameters to customize additional object
+           properties.
+           <br/><br/>
+           Accepted options-properties are</p>
+
+                    </div>
+
+                    
+                        <ul class="params-list">
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">enabled</code> (defaults to <code>true</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">mirrored</code> (defaults to <code>true</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">horizontalAnchor</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">verticalAnchor</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">offsetX</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">offsetY</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">zOrder</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">rotation</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">scale</code> (defaults to <code>1</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">opacity</code> (defaults to <code>1</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">onClick</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">onFinish</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">roll</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">tilt</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">heading</code> (defaults to <code>0</code>)
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">onLoaded</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">onPlaybackStarted</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">onFinishedPlaying</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">onError</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                            <li class="param">
+                                
+                                    <code class="param-name optional">isTransparent</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                
+                            </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+            <li class="api-class-tab events"><a href="#events">Events</a></li>
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getBoundingRectangle">getBoundingRectangle</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getUri">getUri</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_isTransparent">isTransparent</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_pause">pause</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_play">play</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_resume">resume</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_stop">stop</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_destroyed">destroyed</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_enabled">enabled</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property deprecated inherited">
+                                <a href="#property_heading">heading</a>
+
+                                
+                                
+                                    <span class="flag deprecated">deprecated</span>
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_height">height</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_horizontalAnchor">horizontalAnchor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_mirrored">mirrored</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_offsetX">offsetX</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_offsetY">offsetY</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_opacity">opacity</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property deprecated inherited">
+                                <a href="#property_roll">roll</a>
+
+                                
+                                
+                                    <span class="flag deprecated">deprecated</span>
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_rotate.heading">rotate.heading</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_rotate.roll">rotate.roll</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_rotate.tilt">rotate.tilt</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_rotation">rotation</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_scale">scale</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property deprecated inherited">
+                                <a href="#property_scaling">scaling</a>
+
+                                
+                                
+                                    <span class="flag deprecated">deprecated</span>
+                                
+                            </li>
+                        
+                            <li class="index-item property deprecated inherited">
+                                <a href="#property_tilt">tilt</a>
+
+                                
+                                
+                                    <span class="flag deprecated">deprecated</span>
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_verticalAnchor">verticalAnchor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_zOrder">zOrder</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+                <div class="index-section events">
+                    <h3>Events</h3>
+
+                    <ul class="index-list events extends">
+                        
+                            <li class="index-item event inherited">
+                                <a href="#event_onClick">onClick</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_onError">onError</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_onFinishedPlaying">onFinishedPlaying</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_onLoaded">onLoaded</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event">
+                                <a href="#event_onPlaybackStarted">onPlaybackStarted</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item event deprecated inherited">
+                                <a href="#event_triggers.onClick">triggers.onClick</a>
+
+                                
+                                
+                                    <span class="flag deprecated">deprecated</span>
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_destroy" class="method item inherited">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/ARchitectObject.html#method_destroy">ARchitectObject</a>
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Destroys the object.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_getBoundingRectangle" class="method item inherited">
+    <h3 class="name"><code>getBoundingRectangle</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/BoundingRectangle.html" class="crosslink">BoundingRectangle</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#method_getBoundingRectangle">Drawable2D</a>
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns the BoundingRectangle for this Drawable2D. In case
+             of an error, null will be returned.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="../classes/BoundingRectangle.html" class="crosslink">BoundingRectangle</a></span>:
+                    
+                    <p>the BoundingRectangle for the Drawable2D</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_getUri" class="method item">
+    <h3 class="name"><code>getUri</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns the URI the VideoDrawable is pointing to</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+                    
+                    <p>the URI, as set at creation time.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_isTransparent" class="method item">
+    <h3 class="name"><code>isTransparent</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns whether the VideoDrawable has the transparent flag set</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    
+                    <p>The isTransparent setting.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_pause" class="method item">
+    <h3 class="name"><code>pause</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Pauses playing this video. To resume from the time the file was
+paused, call resume(). If play() is called on a paused file, the play will start
+from the very beginning.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_play" class="method item">
+    <h3 class="name"><code>play</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code class="optional">loopTimes</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Plays the video.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">loopTimes</code> (defaults to <code>1</code>)
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Defines how often the video should be played in a row.
+           A negative value indicates an infinite looping.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_resume" class="method item">
+    <h3 class="name"><code>resume</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Allows a paused video to resume playing from the time the file was paused.
+In any other cases, resume() has the same effect as calling play(1).</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_stop" class="method item">
+    <h3 class="name"><code>stop</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Stops playing this video. onFinishedPlaying() will not be triggered after
+                stop() has been called.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_destroyed" class="property item inherited">
+    <h3 class="name"><code>destroyed</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/ARchitectObject.html#property_destroyed">ARchitectObject</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Indicates if the object has already been destroyed.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_enabled" class="property item inherited">
+    <h3 class="name"><code>enabled</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_enabled">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Flag to enable/disable the Drawable. If the Drawable is
+             disabled, it will never appear on the screen and triggers on
+             this Drawable will never be fired. In case it is enabled, it
+             can be rendered on the screen and fire triggers.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_heading" class="property item deprecated inherited">
+    <h3 class="name"><code>heading</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+        <span class="flag deprecated" title="Use rotate.heading instead.">deprecated</span>
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_heading">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+            <p>Deprecated: Use rotate.heading instead.</p>
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_height" class="property item">
+    <h3 class="name"><code>height</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The VideoDrawable&#39;s height in <a href="../modules/AR.html">SDUs</a>. The width of the
+      VideoDrawable will be calculated accordingly based on the
+      aspect ratio of the playing video.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_horizontalAnchor" class="property item inherited">
+    <h3 class="name"><code>horizontalAnchor</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_horizontalAnchor">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The horizontal anchor defines which pixel (in a horizontal
+             pixel row) of the Drawable2D will be placed right at the
+             screen position of the GeoObject represented by the
+             Drawable2D.<br/><br/></p>
+<p>Valid values are defined in AR.CONST.HORIZONTAL_ANCHOR. For example, if
+LEFT is set as horizontal anchor of an ImageDrawable, the image&#39;s left edge will
+match the calculated position of the Drawable2D.<br/><br/></p>
+<p>The default horizontal anchor points is dependent on the concrete class
+of the Drawable2D.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_mirrored" class="property item inherited">
+    <h3 class="name"><code>mirrored</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_mirrored">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Flag to enable/disable mirroring for this Drawable. When using the front
+             camera, a mirrored drawable will be rotated 180 degree around its y axis.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> true for generic drawables, false for labels and HTMLDrawables</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_offsetX" class="property item inherited">
+    <h3 class="name"><code>offsetX</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_offsetX">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The horizontal offset to the calculated position of the
+             Drawable2D, in <a href="../modules/AR.html">SDUs</a>. A positive offsetX causes the Drawable2D
+             to move right, a negative offsetX causes it to move left.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_offsetY" class="property item inherited">
+    <h3 class="name"><code>offsetY</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_offsetY">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The vertical offset to the calculated position of the
+             Drawable2D, in <a href="../modules/AR.html">SDUs</a>. A positive offsetY causes the Drawable2D
+             to move up, a negative offsetY causes it to move down.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_opacity" class="property item inherited">
+    <h3 class="name"><code>opacity</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_opacity">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>A value within the interval from 0.0 to 1.0 defining the
+             opacity of the entire Drawable2D. A value of 0 indicates
+             full transparency, a value of 1 indicates full opacity.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_roll" class="property item deprecated inherited">
+    <h3 class="name"><code>roll</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+        <span class="flag deprecated" title="Use rotate.roll instead.">deprecated</span>
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_roll">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+            <p>Deprecated: Use rotate.roll instead.</p>
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_rotate.heading" class="property item inherited">
+    <h3 class="name"><code>rotate.heading</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_rotate.heading">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Defines a rotation of the Drawable around the y-axis, specified in degrees. Values will be applied modulo 360.
+A value of 361 degrees has the same effect as setting the value to 1 degree.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_rotate.roll" class="property item inherited">
+    <h3 class="name"><code>rotate.roll</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_rotate.roll">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Defines a rotation of the Drawable around the z-axis, specified in degrees. Values will be applied modulo 360.
+A value of 361 degrees has the same effect as setting the value to 1 degree.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_rotate.tilt" class="property item inherited">
+    <h3 class="name"><code>rotate.tilt</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_rotate.tilt">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Defines a rotation of the Drawable around the x-axis, specified in degrees. Values will be applied modulo 360.
+A value of 361 degrees has the same effect as setting the value to 1 degree.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_rotation" class="property item inherited">
+    <h3 class="name"><code>rotation</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_rotation">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Defines the rotation of the Drawable, in degrees, with the
+             rotation axis perpendicular to the screen plain. For
+             example, setting rotation to 45.0 on a square plain image
+             turns it into a rhombus. A positive value defines a rotation
+             in clockwise direction, a negative value defines a rotation
+             in anti-clockwise direction. Rotation can influence the
+             BoundingRectangle of the Drawable (for example, when a
+             Rectangle is rotated).<br/><br/>
+             Note, rotation is applied in addition to any roll-tilt-heading rotations defined.
+             Rotation specifies the rotation on the screen, with the origin of the rotation
+             being the center of the Drawable2D, including any offsets etc.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_scale" class="property item inherited">
+    <h3 class="name"><code>scale</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_scale">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The scale factor for the Drawable2D. A scale factor
+             greater than 1 enlarges the drawable, a scale factor less
+             than 1 shrinks it down. Only values greater than or equal to 0 are
+             allowed. A scale factor of 0 makes the Drawable2D invisible.
+             A scale factor of 2 doubles the size of the
+             Drawable2D, a scale factor of 0.5 halfs the size of the
+             Drawable2D. Scale will influence the BoundingRectangle of
+             the Drawable, but it will not influence the original
+             properties of the Drawable2D.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_scaling" class="property item deprecated inherited">
+    <h3 class="name"><code>scaling</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+        <span class="flag deprecated" title="Use scale instead.">deprecated</span>
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_scaling">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+            <p>Deprecated: Use scale instead.</p>
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_tilt" class="property item deprecated inherited">
+    <h3 class="name"><code>tilt</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+        <span class="flag deprecated" title="Use rotate.tilt instead.">deprecated</span>
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#property_tilt">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+            <p>Deprecated: Use rotate.tilt instead.</p>
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_verticalAnchor" class="property item inherited">
+    <h3 class="name"><code>verticalAnchor</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_verticalAnchor">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The vertical anchor defines which pixel (in a vertical pixel
+             column) of the Drawable2D will be placed right at the screen
+             position of the GeoObject represented by the Drawable2D.<br/><br/></p>
+<p>Valid values are defined in AR.CONST.VERTICAL_ANCHOR. For example, if TOP
+is set as horizontal anchor of an Image, the image&#39;s top edge will match
+the calculated position of the Drawable2D.<br/><br/></p>
+<p>The default vertical anchor points is dependent on the concrete class of
+the Drawable2D.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_zOrder" class="property item inherited">
+    <h3 class="name"><code>zOrder</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable2D.html#property_zOrder">Drawable2D</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>If multiple Drawable2Ds are assigned to a certain GeoObject, the zOrder defines the drawing order of these Drawables.
+In case the Drawables overlap, the Drawable with the higher zOrder value is rendered on top of the others (e.g. a Drawable with
+zOrder 1 is rendered on top of a Drawable of zOrder 0, which again is rendered on top of -1).
+In case Drawables have the same zOrder defined, and they overlap, the behavior is undefined and might cause unexpected results,
+thus it is good practice to define the zOrder for potentially overlapping Drawables.
+<br/><br/>
+To specify the rendering order of the Drawables of different GeoObjects, refer to GeoObject.renderingOrder.
+<br/><br/>
+Must be a whole number.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 0</p>
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+            <div id="events" class="api-class-tabpanel">
+                <h2 class="off-left">Events</h2>
+
+                
+                    <div id="event_onClick" class="events item inherited">
+    <h3 class="name"><code>onClick</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#event_onClick">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>When the Drawable is clicked, the system will trigger
+Drawable.onClick(ARObject). A click on the screen might hit multiple
+Drawables, thus a click creates a &quot;clicked Drawables-queue&quot;, with the
+uppermost Drawable in the front of the queue. The return value of the
+function determines if, after the onClick()-Function was
+executed for this Drawable, the queue shall continue to execute
+onClick() for the next Drawable in the queue. In case the last
+Drawable in the queue still requests to continue the click-queue,
+ARObject.onClick() will be executed. If the queue still continues,
+context.onScreenClick() will be executed.</p>
+<p>The return value of the function determines what happens next. If false, the click-queue should not stop with this Drawable.
+        Thus, the next Drawable&#39;s onClick() function will be
+        executed. This is the default value in case no return value is
+        set or the function is not defined for this Drawable. If true, the queue-execution will stop at the current
+        Drawable, underlying Drawables will not receive
+        onClick() calls.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">arObject</code>
+                        <span class="type"><a href="../classes/ARObject.html" class="crosslink">ARObject</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>the ARObject the clicked Drawable is attached to.</p>
+<p>The trigger is null by default, and will thus result in no action
+executed when the trigger fires. A developer can add custom functionality
+by assigning a custom function to onClick.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_onError" class="events item">
+    <h3 class="name"><code>onError</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The trigger will fire when the Video file cannot be loaded or played.<br/><br/>The trigger is null by default, and will thus result in no action
+executed when the trigger fires. A developer can add custom functionality by assigning a custom function to onError.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Event Payload:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">msg</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The detailed error description.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_onFinishedPlaying" class="events item">
+    <h3 class="name"><code>onFinishedPlaying</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The trigger will fire just after the Video file finished playing.<br/><br/>The trigger is null by default, and will thus result in no action
+executed when the trigger fires. A developer can add custom functionality by assigning a custom function to onFinishedPlaying.</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_onLoaded" class="events item">
+    <h3 class="name"><code>onLoaded</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The trigger will fire when the Video file was loaded.<br/><br/>The trigger is null by default, and will thus result in no action
+executed when the trigger fires. A developer can add custom functionality by assigning a custom function to onLoaded.</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_onPlaybackStarted" class="events item">
+    <h3 class="name"><code>onPlaybackStarted</code></h3>
+    <span class="type"></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The trigger will fire just before the Video file starts playing.<br/><br/>The trigger is null by default, and will thus result in no action
+executed when the trigger fires. A developer can add custom functionality by assigning a custom function to onPlaybackStarted.</p>
+
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+                    <div id="event_triggers.onClick" class="events item deprecated inherited">
+    <h3 class="name"><code>triggers.onClick</code></h3>
+    <span class="type"></span>
+
+    
+        <span class="flag deprecated" title="Use onClick instead.">deprecated</span>
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Drawable.html#event_triggers.onClick">Drawable</a>
+            
+        
+        
+        </p>
+
+        
+            <p>Deprecated: Use onClick instead.</p>
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+
+
+    
+</div>
+
+                
+            </div>
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
