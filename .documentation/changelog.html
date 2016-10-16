@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h1 id="wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</h1>
+<h2 id="wikitude-sdk-javascript-api-5-3-0">Wikitude SDK JavaScript API 5.3.0</h2>
+<p>Release Date: 13.09.2016</p>
+<h4 id="new">New</h4>
+<h6 id="sdk">SDK</h6>
+<ul>
+<li>iOS 10 support</li>
+<li>Positionables allow developer to position <a href="../Reference/JavaScript%20API/classes/Drawable.html"><code>AR.Drawables</code></a> in 3D space using the Plugins API. The new <a href="positionable.html">marker tracking example</a> provides a detailed demonstration of this feature.</li>
+<li>New InputFrameRenderSettings options for Plugins API</li>
+<li>A new include for the <code>architect.js</code> to prevent mixed content errors in https environments</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<h6 id="sdk">SDK</h6>
+<ul>
+<li>Fixes issues with NAT64 networks</li>
+<li>Fixes an issue where <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> would not be able to send proper server requests</li>
+<li>Fixes an issue when enabling and disabling the camera via <a href="../Reference/JavaScript%20API/classes/hardware.html#property_camera.enabled"><code>AR.hardware.camera.enabled</code></a></li>
+<li>Fixes an issue when resolving relative paths inside the JavaScript library</li>
+<li>Fixes an issue where the SDK could crash if a different Architect World is loaded and the previous one used cloud recognition</li>
+<li>Fixes an issue with snap-to-screen contents that get distorted when screen is rotated while the app is in background</li>
+<li>Fixes an issue with AR.Radar that get distorted when screen is rotated while the app is in background</li>
+<li>Fixes a rare crash in the 3D Tracking engine</li>
+<li><code>isDeviceSupported</code> now correctly works for the iPod Touch 5th gen</li>
+<li>Fix for broken CMMotionManager implementation in iOS 10</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Improved memory handling of 3D models</li>
+<li>Video drawables report more errors </li>
+<li>Improved and aligned behaviour of cache handling</li>
+<li>SampleApp now fully ATS compliant - only uses <code>https</code> links for content loading</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-2-0">Wikitude SDK JavaScript API 5.2.0</h2>
+<p>Release Date: 08.07.2016</p>
+<h4 id="new">New</h4>
+<h6 id="sdk">SDK</h6>
+<ul>
+<li>InputPlugins allow developer to use the Wikitude SDK with an external camera feed</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<h6 id="sdk">SDK</h6>
+<ul>
+<li>Fixen an issue where <code>AR.ImageDrawables</code> might not appear after loading an Architect World or resuming the SDK</li>
+<li>Fixes an issue where 3D models might not be rendered correctly after the SDK paused/resumed</li>
+<li>Fixes an issue where destroying the SDK while a large .wtc file is loading, crashed the SDK</li>
+<li>Fixes several issues that might lead to a crash if the SDK is paused/resumed</li>
+<li>Fixes several issues that might lead to a crash if the SDK is destroyed and immediately afterwards created again</li>
+<li>The device sensor calibration screen can now reliable be turned off. A new API can be used to react in code to uncalibrated device sensors</li>
+<li>Fixes an issue where green camera frames could be rendered under certain circumstances</li>
+<li>Fixes an issue where video drawables might only play there audio track</li>
+<li>Fixes an issue where taking a screenshot might not release all temporary allocated memory</li>
+<li>Fixes several issues where destroying the SDK might not release all of its allocated memory</li>
+</ul>
+<h6 id="3d-encoder">3D Encoder</h6>
+<ul>
+<li>Fixes animations with negative start offsets</li>
+<li>Fixes animations containing several takes</li>
+<li>Fixes “texture not found” bug on Windows</li>
+<li>Adds a new warning in case of invalid polygon indices of materials</li>
+<li>Update to FBX SDK 2017, FBX version 7.5</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-1-4">Wikitude SDK JavaScript API 5.1.4</h2>
+<p>Release Date: 14.03.2016</p>
+<h4 id="new">New</h4>
+<h6 id="3d-encoder">3D Encoder</h6>
+<ul>
+<li>Option to select the type of back-face culling that should be applied when rendering the 3D model</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<h6 id="sdk">SDK</h6>
+<ul>
+<li>Memory leak when using continuous cloud recognition</li>
+<li>3D models with &#39;Grouping on Takes&#39; did not consider different animation offsets</li>
+<li>3D models with non-power-of-two textures causing black textures on iOS devices</li>
+</ul>
+<h6 id="3d-encoder">3D Encoder</h6>
+<ul>
+<li>Windows 3D Encoder always rendered empty scenes</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-1-3">Wikitude SDK JavaScript API 5.1.3</h2>
+<p>Release Date: 03.03.2016</p>
+<h4 id="new">New</h4>
+<ul>
+<li>New JS API to specify a <code>custom cloud recognition server url</code> through <a href="../Reference/JavaScript%20API/classes/context.html"><code>AR.context</code></a></li>
+</ul>
+<h6 id="3d-encoder">3D Encoder</h6>
+<ul>
+<li>different modes for grouping animations</li>
+<li>mesh deformer animations take into account geometric transforms mesh transformations</li>
+<li>support for shared joint nodes</li>
+<li>new wt3 file format; wt3 created with Encoder 1.3 cannot be used with SDK &lt; 5.1.3 </li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<h6 id="sdk">SDK</h6>
+<ul>
+<li><code>onError</code> trigger not called if local assets could not be loaded</li>
+<li><code>AR.ModelAnimation</code> <code>onFinish</code> trigger not called</li>
+<li>Texture settings for 3D model rendering</li>
+<li>Mesh deformer animations take into account geometric transforms mesh transformations</li>
+<li><code>CloudTracker</code> might not load on low end devices</li>
+<li>Camera and sensors could not be started or stopped from the JS API</li>
+<li>NSError pointer was always set to an actual error when starting the SDK although the SDK did start correctly</li>
+</ul>
+<h6 id="3d-encoder">3D Encoder</h6>
+<ul>
+<li>Memory leak on screenshot creation    </li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-1-2">Wikitude SDK JavaScript API 5.1.2</h2>
+<p>Release Date: 11.02.2016</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Crash on low end devices regarding threading</li>
+<li>Crash when using multiple video drawables </li>
+<li>Radar always pointing west</li>
+<li>Linker error when using the SDK in a library/framework project</li>
+<li>Continuous cloud recognition could not be stopped</li>
+<li>Injecting an arbitrary location had no effect</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-1-1">Wikitude SDK JavaScript API 5.1.1</h2>
+<p>Release Date: 12.01.2016</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Crash on devices running iOS 7</li>
+<li>Missing textures on certain 3D models</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-1-0">Wikitude SDK JavaScript API 5.1.0</h2>
+<p>Release Date: 01.12.2015</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Option to specify if the system compass calibration screen should be shown or not</li>
+<li>Support multiple regional co-located cloud recognition services</li>
+<li>3D model import: account for pivot node transformations</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Potential crash when multiple <code>WTArchitectView</code> instances are created</li>
+<li>Black camera rendering when pausing/resuming the Wikitude iOS SDK</li>
+<li>3D model import: <ul>
+<li>Animation grouping</li>
+<li>Account for animation stack (numbering of animations if more than one animation tracks are on the FBX animation stack)</li>
+<li>Accept the first texture of a multi-textured 3D model</li>
+<li>Accept 3D models with more than one mesh skins per node</li>
+</ul>
+</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-5-0-0">Wikitude SDK JavaScript API 5.0.0</h2>
+<p>Release Date: 27.08.2015</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Extended Tracking</li>
+<li>Plugins API</li>
+<li>Unity Plugin</li>
+<li>Native API </li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Potential problem with 3D special effects causing crashes</li>
+<li>Potential problem when calling <code>trackable.drawables.addCamDrawable()</code> while snapping is active</li>
+<li>Wrong log messages for connection not found</li>
+<li>Potential problem when clicking parts of a 3D model</li>
+<li>Potential problem when 3D models are re-loaded fast</li>
+<li>Potential memory increase with certain 3D models</li>
+<li>Problem when at the same time addCamDrawable is called in the onExitFieldOfVision event</li>
+<li>Potential problem with texture rendering when clicking a button</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Newest version of 3D rendering engine</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-4-1-1">Wikitude SDK JavaScript API 4.1.1</h2>
+<p>Release Date: 27.04.2015</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Missing QT 5 .dll&#39;s for Windows 3D Encoder</li>
+<li>AR.Model <code>onError</code> handler now has more details about what failed</li>
+<li>Loading of <a href="../Reference/JavaScript%20API/classes/ClientTracker.html"><code>ClientTracker</code></a> works as expected when no <code>onLoaded</code> trigger is set</li>
+<li>An issue with inverted axis when using image recognition in combination with the front camera</li>
+<li>Documentation clarifications and fixes </li>
+<li>Updated Terms of Service</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-4-1-0">Wikitude SDK JavaScript API 4.1.0</h2>
+<p>Release Date: 03.03.15</p>
+<h4 id="new">New</h4>
+<ul>
+<li>New JS API <code>AR.CloudTracker</code> for cloud recognition support</li>
+<li>Access to the device front cam through a JavaScript and Objective-C API</li>
+<li>Information about the distance to a image target</li>
+<li>Click&#39;s on 3D models now return the name of the affected mesh part</li>
+<li>New required iOS SDK framework: <code>SystemConfiguration.framework</code></li>
+<li>API changes<ul>
+<li>new class <code>WTStartupConfiguration</code></li>
+<li>new bit mask <code>WTFeatures</code></li>
+<li>updated class <code>WTArchitectView</code><ul>
+<li>new method to check if the device is supported</li>
+<li>new method to start the SDK rendering</li>
+</ul>
+</li>
+<li>deprecated enum <code>WTAugemntedRealityMode</code></li>
+<li>deprecated methods that were using the <code>WTAugmentedRealityMode</code> enum</li>
+</ul>
+</li>
+<li>Quick Look Plugin for Mac OS X which allows introspection of <code>.wtc</code> files</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Potential Memory issue when changing properties of 3d model</li>
+<li>Potential problems when loading large <code>.wtc</code> files</li>
+<li><code>onSnappedToScreen</code> function is not called when using the <code>enabledOnExitFieldOfVision</code> property</li>
+<li>Potential problems with animated 3D Models not clickable</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Performance of Image Recognition initial recognition phase</li>
+<li>Tracking Performance optimized and streamlined</li>
+<li>JS &lt;=&gt; ObjC bridge performance</li>
+<li>Example app with new examples for any of the new features</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-4-0-2">Wikitude SDK JavaScript API 4.0.2</h2>
+<p>Release Date: 09.10.14</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Support/Improvements for iOS 8</li>
+<li>Example application</li>
+<li>API changes <ul>
+<li>new class WTNavigation</li>
+<li>updated class WTArchitectView</li>
+<li>updated protocol WTArchitectViewDelegate</li>
+<li>updated enum WTAugmentedRealityMode</li>
+</ul>
+</li>
+<li>Load ARchitect Worlds with an augmented reality mode ( -loadArchitectWorldFromURL:withAugmentedRealityMode: )</li>
+<li>Umbrella header <code>WikitudeSDK.h</code> ( #import <WikitudeSDK/WikitudeSDK.h> )</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Image target recognition</li>
+<li>Java Script bridge is now more robust at startup</li>
+<li>Reloading ARchitect Worlds with the same WTArchitectView instance</li>
+<li>Error messages<ul>
+<li>pls. implement the -architectView:didFailLoadArchitectWorldNavigation:withError delegate method</li>
+<li>check the console output</li>
+</ul>
+</li>
+<li>Namespace handling in C++</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Warning logs that JPEG or GIF is not a supported image format (introduced in 4.0.2 from 11.09.14)</li>
+<li>Landscape initialized WTArchitectView wasn&#39;t able to detect any image target</li>
+<li>Fixes an issue with flickering augmentations for certain image targets</li>
+<li>Fixes an issue where the &#39;onSnappedToScreen&#39; function was not called when using the &#39;enabledOnExitFieldOfVision&#39; property</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-4-0-0">Wikitude SDK JavaScript API 4.0.0</h2>
+<p>Release Date: 29.07.14</p>
+<h4 id="new">New</h4>
+<ul>
+<li>&quot;Snap-to-screen&quot; feature (see samples <a href="3dmodels.html#snapToScreen">3D Model</a> and <a href="video.html#snappedvideo">Video</a> for implementation)</li>
+<li>Wildcard support for the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#property_targetName"><code>targetName</code></a> property of <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>Trackable2DObject</code></a></li>
+<li>New tracking engine with increased performance </li>
+<li>Control flash light from augmented reality scene (<a href="../Reference/JavaScript%20API/classes/context.html#property_hardware.flashlight"><code>AR.context.hardware.flashlight</code></a>) </li>
+<li>SDK version number is now accessible from JS (<a href="../Reference/JavaScript%20API/classes/context.html#property_versionNumber"><code>AR.context.versionNumber</code></a>)</li>
+<li>Required license key</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>A potential issue that caused rendering artifacts when objects were created outside of the current culling distance</li>
+<li>Pause and resume animation of 3D models correctly after app is put in background</li>
+<li>A potential issue with 3D models that were not deleted correctly from a temporary directory</li>
+<li>A potential issue with 3D models that were not destroyed correctly when using the JS <code>destroy()</code> API</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Camera rendering is now faster</li>
+<li>Samples to reflect Snap-to-screen feature and wildcard support</li>
+<li>Comments in sample apps source code</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-3-2">Wikitude SDK JavaScript API 3.3.2</h2>
+<p>Release Date: 31.07.14</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Fixes a potential issue with 3D models that were not deleted correctly from a temporary directory</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-3-1">Wikitude SDK JavaScript API 3.3.1</h2>
+<p>Release Date 21.04.2014</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Screen capturing on iPhones was not working properly</li>
+<li>Notifications regarding MPMoviePlayerViewController states were not handled correctly and could lead to a crash</li>
+<li>Some PNG images couldn&#39;t be loaded</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-3-0">Wikitude SDK JavaScript API 3.3.0</h2>
+<p>Release Date 01.04.2014</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Multiple AR views supported</li>
+<li>URL scheme support for <code>tel:</code>, <code>sms:</code> and <code>mailto:</code></li>
+<li>Scaling mode: Global Scene (See <a href="../Reference/JavaScript%20API/classes/context.html">JavaScript API Reference</a> for more details)</li>
+<li>Full Interface Builder support for WTArchitectView</li>
+<li>Support for 64-bit <code>arm64</code> architecture </li>
+<li>IR-only mode for AR experiences</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Flickering after resume from background </li>
+<li>Possible mix-up of 3D textures with the same name in different 3D models</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Text Label Rendering - trailing whitespace is now constant</li>
+<li>Framerate on iPhone 4 is now constant</li>
+<li>Open In Browser UI </li>
+<li>libpng uses own symbols to avoid symbol conflicts</li>
+</ul>
+<h4 id="removed">Removed</h4>
+<ul>
+<li>Support for iOS 5</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-2-1">Wikitude SDK JavaScript API 3.2.1</h2>
+<p>Release Date 04.12.2013</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Compilation error preventing gif files to be shown in AR scene</li>
+<li>Animation loops of 3D models</li>
+<li>onError trigger not called for images in not supported format</li>
+<li>Issue where the SDK could crash while the app goes into background</li>
+<li>Issue that broke loading of local resources if the relative path or the bundle name contains a whitespace character</li>
+<li>Rare case where objects appear frozen on the screen</li>
+<li>Issue that the SDK consumes more memory the more often it is started or stopped</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Warning and error log output for Xcode console</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-2-0">Wikitude SDK JavaScript API 3.2.0</h2>
+<p>Release Date 10.10.2013</p>
+<h4 id="new">New</h4>
+<ul>
+<li>VideoDrawables to display videos on top of image targets or as part of <code>GeoObjects</code></li>
+<li>Taking screenshot of AR scene</li>
+<li>Examples for VideoDrawables</li>
+<li>Accuracy hint for location retrieval can be configured</li>
+<li>Example App and SDK is fully iOS 7 compliant</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>ADE.js interfered with architect.js under certain circumstances when loaded from bundle/assets</li>
+<li>AR.context.openInBrowser in some circumstances failed to open the webpage</li>
+<li>Rendering order between HTMLDrawables was not correct</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Resource loading and caching of images, 3D models and tracker files</li>
+<li>Loading time of image recognition tracker</li>
+<li>Reworked radar positioning. Radar position is now defined by an DOM element on the HUD (see examples and updated JS API specification)</li>
+<li>Browse POI samples</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-1-0">Wikitude SDK JavaScript API 3.1.0</h2>
+<p>Release Date 27.08.2013</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Fixed problem with 16 bit PNG images not being drawn.</li>
+<li>AnimatedImageDrawable&#39;s frame rate was ignored after resume.</li>
+<li>Executing onDocumentLocationChanged trigger for HTML Drawable in ADE was broken</li>
+<li>Potential linker error while linking Xamarin.iOS projects</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>HTML Drawables work correctly with dynamic content</li>
+<li>Image detection two times faster</li>
+<li>Better support for target images with low contrast</li>
+<li>More reliable tracking, especially for difficult target images</li>
+<li>Optimized texture memory usage for non square images</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-3-0-0">Wikitude SDK JavaScript API 3.0.0</h2>
+<p>Release Date 18.06.2013</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Integrated image recognition and tracking engine</li>
+<li>Support armv7s architecture</li>
+<li>Examples application</li>
+<li>Support for 3D model animations</li>
+<li>Support for transparent materials, textures and colors on 3D models</li>
+<li>API method for setting distance based scaling parameters. See reference on AR.context.scene.</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Under certain circumstances the light of a 3D model was ignored</li>
+<li>isLoaded() methods of ImageResource, ClientTracker,... on iOS returned integer instead of boolean.</li>
+<li>NSURL accepted for loading an architect world. Adds support for white spaces in bundle name.</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Image recognition supports up to 1000 targets</li>
+<li>Rewritten, extended and improved SDK documentation</li>
+<li>Minor fixes</li>
+</ul>
+<h4 id="removed">Removed</h4>
+<ul>
+<li>Support for Vuforia SDK</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-2-0-1">Wikitude SDK JavaScript API 2.0.1</h2>
+<p>Release Date 15.05.2013</p>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Reference to UDID in Vuforia SDK</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-2-0-0">Wikitude SDK JavaScript API 2.0.0</h2>
+<p>Release Date 26.02.2013</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Support for 3D models via new ARchitect class Model </li>
+<li>iPod touch support for pure image recognition use-case. Use isDeviceSupportedForARMode:WTARMode_IR;</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Stability improvements when using image recognition</li>
+<li>Minor fixes and performance improvements</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-1-2-0">Wikitude SDK JavaScript API 1.2.0</h2>
+<p>Release Date 18.12.2012</p>
+<h4 id="new">New</h4>
+<ul>
+<li>Improved bridge performance (SteelBridge and Weasel)</li>
+<li>onFinish trigger for AnimatedImageDrawables</li>
+<li>ImageResource onLoad() reports width and height of loaded image</li>
+<li>PropertyAnimation can be paused and resumed</li>
+<li>Customize clicking behavior (click, touch down, touch up)</li>
+<li>Set culling distance from JavaScript</li>
+<li>Support for Vuforia SDK v2.0</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Architect Desktop Engine (ADE) now overlays world</li>
+</ul>
+<h4 id="removed">Removed</h4>
+<ul>
+<li>SBJSON library, resolves duplicated symbols error if SBJSON library was used by application as well</li>
+</ul>
+<h4 id="note">Note</h4>
+<ul>
+<li>New linker flag: -ObjC</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-1-1-1">Wikitude SDK JavaScript API 1.1.1</h2>
+<p>Release Date 26.09.2012</p>
+<h4 id="new">New</h4>
+<ul>
+<li>iOS 6 support</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Possible crash when using openInBrowser or startVideoPlayer while IR is active</li>
+<li>Possible crash when calling start / stop while IR is active</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>Handling of unavailable gyroscope on iOS</li>
+<li>Minor performance increase for rendering HTML drawables.</li>
+<li>Handling of images with semi transparency</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-1-1-0">Wikitude SDK JavaScript API 1.1.0</h2>
+<p>Release Date 16.08.2012</p>
+<h4 id="new">New</h4>
+<ul>
+<li>HTML Drawables </li>
+<li>Relative locations </li>
+<li>Customizable AR radar</li>
+<li>Sprite Animations</li>
+<li>3D Transformation</li>
+<li>Animation Groups</li>
+<li>Extension for Qualcomm Vuforia SDK for Image Recognition</li>
+<li>Possibility to turn off camera and sensors</li>
+<li>Possibility to add a single drawable to multiple GeoObjects</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Autorotation support </li>
+<li>ADE shown in certain conditions on device  </li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>New tutorials and snippets</li>
+<li>Library Reference examples and texts</li>
+<li>New simple IR example</li>
+<li>Streamlined trigger properties</li>
+<li>Rendering performance in general</li>
+<li>Performance of AR.logger output on device</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-1-0-5">Wikitude SDK JavaScript API 1.0.5</h2>
+<h4 id="new">New</h4>
+<ul>
+<li>setCullingDistance to ArchitectView (SDK)</li>
+<li>possibility for better error handling when loading an ARchitect World (SDK)</li>
+</ul>
+<h4 id="improved">Improved</h4>
+<ul>
+<li>SimpleARBrowser example</li>
+</ul>
+<h4 id="fixed">Fixed</h4>
+<ul>
+<li>Location service not turned off in certain conditions</li>
+<li>Camera is displayed bigger than it should be in certain conditions </li>
+<li>WTArchtiectView does not properly work when created for the 2nd time</li>
+</ul>
+<h4 id="note">Note</h4>
+<ul>
+<li>If you are targeting iOS version 4.x you have to additionally include the following Other Linker Flags: -fobjc-arc  </li>
+<li>Including a viewport meta-tag in your ARchitect World is recommended if you target different screen resolutions (see ARchitectTools/Hello World/Hello World.html for more details)</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-1-0-4">Wikitude SDK JavaScript API 1.0.4</h2>
+<ul>
+<li>Licensable SDK</li>
+</ul>
+<h2 id="wikitude-sdk-javascript-api-1-0-3">Wikitude SDK JavaScript API 1.0.3</h2>
+<ul>
+<li>Initial Public SDK Release</li>
+</ul>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

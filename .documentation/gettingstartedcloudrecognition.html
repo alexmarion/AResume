@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h1 id="wikitude-cloud-recognition">Wikitude Cloud Recognition</h1>
+<p class='intro' markdown='1'>The Wikitude Cloud Recognition service is a cloud-based service provided by Wikitude, which recognizes images sent from Android and iOS apps using the Wikitude SDK. The recognized images are then tracked in the live camera feed and can be used for augmented reality experiences.</p>
+
+<p>This documentation focuses on the RESTful API called Manager API, which is used to interact on a backend level with the Cloud Recognition service.</p>
+<h2 id="general-definitions">General Definitions</h2>
+<ul>
+<li><p><strong>Target</strong>: An image and its associated extracted data that is used to recognize an image.</p>
+</li>
+<li><p><strong>Target Collection</strong>: A group of <code>targets</code> that are searched together. Think of it as a directory, which contains all your images you want to search. The Wikitude SDK can work with two different sorts of <code>TargetCollections</code></p>
+<ul>
+<li>On-device Target Collection: a static <code>wtc</code> file containing the extracted data of your images. Can consist of up to 1,000 images.</li>
+<li>Cloud Target Collection: A target collection stored on the Wikitude server. See <code>Cloud Archive</code> below. </li>
+<li></li>
+</ul>
+</li>
+<li><strong>Cloud Archive</strong>: An archive stored on the server that is optimized for cloud-based recognition. It is generated from a <code>TargetCollection</code> and is used in combination with the Wikitude SDK <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a>.</li>
+</ul>
+<p><strong>Manager API</strong>: A RESTful web API allowing developers to interact with the Cloud Recognition server for managing <code>Targets</code>, <code>TargetCollections</code> and <code>Cloud Archives</code>. Only you as a developer uses this API. None of your users of your app will interact with this API.</p>
+<p><strong>Client API</strong>: The Client API is the interface between the Wikitude SDK and the Cloud Recognition Service. The API itself is encapsulated in the Wikitude SDK class <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> and not directly accessible. Calls on the client API are called <code>Scans</code>. </p>
+<p><strong>Region</strong>: Wikitude is providing several hosting locations for its Cloud Recognition services to cut down unwanted network latency. As a developer you need to choose on which <code>Region</code> you and your customers want to operate. </p>
+<h2 id="getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</h2>
+<h3 id="regional-availability-of-wikitude-cloud-recognition-service">Regional availability of Wikitude Cloud Recognition Service</h3>
+<p>As as a developer using Wikitude Cloud Recognition Service you need to choose which server location you want to use for your projects. Wikitude operates several servers running Wikitude Cloud Recognition Service in different locations world-wide.</p>
+<p>As the region servers are separated content which is stored on one region servers is only available on this particular server. <strong>Content is not synced across regions</strong>. You can choose from the following <code>Regions</code></p>
+<ul>
+<li><code>Americas</code></li>
+<li><code>China</code></li>
+<li><code>Europe</code></li>
+</ul>
+<p>The servers for each region have separate dedicated domain names and therefore different configurations. </p>
+<p><a id="targetmanagerregional"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Region</th>
+<th style="text-align:center">Target Manager</th>
+<th>Manager API</th>
+<th>SDK Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Americas</td>
+<td style="text-align:center"><a href="https://targetmanager-us.wikitude.com">targetmanager&#8209;us.wikitude.com</a></td>
+<td><a href="https://api-us.wikitude.com">https://api-us.wikitude.com</a></td>
+<td><code>Americas</code></td>
+</tr>
+<tr>
+<td style="text-align:left">China</td>
+<td style="text-align:center"><a href="https://targetmanager-cn.wikitude.com">targetmanager&#8209;cn.wikitude.com</a></td>
+<td><a href="https://api-cn.wikitude.com">https://api-cn.wikitude.com</a></td>
+<td><code>China</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Europe</td>
+<td style="text-align:center"><a href="https://targetmanager.wikitude.com">targetmanager.wikitude.com</a></td>
+<td><a href="https://api.wikitude.com">https://api.wikitude.com</a> or <a href="https://api-eu.wikitude.com">https://api-eu.wikitude.com</a></td>
+<td><code>Europe</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="preparation">Preparation</h3>
+<ol>
+<li><a href="http://www.wikitude.com/c/portal/login?p_l_id=533165">Create a free</a> Wikitude developer account or <a href="http://www.wikitude.com/c/portal/login?p_l_id=533165">log-in</a> if you are a returning developer</li>
+<li>Get the <a href="http://www.wikitude.com/developer/licenses">API tokens</a> for the Manager API and the Client API to start your project. <a href="#authentication">Read more on authentication</a></li>
+<li>Test the API for free using Wikitude&#39;s <a href="https://github.com/Wikitude/wikitude-cloud-recognition-api-samples">sample integrations</a></li>
+<li>Once you finished your integration, <a href="https://www.wikitude.com/products/wikitude-cloud-recognition/">purchase</a> a commercial token.</li>
+</ol>
+<h3 id="first-steps-and-general-usage">First Steps and General Usage</h3>
+<ol>
+<li>Get familiar with the Manager API calls in the <a href="../Reference/Cloud%20Recognition%20REST%20API/index.html">API Reference</a>. </li>
+<li>Create a first Target Collection using the <a href="../Reference/Cloud%20Recognition%20REST%20API/index.html#api-TargetCollection-CreateTargetCollection"><code>Create Target Collection</code></a> endpoint and note down the ID of the Target Collection    </li>
+<li>Create targets using the <a href="../Reference/Cloud%20Recognition%20REST%20API/index.html#api-Target-CreateTarget"><code>Create Target</code></a> endpoint for that particular Target Collection</li>
+<li>Important: <a href="index.html#api-TargetCollection-GenerateCloudArchive"><code>Generate a Cloud Archive</code></a> for your Target Collection</li>
+<li>Go to the Wikitude SDK and create an Android or iOS project</li>
+<li>Use the Client API token to authenticate your Android or iOS project</li>
+<li>Use your Target Collection ID to recognize images</li>
+</ol>
+<p>For more information on the available endpoints and how to work with the Manager API see the <a href="cloudrecognitionworkflow.html">workflow section</a>.</p>
+<p>Instead of creating a <code>TargetCollection</code>, adding one or more <code>Targets</code>, and generating a <code>Cloud Archive</code> by calling the REST API, the <a href="#targetmanagerregional">Wikitude Targetmanager</a> can be used to perform these steps (1-4) in the browser alternatively.</p>
+<p>In case you would like to immediately test the API calls we recommend the tool <a href="https://www.getpostman.com/">Postman</a>. It helps you to quickly construct the requests and analyze the responses.</p>
+<h2 id="authentication">Authentication</h2>
+<p>The Cloud Recognition Service knows two authentication tokens, that you need in order to work with the service</p>
+<ul>
+<li><p><strong>Manager API token</strong> You need this token to authenticate yourself against the RESTful Manager API. The Manager API is used to create, add and delete targets and target collections. The token identifies your developer account. Calls to the Manager API do not count towards your quota limits.</p>
+</li>
+<li><p><strong>Client API token</strong> You need this token to authenticate calls from the Wikitude SDK to the Cloud Recognition services. It again authenticates calls as legitimate. The token is bound to your developer account. Calls from the Wikitude SDK to the service with a wrong or missing token can not access your target collections. </p>
+</li>
+</ul>
+<h3 id="authentication-on-the-manager-api">Authentication on the Manager API</h3>
+<p>The <strong>Manager API token</strong> must be added to each call towards the Wikitude Cloud Recognition Manager API. The token authenticates the user account that is using the API. </p>
+<h3 id="authentication-on-the-client-api">Authentication on the Client API</h3>
+<p>The <strong>Client API token</strong> must be added to your app project using the Wikitude SDK. This token is needed additionally beside the SDK license key when working with the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> class.</p>
+<h2 id="quota-and-limits">Quota and Limits</h2>
+<h3 id="general-upload-limit">General Upload Limit</h3>
+<p>The Wikitude Cloud Recognition <strong>will not accept images bigger than 1024kB</strong> (1 MB). Trying to upload images exceeding this file size will result in a HTTP status code <code>400</code> together with an error message <code>FILE_SIZE_LIMIT_EXCEED</code>.</p>
+<h3 id="limits-for-the-wikitude-cloud-recognition-service">Limits for the Wikitude Cloud Recognition Service</h3>
+<p>There are two main limitations for the Wikitude Cloud Recognition service that you need to be aware of:</p>
+<ul>
+<li><p><strong>Targets</strong> Your token has a certain number of targets that you can upload and store on the cloud service under your developer account. The limit is always counted for your entire developer account and not for a single target collection. The service is not counting single uploads, but how many targets are currently stored in target collections under your account. </p>
+</li>
+<li><p><strong>Scans</strong> Scans are in effect calls from the Wikitude SDK via the Client API to the Cloud Recognition servers. All commercial license come with an allowance of 1,000,000 scans per month per developer account. <strong>Note:</strong> When using Continuous Search mode multiple calls are made to the server.</p>
+</li>
+</ul>
+<h3 id="maximum-number-of-targets-in-a-target-collection">Maximum Number of Targets in a Target Collection</h3>
+<p>A target collection can&#39;t exceed 50,000 targets.</p>
+<h3 id="free-trial-license-for-cloud-recognition">Free Trial License for Cloud Recognition</h3>
+<p>Wikitude provides a trial token for each developer account to try out the Cloud Recognition for free. This trial token has set a quota limit that allows developers to try and test the functionality of the service. Limitations for trial accounts</p>
+<ul>
+<li>Targets: 50,000</li>
+<li>Scans: 1,000 per month</li>
+</ul>
+<p>To get your trial token for the REST, please visit the <a href="http://www.wikitude.com/developer/licenses">License page</a>. The trial token is directly integrated into the Target Manager Frontend.</p>
+<h3 id="commercial-licenses">Commercial Licenses</h3>
+<p>For production systems, we offer commercial licenses with various quota limits for <a href="http://www.wikitude.com/products/wikitude-cloud-recognition/">purchase</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Product</th>
+<th style="text-align:center">Targets</th>
+<th>Scans</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Cloud Recognition 1000</td>
+<td style="text-align:center">1,000</td>
+<td>1,000,000</td>
+</tr>
+<tr>
+<td style="text-align:left">Cloud Recognition 10000</td>
+<td style="text-align:center">10,000</td>
+<td>1,000,000</td>
+</tr>
+<tr>
+<td style="text-align:left">Cloud Recognition 25000</td>
+<td style="text-align:center">25,000</td>
+<td>1,000,000</td>
+</tr>
+<tr>
+<td style="text-align:left">Cloud Recognition 50000</td>
+<td style="text-align:center">50,000</td>
+<td>1,000,000</td>
+</tr>
+<tr>
+<td style="text-align:left">Cloud Recognition 100000 (*)</td>
+<td style="text-align:center">100,000</td>
+<td>1,000,000</td>
+</tr>
+</tbody>
+</table>
+<p>(*) Maximum number of targets per target collection can&#39;t exceed 50,000</p>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

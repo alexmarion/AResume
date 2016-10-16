@@ -1,0 +1,5 @@
+
+function isVersionDeprecated() {
+	return false;
+}
+

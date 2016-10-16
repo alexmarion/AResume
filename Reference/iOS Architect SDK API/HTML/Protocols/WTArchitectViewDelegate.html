@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>WTArchitectViewDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">WikitudeSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Wikitude GmbH</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/architectView:didCaptureScreenWithContext:">- architectView:didCaptureScreenWithContext:</option>
+		
+		<option value="//api/name/architectView:didFailCaptureScreenWithError:">- architectView:didFailCaptureScreenWithError:</option>
+		
+		<option value="//api/name/architectView:didFailToLoadArchitectWorldNavigation:withError:">- architectView:didFailToLoadArchitectWorldNavigation:withError:</option>
+		
+		<option value="//api/name/architectView:didFinishLoadArchitectWorldNavigation:">- architectView:didFinishLoadArchitectWorldNavigation:</option>
+		
+		<option value="//api/name/architectView:invokedURL:">- architectView:invokedURL:</option>
+		
+		<option value="//api/name/architectView:willPresentViewController:onViewController:">- architectView:willPresentViewController:onViewController:</option>
+		
+		<option value="//api/name/architectViewFinishedDeviceSensorsCalibration:">- architectViewFinishedDeviceSensorsCalibration:</option>
+		
+		<option value="//api/name/architectViewNeedsDeviceSensorCalibration:">- architectViewNeedsDeviceSensorCalibration:</option>
+		
+		<option value="//api/name/presentingViewControllerForViewControllerPresentationInArchitectView:">- presentingViewControllerForViewControllerPresentationInArchitectView:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">WTArchitectViewDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>WTArchitectView.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The WTArchitectViewDelegate offers the possibility to either react on events that are triggered inside the ARchitect World or events that are triggerd because of some interaction with the <a href="../Classes/WTArchitectView.html">WTArchitectView</a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="ARchitect World" name="task_ARchitect World"></a>
+						<h2 class="task-title">ARchitect World</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/architectView:didFinishLoadArchitectWorldNavigation:" title="architectView:didFinishLoadArchitectWorldNavigation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectView:didFinishLoadArchitectWorldNavigation:">&ndash;&nbsp;architectView:didFinishLoadArchitectWorldNavigation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called when the provided architect world url finished loading. The resulting navigation object contains the original load url as well as the final resolved url.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectView:(WTArchitectView *)<em>architectView</em> didFinishLoadArchitectWorldNavigation:(WTNavigation *)<em>navigation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The architect view that finished loading.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>navigation</code></th>
+						<td><p>The navigation that finished loading.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/architectView:didFailToLoadArchitectWorldNavigation:withError:" title="architectView:didFailToLoadArchitectWorldNavigation:withError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectView:didFailToLoadArchitectWorldNavigation:withError:">&ndash;&nbsp;architectView:didFailToLoadArchitectWorldNavigation:withError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called when the provided architect world url failed to load.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectView:(WTArchitectView *)<em>architectView</em> didFailToLoadArchitectWorldNavigation:(WTNavigation *)<em>navigation</em> withError:(NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The ArchitectView which failed to load the url.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>navigation</code></th>
+						<td><p>The navigation which failed to load.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>An error object containing more informations why the load did fail.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/architectView:invokedURL:" title="architectView:invokedURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectView:invokedURL:">&ndash;&nbsp;architectView:invokedURL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method offers the possibility to react on events that are triggered inside the ARchitect World. To initiate such an event, the ARchitect World simply has to make an request for an url with the &ldquo;architectsdk://&rdquo; scheme. E.g.: architectsdk://opendetails?id=123.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectView:(WTArchitectView *)<em>architectView</em> invokedURL:(NSURL *)<em>URL</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The <a href="../Classes/WTArchitectView.html">WTArchitectView</a> object which invoked the url.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>URL</code></th>
+						<td><p>The url which was called in javascript.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Screen capturing" name="task_Screen capturing"></a>
+						<h2 class="task-title">Screen capturing</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/architectView:didCaptureScreenWithContext:" title="architectView:didCaptureScreenWithContext:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectView:didCaptureScreenWithContext:">&ndash;&nbsp;architectView:didCaptureScreenWithContext:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called when the <a href="../Classes/WTArchitectView.html">WTArchitectView</a> did finish capturing a screenshot</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectView:(WTArchitectView *)<em>architectView</em> didCaptureScreenWithContext:(NSDictionary *)<em>context</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The ArchitectView which generated the screenshot.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>context</code></th>
+						<td><p>A NSDictionary, containig at least CaptureMode (Key = <a href="../Constants/WTScreenshotCaptureMode.html">WTScreenshotCaptureMode</a>) and SavingMode (Key = <a href="../Constants/WTScreenshotSaveMode.html">WTScreenshotSaveMode</a>). Optional objects are given for the different SaveModes.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The context contains different objects depending on the SaveMode. SaveMode PhotoLibrary contains the two standard objects (CaptureMode &amp; SaveMode). SaveMode PhotoLibrary contains additional a UIImage object (the Screenshot, Key = WTScreenshotKey). SaveMode BundleDirectory contains a NSString object representing the file path in the bundle (Key = WTScreenshotPath).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/architectView:didFailCaptureScreenWithError:" title="architectView:didFailCaptureScreenWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectView:didFailCaptureScreenWithError:">&ndash;&nbsp;architectView:didFailCaptureScreenWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called when the <a href="../Classes/WTArchitectView.html">WTArchitectView</a> couldn&rsquo;t finish capturing a screenshot</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectView:(WTArchitectView *)<em>architectView</em> didFailCaptureScreenWithError:(NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The ArchitectView which couldn&rsquo;t finish the capturing.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A NSError, providing more information on what was failing.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="View controller presentation" name="task_View controller presentation"></a>
+						<h2 class="task-title">View controller presentation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/presentingViewControllerForViewControllerPresentationInArchitectView:" title="presentingViewControllerForViewControllerPresentationInArchitectView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/presentingViewControllerForViewControllerPresentationInArchitectView:">&ndash;&nbsp;presentingViewControllerForViewControllerPresentationInArchitectView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called every time the architect view want’s to present a view controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIViewController *)presentingViewControllerForViewControllerPresentationInArchitectView:(WTArchitectView *)<em>architectView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The architect view which want&rsquo;s to present a view controller.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A view controller which can be used for presentation.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>if nil is returned or the method is not implemented, the architect view tries to grab an appropriate view controller from the current view controller hierarchy.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/architectView:willPresentViewController:onViewController:" title="architectView:willPresentViewController:onViewController:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectView:willPresentViewController:onViewController:">&ndash;&nbsp;architectView:willPresentViewController:onViewController:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called every time the architect view presents a view controller on top of itself. If the architect view is presented using a navigation controller, additional view controller will be pushed onto the navigation controller stack. On all other controller (e.g. tab bar controller) a modal presentation will be used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectView:(WTArchitectView *)<em>architectView</em> willPresentViewController:(UIViewController *)<em>presentedViewController</em> onViewController:(UIViewController *)<em>presentingViewController</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>architectView</code></th>
+						<td><p>The architect view which is about to present a view controller.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>presentedViewController</code></th>
+						<td><p>The view controller which will be presented.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>presentingViewController</code></th>
+						<td><p>The view controller which will present the new view controller. This can be an internally created view controller or the view controller which was returned from the <a href="#//api/name/presentingViewControllerForViewControllerPresentationInArchitectView:">presentingViewControllerForViewControllerPresentationInArchitectView:</a> delegate method.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this method to e.g. stype the UI elements on the presented view controller or change the modal presentation style.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/architectViewNeedsDeviceSensorCalibration:" title="architectViewNeedsDeviceSensorCalibration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectViewNeedsDeviceSensorCalibration:">&ndash;&nbsp;architectViewNeedsDeviceSensorCalibration:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called when the iOS SDK needs to calibrate device sensors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectViewNeedsDeviceSensorCalibration:(WTArchitectView *)<em>architectView</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this method to either show a custom UI that indicates that the user should calibrate it&rsquo;s device or, if <a href="../Classes/WTStartupConfiguration.html">WTStartupConfiguration</a> shouldUseSystemDeviceSensorCalibrationDisplay is set to YES, to prepare your application properly for the system calibration screen.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/architectViewFinishedDeviceSensorsCalibration:" title="architectViewFinishedDeviceSensorsCalibration:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/architectViewFinishedDeviceSensorsCalibration:">&ndash;&nbsp;architectViewFinishedDeviceSensorsCalibration:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is called once the sensor calibration is accurate enough to deliver proper device sensor values.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)architectViewFinishedDeviceSensorsCalibration:(WTArchitectView *)<em>architectView</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">WTArchitectView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 Wikitude GmbH. All rights reserved. Updated: 2016-09-13</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

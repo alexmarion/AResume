@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Location - Wikitude SDK API Reference</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">  -->
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!--<script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="Wikitude SDK API Reference">Wikitude SDK API Reference</h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 5.3.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/ActionArea.html">ActionArea</a></li>
+            
+                <li><a href="../classes/ActionRange.html">ActionRange</a></li>
+            
+                <li><a href="../classes/AnimatedImageDrawable.html">AnimatedImageDrawable</a></li>
+            
+                <li><a href="../classes/Animation.html">Animation</a></li>
+            
+                <li><a href="../classes/AnimationGroup.html">AnimationGroup</a></li>
+            
+                <li><a href="../classes/ARchitectObject.html">ARchitectObject</a></li>
+            
+                <li><a href="../classes/ARObject.html">ARObject</a></li>
+            
+                <li><a href="../classes/BaseTracker.html">BaseTracker</a></li>
+            
+                <li><a href="../classes/BoundingRectangle.html">BoundingRectangle</a></li>
+            
+                <li><a href="../classes/Circle.html">Circle</a></li>
+            
+                <li><a href="../classes/ClientTracker.html">ClientTracker</a></li>
+            
+                <li><a href="../classes/CloudTracker.html">CloudTracker</a></li>
+            
+                <li><a href="../classes/CONST.html">CONST</a></li>
+            
+                <li><a href="../classes/context.html">context</a></li>
+            
+                <li><a href="../classes/Drawable.html">Drawable</a></li>
+            
+                <li><a href="../classes/Drawable2D.html">Drawable2D</a></li>
+            
+                <li><a href="../classes/GeoLocation.html">GeoLocation</a></li>
+            
+                <li><a href="../classes/GeoObject.html">GeoObject</a></li>
+            
+                <li><a href="../classes/hardware.html">hardware</a></li>
+            
+                <li><a href="../classes/HtmlDrawable.html">HtmlDrawable</a></li>
+            
+                <li><a href="../classes/ImageDrawable.html">ImageDrawable</a></li>
+            
+                <li><a href="../classes/ImageResource.html">ImageResource</a></li>
+            
+                <li><a href="../classes/Label.html">Label</a></li>
+            
+                <li><a href="../classes/Location.html">Location</a></li>
+            
+                <li><a href="../classes/logger.html">logger</a></li>
+            
+                <li><a href="../classes/Model.html">Model</a></li>
+            
+                <li><a href="../classes/ModelAnimation.html">ModelAnimation</a></li>
+            
+                <li><a href="../classes/Positionable.html">Positionable</a></li>
+            
+                <li><a href="../classes/PropertyAnimation.html">PropertyAnimation</a></li>
+            
+                <li><a href="../classes/radar.html">radar</a></li>
+            
+                <li><a href="../classes/RelativeLocation.html">RelativeLocation</a></li>
+            
+                <li><a href="../classes/Sound.html">Sound</a></li>
+            
+                <li><a href="../classes/Style.html">Style</a></li>
+            
+                <li><a href="../classes/Trackable2DObject.html">Trackable2DObject</a></li>
+            
+                <li><a href="../classes/Tracker.html">Tracker</a></li>
+            
+                <li><a href="../classes/VideoDrawable.html">VideoDrawable</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/AR.html">AR</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>Location Class</h1>
+<div class="box meta">
+    
+
+    
+        <div class="extends">
+            Extends <a href="../classes/ARchitectObject.html" class="crosslink">ARchitectObject</a>
+        </div>
+    
+
+    
+
+    
+        
+            Module: <a href="../modules/AR.html">AR</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>Location is an abstract class which describes a general
+        location of a POI in the augmented scene.<br/><br/>
+        It should never be instantiated directly.</p>
+
+</div>
+
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_distanceTo">distanceTo</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_distanceToUser">distanceToUser</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_destroyed">destroyed</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_destroy" class="method item inherited">
+    <h3 class="name"><code>destroy</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/ARchitectObject.html#method_destroy">ARchitectObject</a>
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Destroys the object.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_distanceTo" class="method item">
+    <h3 class="name"><code>distanceTo</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>location</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns the shortest distance (&quot;as the crow flies&quot;)
+             to the Location passed as an argument, ignoring any altitude property.<br/><br/></p>
+<div class="paragraph">Example:</div>
+
+<pre class="prettyprint">
+var location1 = new AR.GeoLocation(47.77317, 13.069929);
+var location2 = new AR.GeoLocation(47.77317, 13.069929, 320.);
+var location3 = new AR.GeoLocation(47.77317, 14.069929, 640.);
+var dist = location2.distanceTo(location1); //dist = 0.
+dist = location2.distanceTo(location3); //dist = 74730.
+</pre>
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">location</code>
+                        <span class="type"><a href="../classes/Location.html" class="crosslink">Location</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The Location the distance should be
+           calculated for.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+                    
+                    <p>The numeric distance in meters.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_distanceToUser" class="method item">
+    <h3 class="name"><code>distanceToUser</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Returns the shortest distance (&quot;as the crow flies&quot;)
+             to the current location of the user, ignoring any altitude property.<br/><br/>
+             If the current position of the user cannot be determined, undefined will be returned.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+                    
+                    <p>The numeric distance in meters.</p>
+
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_destroyed" class="property item inherited">
+    <h3 class="name"><code>destroyed</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/ARchitectObject.html#property_destroyed">ARchitectObject</a>
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Indicates if the object has already been destroyed.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

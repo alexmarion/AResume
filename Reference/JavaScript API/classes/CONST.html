@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CONST - Wikitude SDK API Reference</title>
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">  -->
+    <link rel="stylesheet" href="../assets/css/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <!--<script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script> -->
+    <script src="../assets/js/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="Wikitude SDK API Reference">Wikitude SDK API Reference</h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 5.3.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/ActionArea.html">ActionArea</a></li>
+            
+                <li><a href="../classes/ActionRange.html">ActionRange</a></li>
+            
+                <li><a href="../classes/AnimatedImageDrawable.html">AnimatedImageDrawable</a></li>
+            
+                <li><a href="../classes/Animation.html">Animation</a></li>
+            
+                <li><a href="../classes/AnimationGroup.html">AnimationGroup</a></li>
+            
+                <li><a href="../classes/ARchitectObject.html">ARchitectObject</a></li>
+            
+                <li><a href="../classes/ARObject.html">ARObject</a></li>
+            
+                <li><a href="../classes/BaseTracker.html">BaseTracker</a></li>
+            
+                <li><a href="../classes/BoundingRectangle.html">BoundingRectangle</a></li>
+            
+                <li><a href="../classes/Circle.html">Circle</a></li>
+            
+                <li><a href="../classes/ClientTracker.html">ClientTracker</a></li>
+            
+                <li><a href="../classes/CloudTracker.html">CloudTracker</a></li>
+            
+                <li><a href="../classes/CONST.html">CONST</a></li>
+            
+                <li><a href="../classes/context.html">context</a></li>
+            
+                <li><a href="../classes/Drawable.html">Drawable</a></li>
+            
+                <li><a href="../classes/Drawable2D.html">Drawable2D</a></li>
+            
+                <li><a href="../classes/GeoLocation.html">GeoLocation</a></li>
+            
+                <li><a href="../classes/GeoObject.html">GeoObject</a></li>
+            
+                <li><a href="../classes/hardware.html">hardware</a></li>
+            
+                <li><a href="../classes/HtmlDrawable.html">HtmlDrawable</a></li>
+            
+                <li><a href="../classes/ImageDrawable.html">ImageDrawable</a></li>
+            
+                <li><a href="../classes/ImageResource.html">ImageResource</a></li>
+            
+                <li><a href="../classes/Label.html">Label</a></li>
+            
+                <li><a href="../classes/Location.html">Location</a></li>
+            
+                <li><a href="../classes/logger.html">logger</a></li>
+            
+                <li><a href="../classes/Model.html">Model</a></li>
+            
+                <li><a href="../classes/ModelAnimation.html">ModelAnimation</a></li>
+            
+                <li><a href="../classes/Positionable.html">Positionable</a></li>
+            
+                <li><a href="../classes/PropertyAnimation.html">PropertyAnimation</a></li>
+            
+                <li><a href="../classes/radar.html">radar</a></li>
+            
+                <li><a href="../classes/RelativeLocation.html">RelativeLocation</a></li>
+            
+                <li><a href="../classes/Sound.html">Sound</a></li>
+            
+                <li><a href="../classes/Style.html">Style</a></li>
+            
+                <li><a href="../classes/Trackable2DObject.html">Trackable2DObject</a></li>
+            
+                <li><a href="../classes/Tracker.html">Tracker</a></li>
+            
+                <li><a href="../classes/VideoDrawable.html">VideoDrawable</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/AR.html">AR</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>CONST Class</h1>
+<div class="box meta">
+    
+
+    
+
+    
+
+    
+        
+            Module: <a href="../modules/AR.html">AR</a>
+        
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    <p>A static class containing constant values. The Singleton
+             instance of CONST will automatically be created on startup.</p>
+
+</div>
+
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                        
+                            <li class="index-item property">
+                                <a href="#property_ANIMATION_GROUP_TYPE">ANIMATION_GROUP_TYPE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_CAMERA_FOCUS_MODE">CAMERA_FOCUS_MODE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_CAMERA_POSITION">CAMERA_POSITION</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_CLICK_BEHAVIOR">CLICK_BEHAVIOR</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_CLOUD_RECOGNITION_SERVER_REGION">CLOUD_RECOGNITION_SERVER_REGION</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_EASING_CURVE_TYPE">EASING_CURVE_TYPE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_FONT_STYLE">FONT_STYLE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_HORIZONTAL_ANCHOR">HORIZONTAL_ANCHOR</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_LOCATION_ACCURACY">LOCATION_ACCURACY</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_STATE">STATE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_UNKNOWN_ALTITUDE">UNKNOWN_ALTITUDE</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_VERTICAL_ANCHOR">VERTICAL_ANCHOR</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_ANIMATION_GROUP_TYPE" class="property item">
+    <h3 class="name"><code>ANIMATION_GROUP_TYPE</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The property holds various animation group types as string
+             properties.<br/><br/></p>
+<p>The following Animation Group types are defined:<br/></p>
+<p><table></p>
+<p><tr><td><b>Constant<b></td><td><b>String Representation</b></td></tr></p>
+<p><tr><td>PARALLEL</td><td>parallel</td></tr></p>
+<p><tr><td>SEQUENTIAL</td><td>sequential</td></tr>
+</table><br/></p>
+<p>One can access it by writing e.g. AR.CONST.ANIMATION_GROUP_TYPE.PARALLEL</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_CAMERA_FOCUS_MODE" class="property item">
+    <h3 class="name"><code>CAMERA_FOCUS_MODE</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Possible autofocus modes for the camera.</p>
+<p>The following autofocus modes are defined:</p>
+<ul>
+<li>ONCE - The camera performs one more autofocus operation and stays at that autofocus setting. Subsequent calls with this setting will refocus the camera every time.</li>
+<li>CONTINUOUS - The camera constantly adjust the autofocus</li>
+</ul>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_CAMERA_POSITION" class="property item">
+    <h3 class="name"><code>CAMERA_POSITION</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Possible positions of the camera on the device</p>
+<p>The following camera positions are defined:</p>
+<ul>
+<li>FRONT - Front facing camera</li>
+<li>BACK - Back facing camera</li>
+</ul>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_CLICK_BEHAVIOR" class="property item">
+    <h3 class="name"><code>CLICK_BEHAVIOR</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The different click behaviors available</p>
+<p>The following click behaviors are defined:</p>
+<ul>
+<li>CLICK</li>
+<li>TOUCH_UP</li>
+<li>TOUCH_DOWN</li>
+</ul>
+
+<p>See AR.context.clickBehavior for details.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_CLOUD_RECOGNITION_SERVER_REGION" class="property item">
+    <h3 class="name"><code>CLOUD_RECOGNITION_SERVER_REGION</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Possible server regions to choose</p>
+<p>The following server regions are defined:</p>
+<ul>
+<li>AMERICAS - Indicates that the SDK connects with the cloud recognition server in the Americas region.</li>
+<li>CHINA - Indicates that the SDK connects with the cloud recognition server in China.</li>
+<li>EUROPE - Indicates that the SDK connects with the cloud recognition server in Europe.</li>
+</ul>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_EASING_CURVE_TYPE" class="property item">
+    <h3 class="name"><code>EASING_CURVE_TYPE</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The property holds various easing curve types as string
+             properties.<br/><br/></p>
+<p>The following Easing Curve types are defined:<br/></p>
+<p><table></p>
+<p><tr><td><b>Constant<b></td><td><b>String Representation</b></td></tr></p>
+<p><tr><td>LINEAR</td><td>linear</td></tr></p>
+<p><tr><td>EASE_IN_QUAD</td><td>easeInQuad</td></tr></p>
+<p><tr><td>EASE_OUT_QUAD</td><td>easeOutQuad</td></tr></p>
+<p><tr><td>EASE_IN_OUT_QUAD</td><td>easeInOutQuad</td></tr></p>
+<p><tr><td>EASE_OUT_IN_QUAD</td><td>easeOutInQuad</td></tr></p>
+<p><tr><td>EASE_IN_CUBIC</td><td>easeInCubic</td></tr></p>
+<p><tr><td>EASE_OUT_CUBIC</td><td>easeOutCubic</td></tr></p>
+<p><tr><td>EASE_IN_OUT_CUBIC</td><td>easeInOutCubic</td></tr></p>
+<p><tr><td>EASE_OUT_IN_CUBIC</td><td>easeOutInCubic</td></tr></p>
+<p><tr><td>EASE_IN_QUAT</td><td>easeInQuat</td></tr></p>
+<p><tr><td>EASE_OUT_QUAT</td><td>easeOutQuat</td></tr></p>
+<p><tr><td>EASE_IN_OUT_QUAT</td><td>easeInOutQuat</td></tr></p>
+<p><tr><td>EASE_OUT_IN_QUAT</td><td>easeOutInQuat</td></tr></p>
+<p><tr><td>EASE_IN_QUINT</td><td>easeInQuint</td></tr></p>
+<p><tr><td>EASE_OUT_QUINT</td><td>easeOutQuint</td></tr></p>
+<p><tr><td>EASE_IN_OUT_QUINT</td><td>easeInOutQuint</td></tr></p>
+<p><tr><td>EASE_OUT_IN_QUINT</td><td>easeOutInQuint</td></tr></p>
+<p><tr><td>EASE_IN_ELASTIC</td><td>easeInElastic</td></tr></p>
+<p><tr><td>EASE_OUT_ELASTIC</td><td>easeOutElastic</td></tr></p>
+<p><tr><td>EASE_IN_OUT_ELASTIC</td><td>easeInOutElastic</td></tr></p>
+<p><tr><td>EASE_OUT_IN_ELASTIC</td><td>easeOutInElastic</td></tr></p>
+<p><tr><td>EASE_IN_BACK</td><td>easeInBack</td></tr></p>
+<p><tr><td>EASE_OUT_BACK</td><td>easeOutBack</td></tr></p>
+<p><tr><td>EASE_IN_OUT_BACK</td><td>easeInOutBack</td></tr></p>
+<p><tr><td>EASE_OUT_IN_BACK</td><td>easeOutInBack</td></tr></p>
+<p><tr><td>EASE_IN_SINE</td><td>easeInSine</td></tr></p>
+<p><tr><td>EASE_OUT_SINE</td><td>easeOutSine</td></tr></p>
+<p><tr><td>EASE_IN_OUT_SINE</td><td>easeInOutSine</td></tr></p>
+<p><tr><td>EASE_OUT_IN_SINE</td><td>easeOutInSine</td></tr></p>
+<p><tr><td>EASE_IN_EXPO</td><td>easeInExpo</td></tr></p>
+<p><tr><td>EASE_OUT_EXPO</td><td>easeOutExpo</td></tr></p>
+<p><tr><td>EASE_IN_OUT_EXPO</td><td>easeInOutExpo</td></tr></p>
+<p><tr><td>EASE_OUT_IN_EXPO</td><td>easeOutInExpo</td></tr></p>
+<p><tr><td>EASE_IN_CIRC</td><td>easeInCirc</td></tr></p>
+<p><tr><td>EASE_OUT_CIRC</td><td>easeOutCirc</td></tr></p>
+<p><tr><td>EASE_IN_OUT_CIRC</td><td>easeInOutCirc</td></tr></p>
+<p><tr><td>EASE_OUT_IN_CIRC</td><td>easeOutInCirc</td></tr></p>
+<p><tr><td>EASE_IN_BOUNCE</td><td>easeInBounce</td></tr></p>
+<p><tr><td>EASE_OUT_BOUNCE</td><td>easeOutBounce</td></tr></p>
+<p><tr><td>EASE_IN_OUT_BOUNCE</td><td>easeInOutBounce</td></tr></p>
+<p><tr><td>EASE_OUT_IN_BOUNCE</td><td>easeOutInBounce</td></tr></p>
+<p><tr><td>EASE_IN_CURVE</td><td>easeInCurve</td></tr></p>
+<p><tr><td>EASE_OUT_CURVE</td><td>easeOutCurve</td></tr>
+</table><br/></p>
+<p>A detailed description on the various easing curve types are described
+<a href="http://doc.qt.nokia.com/solutions/4/qtanimationframework/qteasingcurve.html">here</a>.</p>
+<p>One can access it by writing e.g. AR.CONST.EASING_CURVE_TYPE.LINEAR</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_FONT_STYLE" class="property item">
+    <h3 class="name"><code>FONT_STYLE</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The property holds various font styles as string properties.<br/><br/></p>
+<p>The following font styles are defined:</p>
+<ul>
+<li>NORMAL</li>
+<li>BOLD</li>
+<li>ITALIC</li>
+</ul>
+
+<p>One can access it by writing e.g. AR.CONST.FONT_STYLE.NORMAL</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_HORIZONTAL_ANCHOR" class="property item">
+    <h3 class="name"><code>HORIZONTAL_ANCHOR</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The property holds various horizontal anchors as int
+             properties.<br/><br/></p>
+<p>The following horizontal anchors are defined:</p>
+<ul>
+<li>LEFT</li>
+<li>CENTER</li>
+<li>RIGHT</li>
+</ul>
+
+<p>One can access it by writing e.g. AR.CONST.HORIZONTAL_ANCHOR.LEFT</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_LOCATION_ACCURACY" class="property item">
+    <h3 class="name"><code>LOCATION_ACCURACY</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The level of accuracy of a location reported back from the
+             system. The property holds various accuracy levels as int
+             properties.<br/><br/></p>
+<p>The following accuracy levels are defined:</p>
+<ul>
+<li>HIGH - the reported location is very accurate with a potential
+inaccuracy of up to 10 meters</li>
+<li>MEDIUM - the reported location is fairly accurate with a potential
+inaccuracy between 10 and 35 meters</li>
+<li>LOW - the reported location is inaccurate with a potential
+inaccuracy of more than 35 meters</li>
+</ul>
+
+<p>One can access it by writing e.g. AR.CONST.LOCATION_ACCURACY.LOW</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_STATE" class="property item">
+    <h3 class="name"><code>STATE</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The property holds various states as int properties.<br/><br/></p>
+<p>The following states are defined:</p>
+<ul>
+<li>INITIALIZED - The object is initialized, but no data is loaded.</li>
+<li>LOADING - The data is currently being loaded.</li>
+<li>LOADED - The data is loaded.</li>
+<li>PLAYING - The file is currently being played.</li>
+<li>ERROR - The file cannot be loaded or played. This can have various
+reasons, including the data not being fetchable, the file being corrupt
+etc.</li>
+</ul>
+
+<p>One can access it by writing e.g. AR.CONST.STATE.INITIALIZED</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_UNKNOWN_ALTITUDE" class="property item">
+    <h3 class="name"><code>UNKNOWN_ALTITUDE</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The value indicating that the altitude is unknown or cannot
+             be fetched.<br/><br/></p>
+<p>It is set to -32768 meters. This altitude-level is impossible on the
+earth&#39;s surface.<br/><br/></p>
+<p>In case a GeoLocation has set its altitude to UNKNOWN_ALTITUDE, the true
+altitude will be assumed to be on the same altitude level as the user.</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_VERTICAL_ANCHOR" class="property item">
+    <h3 class="name"><code>VERTICAL_ANCHOR</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+            
+        
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The property holds various vertical anchors as int
+             properties.<br/><br/></p>
+<p>The following vertical anchors are defined:</p>
+<ul>
+<li>TOP</li>
+<li>MIDDLE</li>
+<li>BOTTOM</li>
+</ul>
+
+<p>One can access it by writing e.g. AR.CONST.VERTICAL_ANCHOR.TOP</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="video-drawables">Video Drawables</h2>
+<p>Besides images, text and HTML content you are able to display videos in augmented reality using the Wikitude SDK. With the help of <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html"><code>AR.VideoDrawables</code></a> you can add a video on top of any target image (<a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a>) or have it displayed at any geo location (<a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a>). Like any other drawable you can position, scale, rotate and change the opacity of the video drawable.</p>
+<p>To view the sample you can use the image in <a href="targetimages.html">on this page</a></p>
+<h3 id="supported-devices">Supported Devices</h3>
+<p>In general, video drawables are fully supported on devices running iOS 6+ and Android 4.0+. Other devices will still play back the video but only in fullscreen mode as a fall-back solution. </p>
+<ul>
+<li>iOS 6.0 or newer: full support</li>
+<li>Android 4.0 or newer: full support</li>
+<li>Android 3.x or older: only fullscreen videos</li>
+</ul>
+<p>The Wikitude SDK is detecting the appropriate mode accordingly.</p>
+<h3 id="multiple-video-drawables">Multiple Video Drawables</h3>
+<p>Android has a limit of how many video drawables can be instantiated at the same time. Every time a Video Drawable object is created, Android will create a MediaPlayer for it and allocates memory. Therefor it is not possible to create more than 4 VideoDrawables at the same time.</p>
+<h3 id="supported-video-codecs-and-hosting-services">Supported Video Codecs and Hosting Services</h3>
+<p>To support all platforms make sure to use a H.264 encoded video with a maximum resolution of 720p (1280x720 pixel).</p>
+<p>H.264 defines different profiles. Make sure that you are using either one of the following</p>
+<ul>
+<li>Baseline</li>
+<li>Extended</li>
+<li>Main</li>
+</ul>
+<p>If the profile differs Android devices will most certainly misbehave (fail to play or crash entirely) when playing back those videos. </p>
+<p>Keep in mind that URLs from video hosting services need to point directly to the H.264 encoded video file. Standard YouTube and Vimeo URLs (like <a href="http://www.youtube.com/watch?v=bX98XNv8VL4">http://www.youtube.com/watch?v=bX98XNv8VL4</a>) will <strong>not</strong> work for this purpose. </p>
+<p>If you like to add a YouTube video, which is then played full-screen in the native player, rather use an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> showing a poster or play-button and add the URL to the YouTube video to the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html#event_onClick"><code>onClick</code></a> trigger. Similar to what we do in the <a href="clientrecognition.html#interactivity">client recognition sample</a>.</p>
+<h3 id="video-sample">Video Sample</h3>
+<p>The following examples will demonstrate how to choose a proper video and how to augment a target image. Furthermore it shows how to react on playback states and concludes with how to use transparent videos.</p>
+<p>This sample consists of four parts</p>
+<ol>
+<li><a href="#choosingvideo">Select a Video and add it to a Target Image</a></li>
+<li><a href="#playback">Control Video Playback</a></li>
+<li><a href="#snappingvideo">Snapping Video</a></li>
+<li><a href="#transparentvideo">Bonus: Transparent Video</a></li>
+</ol>
+<p><a id="choosingvideo"></a></p>
+<h3 id="select-a-video-and-add-it-to-a-target-image-1-4-">Select a Video and add it to a Target Image (1/4)</h3>
+<p>The video we use for this example is &quot;video.mp4&quot;. As with all resources the video can be loaded locally from the application bundle or remotely from any server. In this example the video file is already bundled with the application.</p>
+<p>To view the sample you can use the images <a href="targetimages.html">on this page</a>. </p>
+<p>With the video URL at hand the drawable is created as follows:</p>
+<pre><code class="lang-js">// Create video drawable
+var video = new AR.VideoDrawable(&quot;assets/video.mp4&quot;, 0.5, {
+    offsetX: 0.2,
+    offsetY: 0.2
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_1_SimpleVideo/js/simplevideo.js#L23-L25">GitHub</a>
+</div>
+
+
+<p>The URL and the size are required when creating a new <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html"><code>AR.VideoDrawable</code></a>. Optionally the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#property_offsetX"><code>offsetX</code></a> and <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#property_offsetY"><code>offsetY</code></a> parameters are set to position the video on the target. The values for the offsets are again in SDUs (more information on the concept of SDUs <a href="sdu-dbs.html">here</a>). </p>
+<p>Adding the video to the target image is straight forward and similar like adding any other drawable to an image target.</p>
+<pre><code class="lang-js">var pageOne = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        cam: video
+    },
+    onEnterFieldOfVision: function onEnterFieldOfVisionFn () {
+        video.play(-1);
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_1_SimpleVideo/js/simplevideo.js#L34-L42">GitHub</a>
+</div>
+
+<p><img src="images/simple_videos.jpg" style="width:300px;"></img> </p>
+<p>To start the video immediately after the target is recognized we call <code>play</code> inside the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#event_onEnterFieldOfVision"><code>onEnterFieldOfVision</code></a> trigger. Supplying <code>-1</code> to <code>play</code> tells the Wikitude SDK to loop the video infinitely. Choose any positive number to re-play it multiple times.</p>
+<p>Note that we&#39;re using the wildcard <code>*</code>as the target name. This indicates that the trackable will match any target that is defined in the supplied tracker.</p>
+<p><a id="playback"></a></p>
+<h3 id="control-video-playback-2-4-">Control Video Playback (2/4)</h3>
+<p>The class <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html"><code>AR.VideoDrawable</code></a> offers functions and triggers to control playback of the video and get notified of playback states. The following example makes use of the triggers and states to display an image of a play button on top of the target. Once the user clicks the play button the video starts to play. Additionally we pause and resume the video whenever the target is lost so the user does not miss any video content when looking away.</p>
+<p>To view the sample you can use the image in <a href="targetimages.html">on this page</a></p>
+<pre><code class="lang-js">// Create video drawable
+var video = new AR.VideoDrawable(&quot;assets/video.mp4&quot;, 0.5, {
+    offsetX: 0.2,
+    offsetY: 0.2,
+    onLoaded: function videoLoaded() {
+        playButton.enabled = true;
+    },
+    onPlaybackStarted: function videoPlaying () {
+        playButton.enabled = false;
+        video.enabled = true;
+    },
+    onFinishedPlaying: function videoFinished () {
+        playButton.enabled = true;
+        video.playing = false;
+        video.enabled = false;
+    },
+    onClick: function videoClicked () {
+        if (video.playing) {
+            video.pause();
+            video.playing = false;
+            playButton.enabled = true;
+        } else {
+            video.resume();
+            video.playing = true;
+            playButton.enabled = true;
+        }
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_2_PlaybackStates/js/playbackstates.js#L42-L67">GitHub</a>
+</div>
+
+<p>As before the video is positioned on the target with the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#property_offsetX"><code>offsetX</code></a> and <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#property_offsetY"><code>offsetY</code></a> properties. Additionally functions are assigned to the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#event_onLoaded"><code>onLoaded</code></a>, <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#event_onPlaybackStarted"><code>onPlaybackStarted</code></a> and <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#event_onFinishedPlaying"><code>onFinishedPlaying</code></a> triggers. The <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#event_onLoaded"><code>onLoaded</code></a> trigger fires once the video is ready for playback and the <code>playButton</code> is enabled. The <code>playButton</code> is an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> defined as follows:</p>
+<pre><code class="lang-js">// Create play button
+var playButtonImg = new AR.ImageResource(&quot;assets/playButton.png&quot;);
+var playButton = new AR.ImageDrawable(playButtonImg, 0.2, {
+    enabled: false,
+    onClick: function playButtonClicked() {
+        video.play(1);
+        video.playing = true;
+    },
+    offsetX: video.offsetX,
+    offsetY: video.offsetY
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_2_PlaybackStates/js/playbackstates.js#L17-L27">GitHub</a>
+</div>
+
+<p>Once the user clicks the button the video is played once: <code>video.play(1)</code>. Starting the playback fires the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#event_onPlaybackStarted"><code>onPlaybackStarted</code></a> trigger that in this example hides the <code>playButton</code>. When playback finishes the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#event_onFinishedPlaying"><code>onFinishedPlaying</code></a> trigger is called that shows the <code>playButton</code> again.</p>
+<p>To give the user the possibility to pause the video the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html"><code>AR.VideoDrawable&#39;s</code></a> click trigger is used. If the video is playing and the user is clicking the function <code>pause()</code> is called which then pauses playback. Clicking the video again resumes playback.</p>
+<p>Similar to the user clicking on the video we want to pause/resume the playback if the target image is lost - as this means  the user is currently not actively watching the video. To  accomplish this the <code>onEnterFieldOfVision</code> and <code>onExitFieldOfVision</code> triggers of the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> are used:</p>
+<pre><code class="lang-js">var pageOne = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        cam: [video, playButton]
+    },
+    onEnterFieldOfVision: function onEnterFieldOfVisionFn () {
+        if (video.playing) {
+            video.pause();
+        }
+    },
+    onExitFieldOfVision: function onExitFieldOfVisionFn () {
+        if (video.playing) {
+            video.resume();
+        }
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_2_PlaybackStates/js/playbackstates.js#L78-L93">GitHub</a>
+</div>
+
+<p>This concludes the example showing you how to control the playback of a <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html"><code>AR.VideoDrawable</code></a>. Have a look at the <a href="../Reference/JavaScript%20API">API Reference</a> for more details on each of the functions and triggers.</p>
+<p><a id="snappingvideo"></a></p>
+<h3 id="snapping-video-3-4-">Snapping Video (3/4)</h3>
+<p>In the <a href="#playback">previous example</a> we used several triggers to pause and resume video playback when the target image is lost so that the user doesn&#39;t miss any video content while looking away. In this example we take this approach a little further and do not pause and resume video playback but instead snap the video onto the screen so that it is still visible even when the target image is lost.
+To do so the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> offers several <code>snapToScreen</code> settings. In this example we use the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#property_snapToScreen.enableOnExitFieldOfVision"><code>snapToScreen.enabledOnExitFieldOfVision</code></a> property to automatically snap all cam drawables onto the screen when the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#event_onExitFieldOfVision"><code>onExitFieldOfVision</code></a> event occurs. To disable snapping when the target image is visible again we use the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#property_snapToScreen.enabled"><code>snapToScreen.enabled</code></a> property and set it to <code>false</code> in the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#event_onEnterFieldOfVision"><code>onEnterFieldOfVision</code></a> event. Doing so will display all cam drawables on the target image again.</p>
+<pre><code class="lang-js">this.pageOne = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        cam: [this.video, playButton]
+    },
+    onEnterFieldOfVision: function onEnterFieldOfVision() {
+        World.pageOne.snapToScreen.enabled = false;
+    },
+    snapToScreen: {
+        enabledOnExitFieldOfVision: true,
+        snapContainer: document.getElementById(&#39;snapContainer&#39;)
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_3_SnappingVideo/js/snappingvideo.js#L80-L92">GitHub</a>
+</div>
+
+
+<p>The snap position is defined through a <code>div</code> element in your HTML source. The position and size of the <code>div</code> will affect the appearance of all cam drawables in the snapped state. It&#39;s important to update the <code>div</code> for both orientations, portrait and landscape, so that the augmentations will appear as expected. This example uses css to adopt the <code>div</code> for different device orientations.</p>
+<p><a id="transparentvideo"></a></p>
+<h3 id="bonus-transparent-video-4-4-">Bonus: Transparent video (4/4)</h3>
+<p>This bonus example shows you how to add transparent videos on top of a target. Transparent videos require some extra preparation work.</p>
+<p>Summarizing the required steps, here is what you need to do in order to use transparent videos in a simple list. We are describing each of the steps in more detail.</p>
+<ol>
+<li>Produce a green screen (chroma key) video</li>
+<li>Edit that video using standard video processing software and remove the green screen. Export your result into a file format, which can handle alpha channel information (e.g. Apple ProRes 4444)</li>
+<li>Convert the video from step 2 using the script in the tools folder</li>
+<li>Add it to a target image</li>
+</ol>
+<p>Producing a transparent video is usually done using a green screen for filming and a technique called chroma key to replace the green background with transparency. Extensive information is available on the internet that should help you get started on this topic. </p>
+<p>There are different video codecs that support alpha channels for motion picture and most of them will work as your raw material. We have extensively tested Apple ProRes 4444 codec for our own development and were satisfied with the results.</p>
+<p>The Wikitude SDK can only render H.264 encoded videos, which is a codec that in practice does not support an alpha channel. The solution here is to include in the alpha channel in a separate (visible) part of the video. The video is split vertically consisting of a color and a alpha channel in the final video below each other. The following image shows how the preprocessing result should look like.</p>
+<p><img src="images/video_h264_transparent.png" alt=""></p>
+<p>The upper half of the image transports the color information for the final video while the lower half includes a grayscale representation of the alpha layer. White areas will be fully opaque and black areas will be fully transparent. If you are familiar with Photoshop, think of the lower half as a mask. Resulting videos have an height that is exactly twice as big as the input video.</p>
+<p>To convert your raw video to a valid input video for the SDK we need to re-encode the video and automatically create the alpha mask. The script below uses <code>ffmpeg</code> to do so and wraps the necessary commands. Follow these simple steps:</p>
+<h4 id="macos-x">MacOS X</h4>
+<ol>
+<li>Open the Terminal application</li>
+<li>Input <code>cd &lt;SDK&gt;/tools/video/MacOSX</code>. Replace <code>&lt;SDK&gt;</code> with the path to the SDK folder</li>
+<li>Execute <code>sh convert.sh &lt;input video&gt; &lt;output video&gt;</code>. Replace <code>&lt;input video&gt;</code> with the path to your transparent video and <code>&lt;output video&gt;</code> with the path where you want the output video to be stored.</li>
+</ol>
+<h4 id="windows">Windows</h4>
+<ol>
+<li>Open the Command Line</li>
+<li><code>cd &lt;SDK&gt;\tools\video\Windows</code>. Replace <code>&lt;SDK&gt;</code> with the path to the SDK folder</li>
+<li>Execute <code>convert.bat &lt;input video&gt; &lt;output video&gt;</code>. Replace <code>&lt;input video&gt;</code> with the path to your transparent video and <code>&lt;output video&gt;</code> with the path where you want the output video to be stored.</li>
+</ol>
+<p>This creates the required video with a vertically split color and alpha channel.</p>
+<p>Adding the transparent H.264 video to a target image is easy and accomplished in the same way as any other video is added. Just make sure to set the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html#method_isTransparent"><code>isTransparent</code></a> property of the <a href="../Reference/JavaScript%20API/classes/VideoDrawable.html"><code>AR.VideoDrawable</code></a> to <code>true</code>.</p>
+<p>To view the sample you can use the image in <a href="targetimages.html">on this page</a></p>
+<p><img src="images/transparent_video_1.jpg" style="width:300px;"></img> <img src="images/transparent_video.jpg" style="width:300px;"></img></p>
+<pre><code class="lang-js">// Create a transparent video drawable
+var video = new AR.VideoDrawable(&quot;assets/transparentVideo.mp4&quot;, 0.7, {
+    offsetX: -0.2,
+    offsetY: -0.12,
+    isTransparent: true
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/7_Video_4_Bonus-TransparentVideo/js/transparentvideo.js#L52-L56">GitHub</a>
+</div>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

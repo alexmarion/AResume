@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="client-recognition">Client Recognition</h2>
+<p>This example shows how to recognize images in the viewfinder and overlay it with images. Furthermore it shows how to recognize multiple different images and how to react on user clicks on the overlaid elements.</p>
+<p>For a better understanding, here are some terms that will be used in the following and other section of this documentation related to vision-based augmented reality.</p>
+<ul>
+<li><p><strong>Target</strong>: A target image and its associated extracted data that is used by the tracker to recognize an image.</p>
+</li>
+<li><p><strong>Target collection</strong>: An archive storing a collection of targets that can be recognized by the tracker. A target collection can hold up to 1000 targets.</p>
+</li>
+<li><p><strong>ClientTracker</strong>: The tracker analyzes the live camera image and detects the targets stored in its associated target collection. Multiple trackers can be created, however only one tracker can be active for recognition at any given time.</p>
+</li>
+</ul>
+<p>This sample consists of five parts</p>
+<ol>
+<li><a href="#imageontarget">Image on Target</a></li>
+<li><a href="#multipletarget">Multiple Targets</a></li>
+<li><a href="#extendedtracking">Extended Tracking</a></li>
+<li><a href="#interactivity">Interactivity</a></li>
+<li><a href="#htmldrawables">Adding HTML content</a></li>
+<li><a href="#bonussparkle">Bonus: Sparkle Animations</a></li>
+<li><a href="#distancetotarget">Bonus: Distance to target</a></li>
+</ol>
+<p><a id="imageontarget"></a></p>
+<h3 id="image-on-target-1-7-">Image on Target (1/7)</h3>
+<p>With these terms in mind let&#39;s start by defining what actually should be recognized (target) and create a corresponding target collection that the tracker can use. In this case, the target collection includes the following single magazine page.</p>
+<p>To view the sample you can use the image in <a href="targetimages.html">on this page</a></p>
+<p><img src="images/magazine_page_one.jpeg" alt="Page of a magazine that should be augmented." title="Page of a magazine that should be augmented"></p>
+<p>See <a href="targetmanagement.html">Target Management</a> for instructions about how to create target collections which can be used in the Wikitude SDK.</p>
+<p>This is the same process for every use of image recognition in ARchitect. You&#39;ll first need to define your targets and then create a target collection for it. Now let us have a look at the JavaScript for enabling image recognition.</p>
+<pre><code class="lang-js">// Initialize ClientTracker
+// Important: If you replace the tracker file with your own, make sure to change the target name accordingly.
+// Use a specific target name to match only a certain target or use a wildcard to match any or a certain group of targets.
+
+this.tracker = new AR.ClientTracker(&quot;assets/magazine.wtc&quot;, {
+    onLoaded: this.worldLoaded
+});
+
+// Create overlay for page one
+var imgOne = new AR.ImageResource(&quot;assets/imageOne.png&quot;);
+var overlayOne = new AR.ImageDrawable(imgOne, 1, {
+    offsetX: -0.15,
+    offsetY: 0
+});
+
+var pageOne = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        cam: overlayOne
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_1_ImageOnTarget/js/imageontarget.js#L19-L41">GitHub</a>
+</div>
+
+<p>First an  <a href="../Reference/JavaScript%20API/classes/ClientTracker.html"><code>AR.ClientTracker</code></a> needs to be created in order to start the recognition engine. It is initialized with a URL specific to the target collection. Optional parameters are passed as object in the last argument. In this case a callback function for the <a href="../Reference/JavaScript%20API/classes/ClientTracker.html#event_onLoaded"><code>onLoaded</code></a> trigger is set. Once the tracker is fully loaded the function <code>worldLoaded()</code> is called.</p>
+<p>The next step is to create the augmentation. In this example an image resource is created and passed to the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a>. A drawable is a visual component that can be connected to an target image  <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> or a geolocated object  <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a>. The <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> is initialized by the image and its size. Optional parameters allow for position it relative to the recognized target.</p>
+<p>The last line combines everything by creating an <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> with the previously created tracker, the name of the image target and the drawable that should augment the recognized image.
+Please note that in this case the target name is a wildcard <code>*</code>. Wildcards can be used to match any target defined in the target collection. If you want to match specific targets only for a particular <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> simply provide the target name as specified in the target collection.</p>
+<div class="warning"> 
+<strong>Recognize your own images</strong>
+
+ <ol>
+ <li>Upload your images to the <a href="http://targetmanager.wikitude.com/" target="_top">target management tool (log-in required)</a></li>
+ <li>Generate your target collection file (.wtc)</li>
+ <li>In your code create an  <code>AR.ClientTracker</code> and load the target collection file from the previous step</li>
+ <li>Create an AR.Trackable2DObject and assign <strong>your</strong> targetName</li>
+ </ol>
+<br />
+
+Make sure that the <code>targetName</code> used with the <code>AR.Trackable2DObject</code> correspond to one of the target names in your target collection. You can also use a wildcard to match any target or only a specific subset of targets. Please refer to the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> main documentation for more information about wildcards.
+
+</div>
+
+<p><a id="multipletarget"></a></p>
+<h3 id="multiple-targets-2-7-">Multiple Targets (2/7)</h3>
+<p>Adding multiple targets to a target collection is straightforward. Simply follow the guide at <a href="targetmanagement.html">Target Management</a>. Each target in the target collection is identified by its <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#property_targetName"><code>targetName</code></a>. By using this <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#property_targetName"><code>targetName</code></a>, it is possible to create an <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> for every target in the target collection.</p>
+<p>To view the sample you can use the image in <a href="targetimages.html">on this page</a></p>
+<p><img src="images/magazine_page_two.jpeg" alt="Second page of a magazine that should be augmented." title="Second page of a magazine that should be augmented."></p>
+<pre><code class="lang-js">// Create overlay for page two
+var imgTwo = new AR.ImageResource(&quot;assets/imageTwo.png&quot;);
+var overlayTwo = new AR.ImageDrawable(imgTwo, 0.5, {
+    offsetX: 0.12,
+    offsetY: -0.01
+});
+var pageTwo = new AR.Trackable2DObject(this.tracker, &quot;pageTwo&quot;, {
+    drawables: {
+        cam: overlayTwo
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_2_MultipleTargets/js/multipletargets.js#L48-L61">GitHub</a>
+</div>
+
+<p>Similar to the first part, the image resource and the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> for the second overlay are created. The <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> for the second page uses the same tracker but with a different target name.</p>
+<p><a id="extendedtracking"></a></p>
+<h3 id="extended-tracking-3-7-">Extended Tracking (3/7)</h3>
+<p>Extended tracking is an optional mode you can set for each <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> separately. In this mode the Wikitude SDK will scan the environment of the user and try to keep track of the scene even if the original target image is not in view anymore. So the tracking extends beyond the limits of the original target image. The performance of this feature depends on various factors like computing power of the device, background texture and objects.</p>
+<p>If a target is enabled for extended tracking the <code>onExitFieldOfVision</code> trigger is not called when the original target image is not visible anymore, but once the extended tracking is interrupted. </p>
+<p>If you don&#39;t need this feature, we recommend not to enable it to avoid high CPU load.</p>
+<p>In the sample the <code>AR.Trackable2DObject</code> is defined as usual with the difference that the option <code>enableExtendedTracking</code> is set to <code>true</code>.</p>
+<p>If you need informations about the quality of the extended tracking, you must define the callback function <code>onExtendedTrackingQualityChanged</code> like in the example below.</p>
+<pre><code class="lang-js">        var pageOne = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+            drawables: {
+                cam: [pipes]
+            },
+            enableExtendedTracking: true,
+            onExtendedTrackingQualityChanged: function (targetName, oldTrackingQuality, newTrackingQuality) {
+                var backgroundColor;
+                var trackingQualityText;
+
+                if ( -1 == newTrackingQuality ) {
+                    backgroundColor = &#39;#FF3420&#39;;
+                    trackingQualityText = &#39;Bad&#39;;
+                } else if ( 0 == newTrackingQuality ) {
+                    backgroundColor = &#39;#FFD900&#39;;
+                    trackingQualityText = &#39;Average&#39;;
+                } else {
+                    backgroundColor = &#39;#6BFF00&#39;;
+                    trackingQualityText = &#39;Good&#39;;
+                }
+                var cssDivInstructions = &quot; style=&#39;display: table-cell;vertical-align: middle; text-align: middle; width: 50%; padding-right: 15px;&#39;&quot;;
+                var messageBox = document.getElementById(&#39;loadingMessage&#39;);
+                messageBox.style.backgroundColor = backgroundColor;
+                messageBox.innerHTML = &quot;&lt;div&quot; + cssDivInstructions + &quot;&gt;Tracking Quality: &quot; + trackingQualityText + &quot;&lt;/div&gt;&quot;;
+                messageBox.style.display = &#39;block&#39;;
+            }
+        });
+</code></pre>
+<p>With that enabled the tracking will continue even if the target image is lost.</p>
+<p><a id="interactivity"></a></p>
+<h3 id="interactivity-4-7-">Interactivity (4/7)</h3>
+<p>The final step is to add interactivity to the image target. For this example a button is added to each target that opens a webpage.</p>
+<p>The button is created similar to the overlay feature. An <a href="../Reference/JavaScript%20API/classes/ImageResource.html"><code>AR.ImageResource</code></a> defines the look of the button and is reused for both buttons.</p>
+<pre><code>this.imgButton = new AR.ImageResource(&quot;assets/wwwButton.png&quot;);
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_3_Interactivity/js/interactivity.js#L28">GitHub</a>
+</div>
+
+<p>For each target an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> for the button is created by utilizing the helper function <code>createWwwButton(url, options)</code>. The returned drawable is then added to the <code>drawables.cam</code> array on creation of the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a>.</p>
+<pre><code class="lang-js">var pageOneButton = this.createWwwButton(&quot;http://www.wikitude.com/pageone&quot;, 0.1, {
+    offsetX: -0.25,
+    offsetY: -0.25
+});
+var pageOne = new AR.Trackable2DObject(this.tracker, &quot;pageOne&quot;, {
+    drawables: {
+        cam: [overlayOne, pageOneButton]
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_3_Interactivity/js/interactivity.js#L42-46">GitHub</a>
+</div>
+
+<p>As the button should be clickable the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html#event_onClick"><code>onClick</code></a> trigger is defined in the options passed to the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a>. In general each drawable can be made clickable by defining its <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html#event_onClick"><code>onClick</code></a> trigger.</p>
+<pre><code class="lang-js">createWwwButton: function createWwwButtonFn(url, size, options) {
+    options.onClick = function() {
+        AR.context.openInBrowser(url);
+    };
+    return new AR.ImageDrawable(this.imgButton, size, options);
+},
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_3_Interactivity/js/interactivity.js#L81-89">GitHub</a>
+</div>
+
+<p>The function assigned to the click trigger calls <a href="../Reference/JavaScript%20API/classes/context.html#method_openInBrowser"><code>AR.context.openInBrowser</code></a> with the specified URL, which opens the URL in the browser.</p>
+<p><a id="htmldrawables"></a></p>
+<h3 id="adding-html-content-5-7-">Adding HTML content (5/7)</h3>
+<p>Using an <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html"><code>AR.HtmlDrawable</code></a> it is possible to display HTML content inside the AR scene, the same way images are displayed. In this example a weather widget is added on top of the image target to present the real-time weather in Maui, Hawaii.</p>
+<p>In general any HTML content can be loaded by passing a relative or absolute URL. Additionally HTML content can also be passed as a string; please see the API reference for more details on how to specify the content when creating the drawable. This example uses a relative URL to the weather widget that is stored as <code>.html</code> file in the example&#39;s <code>assets</code> subfolder.</p>
+<p>Once the content has been chosen it is important to think about the viewport the content will need in order to be laid out correctly. The viewport is the area that is available to the HTML content when it is rendered. It is independent of the actual area the <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html"><code>AR.HtmlDrawable</code></a> will need on screen when placed in the AR scene.</p>
+<p>The viewport width and height needs to be set when constructing the <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html"><code>AR.HtmlDrawable</code></a> and should also be set as meta tag inside the  HTML content that is used. This tells the HTML rendering engine to use the specified viewport size during rendering.</p>
+<pre><code class="lang-html">&lt;meta name=&quot;viewport&quot; 
+      content=&quot;target-densitydpi=device-dpi, width = 320, user-scalable = 0&quot;&gt;
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_4_HtmlDrawable/assets/weather.html#L3">GitHub</a>
+</div>
+
+<p>Make sure that the value of <code>width</code> is set according to the size (in pixel) the HTML content needs. It should also correspond to the <code>viewportWidth</code> value specified during the creation of the <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html"><code>AR.HtmlDrawable</code></a>.</p>
+<p>Similar to  <code>viewportWidth</code> the <code>viewportHeight</code> is specified to define the available pixel height during rendering of the content. If you are unsure of the pixel size of the HTML content at hand, you can use the developer tools built into modern browsers (e.g. WebInspector) to take measure.</p>
+<p>In the code example below we are putting that all together to a working <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html"><code>AR.HtmlDrawable</code></a>. The created drawable is added to the list of <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> drawables just like any other drawable.</p>
+<pre><code class="lang-js">var weatherWidget = new AR.HtmlDrawable({
+    uri: &quot;assets/weather.html&quot;
+}, 0.25, {
+    viewportWidth: 320,
+    viewportHeight: 100,
+    backgroundColor: &quot;#FFFFFF&quot;,
+    offsetX: +0.36,
+    offsetY: 0.5,
+    horizontalAnchor: AR.CONST.HORIZONTAL_ANCHOR.RIGHT,
+    verticalAnchor: AR.CONST.VERTICAL_ANCHOR.TOP,
+    clickThroughEnabled: true,
+    allowDocumentLocationChanges: false,
+    onDocumentLocationChanged: function onDocumentLocationChangedFn(uri) {
+        AR.context.openInBrowser(uri);
+    }
+});
+var pageOne = new AR.Trackable2DObject(this.tracker, &quot;pageOne&quot;, {
+    drawables: {
+        cam: [overlayOne, pageOneButton, weatherWidget, sparkles]
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_4_HtmlDrawable/js/htmldrawable.js#L68-L83">GitHub</a>
+</div>
+
+<p>Interaction with an <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html"><code>AR.HtmlDrawable</code></a> is controlled with the <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html#property_clickThroughEnabled"><code>clickThroughEnabled</code></a> and <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html#property_allowDocumentLocationChanges"><code>allowDocumentLocationChanges</code></a> properties. Setting <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html#property_clickThroughEnabled"><code>clickThroughEnabled</code></a> will forward click events to the HTML content making it possible to follow links or click buttons. If the content of the HTML drawable should not change <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html#property_allowDocumentLocationChanges"><code>allowDocumentLocationChanges</code></a> can be set to <code>false</code> so links are not followed. It is still possible to react on clicked links by using the <a href="../Reference/JavaScript%20API/classes/HtmlDrawable.html#event_onDocumentLocationChanged"><code>onDocumentLocationChanged</code></a> trigger. The example uses this trigger to open clicked links fullscreen in a browser. The result then looks like this</p>
+<p><img src="images/IRExample_HTML_2.jpg" alt="HTML Drawable - Real time weather widget">
+<a id="bonussparkle"></a></p>
+<h3 id="bonus-sparkles-6-7-">Bonus: Sparkles (6/7)</h3>
+<p>This section adds a little bonus to the above example. Sprite sheet animations can be used to animate images similar to animated GIFs and are used in this example to add sparkles to the overlay.</p>
+<p>A sprite sheet is an image file that contains all key frame images required for the animation. The key frame image size (width and height) is passed at creation time and must be equal for all key frame images. Key frame images will be managed in an array, starting with entry 0. The key frame image array will be filled from left to right, row by row. Any partly filled key frames at the edge of the sprites sheet will be ignored.</p>
+<p><img src="images/imageSparkles.png" alt="Sprite sheet of sparkles for this example." title="Sprite sheet of sparkles for this example."></p>
+<p>First the image resource is created which is used for creating the <a href="../Reference/JavaScript%20API/classes/AnimatedImageDrawable.html"><code>AR.AnimatedImageDrawable</code></a>. Since the width/height of the sprite sheet is 512 and it carries 16 key frames, the width and height of a single image is 128. So we set 128 as the width and height of the <a href="../Reference/JavaScript%20API/classes/AnimatedImageDrawable.html"><code>AR.AnimatedImageDrawable</code></a>.</p>
+<pre><code class="lang-js">// Sparkles
+var imgSparkles = new AR.ImageResource(&quot;assets/imageSparkles.png&quot;);
+var sparkles = new AR.AnimatedImageDrawable(imgSparkles, 0.25, 128, 128, {
+    offsetX: -0.2,
+    offsetY: 0.5,
+    rotation: 75
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_5_Bonus-Sparkles/js/sparkles.js#L36-L41">GitHub</a>
+</div>
+
+<p>To start the animation the order of the keyframes needs to be passed as array. Additionally the time each frame is displayed in ms and the loop count needs to be defined. In this case each image is displayed 100ms before it changes and a loop count of <code>-1</code> plays the animation in an infinite loop.</p>
+<pre><code class="lang-js">sparkles.animate([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], 100, -1);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_5_Bonus-Sparkles/js/sparkles.js#L46">GitHub</a>
+</div>
+
+<p>The last step is to add it as drawable to the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> so it will be overlaid on the first page.</p>
+<pre><code class="lang-js">var pageOne = new AR.Trackable2DObject(this.tracker, &quot;pageOne&quot;, {
+    drawables: {
+        cam: [overlayOne, pageOneButton, weatherWidget, sparkles]
+    }
+});
+</code></pre>
+<p><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_5_Bonus-Sparkles/js/sparkles.js#L106-110">GitHub</a>
+</div>
+<a id="distancetotarget"></a></p>
+<h3 id="bonus-distance-to-target-7-7-">Bonus: Distance to target (7/7)</h3>
+<p>This section shows how to measure the distance to a given target, and how to react to changes in the measured value.</p>
+<p>The AR scene is based on the code of the first sample, with a target collection containing just one target.</p>
+<p>We define the physical size of the target when creating the <a href="../Reference/JavaScript%20API/classes/ClientTracker.html"><code>ClientTracker</code></a>.</p>
+<p>This is not always necessary, since a target collection can include the definition of the physical size for all targets (see <a href="targetmanagement.html">Target Management</a> for more details).</p>
+<p>The <a href="../Reference/JavaScript%20API/classes/ClientTracker.html#property_physicalTargetImageHeights"><code>physicalTargetImageHeights</code></a> option is used for this purpose, with values in millimeters for each target.</p>
+<p>For this example, we assume the target is printed on a standard A4 sheet with a physical height of 286mm, if your target size is different, change the value accordingly, otherwise the measurement won&#39;t be very accurate.</p>
+<pre><code class="lang-js">         this.tracker = new AR.ClientTracker(&quot;assets/magazine.wtc&quot;, {
+            onLoaded: this.worldLoaded,
+            physicalTargetImageHeights: {
+                pageOne:    286
+            }
+         });
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_6_Bonus-DistanceToTarget/js/distancetotarget.js#L13-L18">GitHub</a>
+</div>
+
+<p>Then we declare the callback function to be called when the distance changes, and the change threshold in millimeters to trigger the event:</p>
+<pre><code class="lang-js">         var pageOne = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+             drawables: {
+                 cam: overlayOne
+            },
+            distanceToTarget: {
+                changedThreshold: 1,
+                onDistanceChanged: function(distance) {
+                    document.getElementById(&#39;distanceDisplay&#39;).innerHTML = &quot;Distance from target: &quot; + distance / 10 + &quot; cm&quot;;
+                    overlayOne.rotation = distance;
+                }
+            },
+            onExitFieldOfVision: function() {
+                document.getElementById(&#39;distanceDisplay&#39;).innerHTML = &quot;Distance from target: unknown&quot;;
+             }
+         });
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/1_ClientRecognition_6_Bonus-DistanceToTarget/js/distancetotarget.js#L35-L49">GitHub</a>
+</div>
+
+<p>The drawable definition is just the same as the first section.</p>
+<p>The option <code>distanceToTarget</code> describes how the tracker will react to changes. The threshold is set to 1 millimeter, and the callback function displays the value on the bottom of the screen, and rotates the augmentation when the user moves towards the target or away from it. </p>
+<p>We also define an <code>onExitFieldOfVision</code> trigger because we don&#39;t want to show any information when the target is not visible.</p>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>GroupTitle</key>
+			<string>3D Models</string>
+			<key>Path</key>
+			<string>3_3dModels_3_Interactivity</string>
+			<key>RequiredFeatures</key>
+			<array>
+				<string>2d_tracking</string>
+			</array>
+			<key>StartupConfiguration</key>
+			<dict>
+				<key>camera_position</key>
+				<string>back</string>
+			</dict>
+			<key>Title</key>
+			<string>Interactivity</string>
+		</dict>
+	</array>
+</array>
+</plist>

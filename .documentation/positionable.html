@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="positionable">Positionable</h2>
+<p>In combination with the Plugins API the Wikitude SDK allows for renderables defined with the JavaScript API to be positioned directly without using the built-in tracking mechanisms. It therefore allows to take advantage of the rendering capabilities of the Wikitude SDK while supplying custom tracking algorithms. This example will take you through the process of implementing such a custom algorithm and highlight the intricacies related thereto. Specifically, a marker tracking plugin is implemented using the OpenCV and ArUco libraries.</p>
+<p>The example is separated into the following sections.</p>
+<ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#javascriptimplementation">JavaScript implementation</a></li>
+<li><a href="#pluginimplementation">Plugin implementation</a></li>
+<li><a href="#nativeimplementation">Native implementation</a></li>
+</ol>
+<p><a id="introduction"></a></p>
+<h3 id="introduction-1-5-">Introduction (1/5)</h3>
+<p>To be able to understand the happenings of this example and utilise the <a href="../Reference/JavaScript%20API/classes/Positionable.html"><code>AR.Positionable</code></a> object, one must first understand how it is implemented in the Wikitude SDK. This section serves as a quick introduction on the topic.</p>
+<p>Within the JavaScript API an <a href="../Reference/JavaScript%20API/classes/Positionable.html"><code>AR.Positionable</code></a> can be defined. This definition in turn invokes the instantiation of a complementary C++ object, of which a reference is provided in the <code>updatePositionables</code> function of the <code>wikitude::sdk::Plugin</code>, allowing it to be manipulated therein. A custom plugin utilising the positionable feature can therefore be implemented by deriving from said class and overriding the <code>updatePositionables</code> member function accordingly.
+After alterations have been performed by the <code>updatePositionables</code> function, the <a href="../Reference/JavaScript%20API/classes/Positionable.html"><code>AR.Positionable</code></a> objects are submitted for rendering each frame. Conceptually, a positionable is therefore a plugin mutable wrapper object to a renderable in the Wikitude SDK. This enables the extension of the JavaScript API though the Plugins API in a simple manner.</p>
+<p><a id="prerequisites"></a></p>
+<h3 id="prerequisites-2-5-">Prerequisites (2/5)</h3>
+<p>For this example the following resources are recommended.</p>
+<p><a id="pluginexample"></a></p>
+<h4 id="plugin-example">Plugin example</h4>
+<p>Have a look at the Plugins API example <a href="pluginsapi.html" title="on this page">on this page</a> if you are not familiar with it yet.</p>
+<p><a id="arucomarker"></a></p>
+<h4 id="aruco-marker">ArUco marker</h4>
+<p>If you would like to create your own ArUco markers, please refer to the utilities accompanying the ArUco library package. It can be downloaded from <a href="http://sourceforge.net/projects/aruco/" title="SourceForge">SourceFore</a>.</p>
+<p><img src="images/aruco_marker_303.png" alt="A marker specific to the ArUco augmented reality library with ID #303." title="A marker specific to the ArUco augmented reality library with ID #303."></p>
+<p><a id="arucoandopencvdocumentation"></a></p>
+<h4 id="aruco-and-opencv-documentation">ArUco and OpenCV documentation</h4>
+<p>If you would like to delve into the details of the tracking algorithm, the <a href="http://www.uco.es/investiga/grupos/ava/node/26" title="ArUco website">ArUco website</a> and the <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html" title="OpenCV documentation pages">OpenCV documentation pages</a> on camera calibration and 3d reconstruction are the recommended starting points.</p>
+<p><a id="javascriptimplementation"></a></p>
+<h3 id="javascript-implementation-3-5-">JavaScript implementation (3/5)</h3>
+<p>Similar to the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> and <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a>, the <a href="../Reference/JavaScript%20API/classes/Positionable.html"><code>AR.Positionable</code></a> is available. It requires a string identifier and a renderable as its input parameters. For this example, an <a href="../Reference/JavaScript%20API/classes/Model.html">AR.Model</a> is used. Notice that no tracker can be specified, as the tracking will be provided by the plugin instead.</p>
+<pre><code class="lang-js">var World = {
+    _myPositionable: null,
+
+    init: function initFn() {
+        this.createOverlays();
+    },
+
+    createOverlays: function createOverlaysFn() {
+        var myModel = new AR.Model(
+            &quot;assets/car.wt3&quot;, {
+                onLoaded: this.loadingStep,
+                    scale: {
+                        x: 0.01,
+                        y: 0.01,
+                        z: 0.01
+                    }
+            });
+
+        World._myPositionable = new AR.Positionable(&quot;myPositionable&quot;, {
+            drawables: {
+                cam: myModel
+            }
+        });
+    }
+};
+
+World.init();
+</code></pre>
+<p><a id="pluginimplementation"></a></p>
+<h3 id="plugin-implementation-4-5-">Plugin implementation (4/5)</h3>
+<p>To implement a custom tracking we use the marker tracking capabilities of the ArUco library, which is based on the OpenCV library. It allows ArUco markers to be recognised within the camera frame. It additionally allows to compute their camera relative 3D position, enabling placement of the model onto the tracked marker. Although the ArUco and OpenCV libraries do most of the heavy lifting, there are quite a lot of things to be considered and done for it to work correctly. These considerations are important for most practical plugins and will be presented in the following sections.</p>
+<p>Ultimately however, all the custom plugin has to do is set the world matrix, view matrix and projection matrix of the <a href="../Reference/JavaScript%20API/classes/Positionable.html"><code>AR.Positionable</code></a> object. How these matrices are to be set differs based on whether a 3D renderable or a 2D renderable is attached.</p>
+<pre><code>// transformation matrices for a 3D renderable
+positionable-&gt;setWorldMatrix(identityMatrix.get());
+positionable-&gt;setViewMatrix(modelViewMatrix.get());
+positionable-&gt;setProjectionMatrix(projectionMatrix.get());
+
+// transformation matrices for a 2D renderable
+positionable-&gt;setWorldMatrix((projectionMatrix * modelViewMatrix).get());
+positionable-&gt;setViewMatrix(identityMatrix.get());
+positionable-&gt;setProjectionMatrix(identityMatrix.get());
+</code></pre><p><a id="headerfile"></a></p>
+<h4 id="the-header-file">The header file</h4>
+<p>Please see below the content of the MarkerTrackingPlugin.h file. We derive from the <code>wikitude::sdk::Plugin</code> class and override the <code>cameraFrameAvailable</code> function and the <code>updatePositionables</code> function.</p>
+<p>Regarding member variables, there are some additions as well. The <code>aruco::MarkerDetector</code> is the main class of the aruco library; it performs all the steps of the tracking algorithm. The <code>std::vector&lt;aruco::Marker&gt;</code> members are containers that hold the detected markers. The remaining member variables should be self explanatory with the exception of the <code>std::mutex</code>, which will be explained as it becomes relevant.</p>
+<pre><code>class MarkerTrackingPlugin : public wikitude::sdk::Plugin {
+public:
+    MarkerTrackingPlugin();
+    ~MarkerTrackingPlugin();
+
+    virtual void surfaceChanged(wikitude::sdk::Size&lt;int&gt; renderSurfaceSize_, wikitude::sdk::Size&lt;float&gt; cameraSurfaceScaling_, wikitude::sdk::InterfaceOrientation interfaceOrientation_);
+
+    virtual void cameraFrameAvailable(const wikitude::sdk::impl::Frame&amp; cameraFrame_);
+
+    virtual void update(const std::list&lt;wikitude::sdk::impl::RecognizedTarget&gt;&amp; recognizedTargets_);
+
+    virtual void updatePositionables(const std::unordered_map&lt;std::string, wikitude::sdk_core::impl::PositionableWrapper*&gt;&amp; positionables_);
+
+private:
+    aruco::MarkerDetector _detector;
+    std::vector&lt;aruco::Marker&gt; _markers;
+    std::vector&lt;aruco::Marker&gt; _markersPrev;
+    std::vector&lt;aruco::Marker&gt; _markersCurr;
+    std::vector&lt;aruco::Marker&gt; _markersPrevUpdate;
+    std::vector&lt;aruco::Marker&gt; _markersCurrUpdate;
+
+    bool _projectionInitialized;
+    float _width;
+    float _height;
+    float _scaleWidth;
+    float _scaleHeight;
+
+    std::mutex _markerMutex;
+    bool _updateDone;
+
+    float _viewMatrixData[16];
+    wikitude::sdk::Matrix4 _projectionMatrix;
+
+    std::mutex _interfaceOrientationMutex;
+    wikitude::sdk::InterfaceOrientation _currentInterfaceOrientation;
+};
+</code></pre><p><a id="cameraframeavailablefunction"></a></p>
+<h4 id="the-cameraframeavailable-function">The cameraFrameAvailable function</h4>
+<p>In the <code>cameraFrameAvailable</code> function the <code>_detector.detect()</code> function call performs the marker tracking on the luminance camera frame given a set of input parameters. While most of the parameters should be self explanatory, the <code>cameraMatrix</code> parameter is not. It contains the data required to calculate the 3D position of the marker relative to the camera. Traditionally, the camera parameters along with distortion coefficients are precomputed by a separate camera calibration process. For the sake of this example however, the parameters are simply estimated with the specifications of the iPhone 5. While the results suffers slightly, they should suffice for this simple demonstration. Even on different devices, the application still performs well. Should this not be the case for your device, you may need to alter the focal length or CDD sensor sizes accordingly.</p>
+<pre><code>// calculate the focal length in pixels (fx, fy)
+const float focalLengthInMillimeter = 4.12f;
+const float CCDWidthInMillimeter = 4.536f;
+const float CCDHeightInMillimeter = 3.416f;
+
+const float focalLengthInPixelsX = _width * focalLengthInMillimeter / CCDWidthInMillimeter;
+const float focalLengthInPixelsY = _height * focalLengthInMillimeter / CCDHeightInMillimeter;
+
+cv::Mat cameraMatrix = cv::Mat::zeros(3, 3, CV_32F);
+
+cameraMatrix.at&lt;float&gt;(0, 0) = focalLengthInPixelsX;
+cameraMatrix.at&lt;float&gt;(1, 1) = focalLengthInPixelsY;
+
+// calculate the frame center (cx, cy)
+cameraMatrix.at&lt;float&gt;(0, 2) = 0.5f * _width;
+cameraMatrix.at&lt;float&gt;(1, 2) = 0.5f * _height;
+
+// always 1
+cameraMatrix.at&lt;float&gt;(2, 2) = 1.0f;
+
+const float markerSizeInMeters = 0.1f;
+
+_markers.clear();
+_detector.detect(frameLuminance, _markers, cameraMatrix, cv::Mat(), markerSizeInMeters);
+</code></pre><p>Once markers are detected, a matrix is calculated that transforms the origin into the center of the tracked marker. Note that the tracking is restricted to a specific marker ID in this case to avoid ambiguities.</p>
+<pre><code>double viewMatrixData[16];
+for (auto&amp; marker : _markers) {
+    // consider only marker 303
+    if (marker.id == 303) {
+        marker.calculateExtrinsics(markerSizeInMeters, cameraMatrix, cv::Mat(), false);
+        marker.glGetModelViewMatrix(viewMatrixData);
+    }
+}
+</code></pre><p>Additionally, a projection matrix is computed that will be used by the <code>updatePositionables</code> function. The input parameters are, again, chosen to coincide with the specifications of the iPhone 5. Should your device have different characteristics, please change the vertical field of view value accordingly.</p>
+<pre><code>if (!_projectionInitialized) {
+    const float fieldOfViewYDegree = 50.0f;
+    const float nearZ = 0.1f;
+    const float farZ = 100.0f;
+    _projectionMatrix.perspective(fieldOfViewYDegree, _width / _height, nearZ, farZ);
+    _projectionInitialized = true;
+}
+</code></pre><p>As we want to have access to the <a href="../Reference/JavaScript%20API/classes/Positionable.html"><code>AR.Positionable</code></a> we defined earlier with the JavaScript API, we need to continue our algorithm within the <code>updatePositionables</code> function. There is however, an important issue that needs to be considered. The <code>cameraFrameAvailable</code> function and the <code>updatePositionables</code> function are executed concurrently. Therefore we need to introduce synchronisation measures to allow data to be passed from one to the other.</p>
+<p>This is where the previously mentioned <code>std::mutex</code> becomes relevant. With it we ensure that the threads never have mutual access to the data being shared. Additionally, we utilize the <code>_updateDone</code> boolean flag to signal the update method that new data is available for processing.</p>
+<pre><code>/* critical section begin */
+_markerMutex.lock();
+
+if (_updateDone) {
+
+    _markersPrev = _markersCurr;
+    _markersCurr = _markers;
+
+    for (unsigned int i = 0; i &lt; 16; ++i) {
+        _viewMatrixData[i] = static_cast&lt;float&gt;(viewMatrixData[i]);
+    }
+
+    _updateDone = false;
+}
+
+/* critical section end */
+_markerMutex.unlock();
+</code></pre><p><a id="updatefunction"></a></p>
+<h4 id="the-updatepositionables-function">The updatePositionables function</h4>
+<p>The <code>updatePositionables</code> method fulfils two tasks. Firstly, it determines whether any markers have been newly found that were not found in the previous frame and whether any markers have been lost that were found in the previous frame. It then accordingly calls the <code>enteredFieldOfVision</code> and <code>exitedFieldOfVision</code> trigger functions, which enable use of these triggers within the JavaScript API.</p>
+<pre><code>std::unordered_map&lt;std::string, wikitude::sdk_core::impl::PositionableWrapper*&gt;::const_iterator it = positionables_.find(&quot;myPositionable&quot;);
+
+if (it == positionables_.end()) {
+    return;
+}
+
+/* critical section start */
+_markerMutex.lock();
+
+if (!_updateDone) {
+
+    _markersPrevUpdate = _markersPrev;
+    _markersCurrUpdate = _markersCurr;
+
+    for (const auto&amp; marker : _markersCurrUpdate) {
+        auto itFound = std::find_if(_markersPrevUpdate.begin(), _markersPrevUpdate.end(), [&amp;](const aruco::Marker&amp; other) -&gt; bool { return other.id == marker.id; });
+
+        if (itFound != _markersPrevUpdate.end()) {
+            _markersPrevUpdate.erase(itFound);
+        }
+        else {
+            it-&gt;second-&gt;enteredFieldOfVision();
+        }
+    }
+
+    for (const auto&amp; marker : _markersPrevUpdate) {
+        it-&gt;second-&gt;exitedFieldOfVision();
+    }
+
+    _updateDone = true;
+}
+
+/* critical section end */
+_markerMutex.unlock();
+</code></pre><p>Secondly, it composes a model view matrix that transforms the origin of the coordinate system into the marker center, enabling our model to be drawn on top. It is aligned such that the X-axis and Y-axis lie in the marker plane with the Z-axis being perpendicular thereto such that the positive half space is in front of the marker.</p>
+<p>To produce this matrix several transformations have to be composed. The ArUco generated view matrix assumes a left handed coordinate system while the Wikitude SDK assumes a right handed coordinate system. To correct this discrepancy the Y-axis is flipped. As this application is intended to run on a mobile device, we need to account for the different device orientations. This is a twofold issue as is requires rotations to be applied depending on the current interface orientation and the correction of the aspect ratio for portrait orientations. Additionally, mobile devices have different screen and video capturing characteristics, therefore another corrective matrix is required to account for the aspect ratio.</p>
+<pre><code>    wikitude::sdk::Matrix4 rotationToLandscapeLeft;
+    rotationToLandscapeLeft.rotateZ(180.0f);
+
+    wikitude::sdk::Matrix4 rotationToPortrait;
+    rotationToPortrait.rotateZ(270.0f);
+
+    wikitude::sdk::Matrix4 rotationToUpsideDown;
+    rotationToUpsideDown.rotateZ(90.0f);
+
+    wikitude::sdk::Matrix4 aspectRatioCorrection;
+    aspectRatioCorrection.scale(_scaleWidth, _scaleHeight, 1.0f);
+
+    wikitude::sdk::Matrix4 portraitAndUpsideDownCorrection;
+    const float aspectRatio = _width / _height;
+    portraitAndUpsideDownCorrection.scale(aspectRatio, 1.0f / aspectRatio, 1.0f);
+
+    wikitude::sdk::Matrix4 viewMatrix(_viewMatrixData);
+    // OpenCV left handed coordinate system to OpenGL right handed coordinate system
+    viewMatrix.scale(1.0f, -1.0f, 1.0f);
+
+    wikitude::sdk::Matrix4 modelViewMatrix;
+
+    wikitude::sdk::InterfaceOrientation currentInterfaceOrientation;
+    {
+        std::lock_guard&lt;std::mutex&gt; lock(_interfaceOrientationMutex);
+        currentInterfaceOrientation = _currentInterfaceOrientation;
+    }
+
+    if (currentInterfaceOrientation == wikitude::sdk::InterfaceOrientation::InterfaceOrientationPortrait || currentInterfaceOrientation == wikitude::sdk::InterfaceOrientation::InterfaceOrientationPortraitUpsideDown) {
+        modelViewMatrix *= portraitAndUpsideDownCorrection;
+    }
+
+    modelViewMatrix *= aspectRatioCorrection;
+
+    switch (currentInterfaceOrientation) {
+        case wikitude::sdk::InterfaceOrientation::InterfaceOrientationLandscapeRight:
+            // nop
+            // we don&#39;t like warnings and not having this case included would cause one
+            break;
+        case wikitude::sdk::InterfaceOrientation::InterfaceOrientationLandscapeLeft:
+            modelViewMatrix *= rotationToLandscapeLeft;
+            break;
+        case wikitude::sdk::InterfaceOrientation::InterfaceOrientationPortrait:
+            modelViewMatrix *= rotationToPortrait;
+            break;
+        case wikitude::sdk::InterfaceOrientation::InterfaceOrientationPortraitUpsideDown:
+            modelViewMatrix *= rotationToUpsideDown;
+            break;
+    }
+
+    modelViewMatrix *= viewMatrix;
+</code></pre><p>Once the model view matrix and the projection matrix have been generated, they can be applied to the positionable.</p>
+<pre><code>wikitude::sdk::Matrix4 identity;
+
+// 3d trackable
+it-&gt;second-&gt;setWorldMatrix(identity.get());
+it-&gt;second-&gt;setViewMatrix(modelViewMatrix.get());
+it-&gt;second-&gt;setProjectionMatrix(_projectionMatrix.get());
+</code></pre><p><a id="nativeimplementation"></a></p>
+<h3 id="native-implementation-5-5-">Native implementation (5/5)</h3>
+<p>As the plugin instantiation and registration is covered by the <a href="pluginsapi.html" title="Plugins API example">Plugins API example</a>, a detailed description on this subject is omitted here.</p>
+<p>Running the sample with the ArUco marker provided in the resource section should present you with the car model nicely being placed on top of the marker.</p>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

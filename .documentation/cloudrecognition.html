@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="cloud-recognition">Cloud Recognition</h2>
+<p>This example shows how to recognize images on a cloud server and then overlay it with augmentations utilizing the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> class. </p>
+<p>For a better understanding, here are some terms that will be used in the following and other sections of this documentation related to vision-based augmented reality.</p>
+<ul>
+<li><p><strong>Target</strong>: An image and its associated extracted data that is used to recognize an image.</p>
+</li>
+<li><p><strong>Target Collection</strong>: A group of <code>targets</code> that are searched together. Think of it as a directory, which contains all your images you want to search. The Wikitude SDK can work with two different sorts of <code>Target Collections</code></p>
+<ul>
+<li>On-device Target Collection: a static <code>wtc</code> file containing the extracted data of your images. Can consist of up to 1,000 images.</li>
+<li>Cloud Target Collection: A target collection stored on the Wikitude server. See <code>Cloud Archive</code> below. Can consist of up to 50,000 images.</li>
+</ul>
+</li>
+<li><p><strong>Cloud Archive</strong>: An archive stored on the server that is optimized for cloud-based recognition. It is generated from a <code>Target Collection</code> and is used in combination with <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a>. </p>
+</li>
+<li><p><strong>CloudTracker</strong>: Instead of analysing and computing the live camera feed directly on the device like the <a href="../Reference/JavaScript%20API/classes/ClientTracker.html"><code>AR.ClientTracker</code></a>, the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> will send the image(s) taken by the camera to the Wikitude Cloud Recognition server. The server will then do the hard work of trying to match the image with your targets in the specified cloud archive. Beside the benefit of searching in large image database using the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> instead of <a href="../Reference/JavaScript%20API/classes/ClientTracker.html"><code>AR.ClientTracker</code></a> has also a positive impact on the general performance in most cases. Especially when using a large target collection and on older devices.</p>
+</li>
+</ul>
+<p>This sample consists of three parts</p>
+<ol>
+<li><a href="#basicrecognitiononclick">Basic Recognition On-Click</a></li>
+<li><a href="#continousvsonclick">Continuous Recognition vs On-Click</a></li>
+<li><a href="#metainformation">Using MetaInformation in the response</a></li>
+</ol>
+<p>The sample is based on a use-case to recognize wine labels directly from wine bottles. We have set-up a target collection on the Wikitude server hosting several wine-labels from around the world. </p>
+<p><a id="basicrecognitiononclick"></a></p>
+<h3 id="basic-recognition-on-click-1-3-">Basic Recognition On-Click (1/3)</h3>
+<p>The goal of this and the following samples in this section is to recognize and augment the wine labels in the image below. All three samples build on each other and functionality is added/improved in each sample.</p>
+<p><img class="image_gallery" src="images/schloss_johannisberg.jpg"><img class="image_gallery" src="images/brazil.jpg"><img class="image_gallery" src="images/barone.jpg"><img class="image_gallery" src="images/etiquette_ermitage.jpg"><img class="image_gallery" src="images/gw_bf2011.jpg"></p>
+<p>Please note that in this section a public cloud archive will be used. See the <a href="gettingstartedcloudrecognition.html">documentation for the Manager API</a> for instructions how to create your own cloud archives which can be used with the Wikitude SDK.</p>
+<h4 id="regional-server-endpoints">Regional server endpoints</h4>
+<p>Before we get started please note that you have to choose which regional-distributed Wikitude server the SDK should contact.</p>
+<p>The cloud recognition server region can be selected by calling the <a href="../Reference/JavaScript%20API/classes/context.html#methodsetCloudRecognitionServerRegion"><code>AR.context.setCloudRecognitionServerRegion</code></a> function from JavaScript with on of the following constants.</p>
+<pre><code>AR.CONST.CLOUD_RECOGNITION_SERVER_REGION.AMERICAS
+AR.CONST.CLOUD_RECOGNITION_SERVER_REGION.CHINA
+AR.CONST.CLOUD_RECOGNITION_SERVER_REGION.EUROPE
+</code></pre><p>The default behaviour is <code>Europe</code>. In case of a wrong value the SDK will silently choose <code>Europe</code>.</p>
+<p>Now let&#39;s get on with the first sample and have a look at the first part of the JavaScript code - the <code>init</code> function.</p>
+<pre><code class="lang-js">    init: function initFn() {
+        this.createTracker();
+        this.createOverlays();
+    },
+</code></pre>
+<p>Once the wine is recognized we want to display a banner which shows a rating, the wine label and in later chapters the name of the recognized wine to the end user. To keep this example simple we will reuse the same banner image on every target. Because of that we are able to load the image once and reuse again and again. This will be done in the <code>createOverlays</code> function, the second function call in the <code>init</code> function above.</p>
+<pre><code class="lang-js">    createOverlays: function createOverlaysFn() {
+        this.bannerImg = new AR.ImageResource(&quot;assets/banner.jpg&quot;);
+        this.bannerImgOverlay = new AR.ImageDrawable(this.bannerImg, 0.4, {
+            offsetX: 0,
+            offsetY: -0.6,
+        });
+    },
+</code></pre>
+<p>First an image resource is created and then passed to an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a>. A drawable is a visual component that can be connected to an image recognized target (<a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a>) or a geolocated object (<a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a>). The <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> is initialized by the image and its size. Optional parameters allow to position it relative to the recognized target.</p>
+<p>After we laid the groundwork in the previous function let&#39;s move on to the first call in the <code>init</code> function, the <code>createTracker</code> function.</p>
+<pre><code class="lang-js">createTracker: function createTrackerFn() {
+    World.tracker = new AR.CloudTracker(&quot;b277eeadc6183ab57a83b07682b3ceba&quot;, &quot;54e4b9fe6134bb74351b2aa3&quot;, {
+        onLoaded: this.worldLoaded,
+        onError: this.trackerError
+    });
+},
+</code></pre>
+<p>As you can see in the code above we pass three parameters to the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a>. The first parameter represents the Client API authentication token, in the example above we will use the public Wikitude authentication token. Read more about <a href="gettingstartedcloudrecognition.html#authentication">authentication and tokens</a> here. The second parameter represents the target collection id. This unique id will identify which cloud archive the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> will use from all the cloud archives connected to your authentication token. Optional parameters are passed as object in the last argument. In this case a callback function for the <code>onLoaded</code> and <code>onError</code> trigger are set. </p>
+<p>Once the server fully loaded the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> the <code>worldLoaded()</code> function is called. If there was a problem initializing the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a> the SDK will call the function <code>trackerError()</code>. Note the initialization can take a few seconds, especially when working with large cloud archives.</p>
+<p>After the SDK calls the <code>worldLoaded()</code> function we continue with our wine sample and want to display a &#39;Scan&#39;-Button to the user. Clicking this button  starts the image recognition process by sending the current camera frame to the cloud recognition server. The next code fragment contains the <code>onClick</code> listener function for this button.</p>
+<pre><code class="lang-js">scan: function scanFn() {
+    World.tracker.recognize(this.onRecognition, this.onRecognitionError); 
+},
+</code></pre>
+<p>After the user clicked the &quot;Scan&quot; button the Wikitude SDK calls the recognize function on the previously created <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a>. The tracker recognize function is passed two callback functions. The first callback will be called by the SDK after each recognition cycle. The second will be called if there is something wrong with the specified cloud archive. </p>
+<p>The next code snipped contains the first callback function <code>onRecognition</code>.</p>
+<pre><code class="lang-js">onRecognition: function onRecognitionFn(recognized, response) {
+    if (recognized) {
+        if (World.wineLabel !== undefined) {
+            World.wineLabel.destroy();
+        }
+
+        if (World.wineLabelOverlay !== undefined) {
+            World.wineLabelOverlay.destroy();
+        }
+
+        World.wineLabel = new AR.ImageResource(&quot;assets/&quot; + response.targetInfo.name + &quot;.jpg&quot;);
+        World.wineLabelOverlay = new AR.ImageDrawable(World.wineLabel, 0.3, {
+            offsetX: -0.5,
+            offsetY: -0.6,
+            zOrder: 1                
+        });
+
+        if (World.wineLabelAugmentation !== undefined) {
+            World.wineLabelAugmentation.destroy();
+        }
+
+        World.wineLabelAugmentation = new AR.Trackable2DObject(World.tracker, response.targetInfo.name , {
+            drawables: {
+                cam: [World.bannerImgOverlay, World.wineLabelOverlay]
+            }
+        });
+    } else {
+        document.getElementById(&#39;errorMessage&#39;).innerHTML = &quot;&lt;div class=&#39;errorMessage&#39;&gt;Recognition failed, please try again!&lt;/div&gt;&quot;;
+
+        setTimeout(function() {
+            var e = document.getElementById(&#39;errorMessage&#39;);
+            e.removeChild(e.firstChild);
+        }, 3000);
+    }        
+},
+</code></pre>
+<p>The first parameter of this callback function is a boolean value which indicates if the server was able to recognize the target, its value will either be <code>0</code> or <code>1</code> depending on the outcome. The second parameter is a JSON object which will contain metadata about the recognized target. If a target was recognized this JSON object will contain another JSON object named <code>targetInfo</code>, which consists of the target name (<code>targetName</code>), its star rating (<code>rating</code>) and optional its physical height. If no target was recognized the JSON object will be empty. More information on the response object will follow in the next chapters.</p>
+<p>If the recognition was successful we would like to display the banner augmentation. To display the label of the recognized wine on top of the previously created banner, another overlay is defined. The property <code>targetInfo.name</code> contained in the response object is read to load the equally named image file. The <code>zOrder</code> property (defaults to 0) is set to 1 to make sure it will be positioned on top of the banner.</p>
+<p>After that, we combine everything by creating an <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> using the CloudTracker, the name of the image target (targetInfo.name) and the drawables that should augment the recognized image.</p>
+<p>If on the other hand the recognition failed we will show an error message to the user.</p>
+<p><a id="continousvsonclick"></a></p>
+<h3 id="continuous-recognition-vs-on-click-2-3-">Continuous Recognition vs On-click (2/3)</h3>
+<p>This chapter will build upon the first chapter. Only relevant changes will be shown, please read the previous chapter before continuing.</p>
+<p>In the first sample of this section we triggered the recognition mode manually (&quot;Tap To Scan&quot;). This is useful in some situations but sometime you probably want to use the continuous mode (&quot;Continuous Search&quot;), explained in the following chapter. The main difference is that the recognition will now be triggered continuously in a defined time interval instead of once by a manual click.</p>
+<p>Let&#39;s look at the changes necessary to enable this functionality.</p>
+<p>The first change takes place in the &#39;trackerLoaded&#39; function. In the sample before we would only show some instructions to the user, now we&#39;ll also start the continuous recognition mode.</p>
+<pre><code class="lang-js">    trackerLoaded: function trackerLoadedFn() {
+        this.startContinuousRecognition(750);
+        this.showUserInstructions();
+    },
+</code></pre>
+<p>We call the function <code>startContinuousRecognition</code> with the parameter <code>750</code>. This parameter represents a time interval which we&#39;ll use to tell the SDK how often a recognition should be started. The snippet below shows the code of the function <code>startContinuousRecognition</code>.</p>
+<pre><code class="lang-js">startContinuousRecognition: function startContinuousRecognitionFn(interval) {
+    this.tracker.startContinuousRecognition(interval, this.onRecognition, this.onRecognitionError, this.onInterruption);
+},
+</code></pre>
+<p>In the function above we start the continuous recognition by calling the <code>startContinuousRecognition</code> function of the <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a>. It is passed four parameters, the first is the already mentioned time interval in which a new recognition is started. It is set in milliseconds and the minimum value is <code>500</code>. The second parameter defines a callback function for when a recognition cycle is completed. The third parameter defines the <code>onRecognitionError</code> callback. The fourth and last parameter defines yet another callback function which is called by the SDK if the recognition interval was set too high for the current network speed.</p>
+<p>We will now take a look at the changes to the callback functions. The <code>onRecognition</code> function has a slight change, the <code>onRecognitionError</code> function stays the same and there is a new callback called <code>onInterruption</code>.</p>
+<p>First the <code>onRecognition</code> function.</p>
+<pre><code class="lang-js">onRecognition: function onRecognitionFn(recognized, response) {
+    if (recognized) {
+        if (World.wineLabel !== undefined) {
+            World.wineLabel.destroy();
+        }
+
+        if (World.wineLabelOverlay !== undefined) {
+            World.wineLabelOverlay.destroy();
+        }
+
+        World.wineLabel = new AR.ImageResource(&quot;assets/&quot; + response.targetInfo.name + &quot;.jpg&quot;);
+        World.wineLabelOverlay = new AR.ImageDrawable(World.wineLabel, 0.27, {
+            offsetX: -0.5,
+            offsetY: -0.6,
+            zOrder: 1
+        });
+
+        if (World.wineLabelAugmentation !== undefined) {
+            World.wineLabelAugmentation.destroy();
+        }
+
+        World.wineLabelAugmentation = new AR.Trackable2DObject(World.tracker, response.targetInfo.name , {
+            drawables: {
+                cam: [World.bannerImgOverlay, World.wineLabelOverlay]
+            }
+        });
+    }
+},
+</code></pre>
+<p>The only change is that we removed the error message when there was no recognition since this will happen fairly often when the user does not point the camera on the actual target.</p>
+<p>The next function <code>onInterruption</code> wasn&#39;t necessary in the last example. Take a look at it in the next snippet.</p>
+<pre><code class="lang-js">onInterruption: function onInterruptionFn(suggestedInterval) {
+    World.tracker.stopContinuousRecognition();
+    World.tracker.startContinuousRecognition(suggestedInterval);
+},
+</code></pre>
+<p>In case the current network speed isn&#39;t fast enough for the set interval, the Wikitude SDK calls this callback function with a new suggested interval more appropriate to the current network speed. To set the new interval the recognition mode will be restarted.</p>
+<p>This example showed how to enable the continuous mode of <a href="../Reference/JavaScript%20API/classes/CloudTracker.html"><code>AR.CloudTracker</code></a>, in the next sample we will take a look at how to use the server response object and custom metadata.</p>
+<p><a id="metainformation"></a></p>
+<h3 id="using-metainformation-in-the-response-3-3-">Using MetaInformation in the response (3/3)</h3>
+<p>As the previous chapter this chapter builds upon the chapters before. Again please read the first two chapters before you get started with this.</p>
+<p>In this section we add another augmentation for the end user. Again the image overlay does not change depending on the recognized target, so we create it once in the <code>createOverlays</code> function. Let&#39;s have a look.</p>
+<pre><code class="lang-js">createOverlays: function createOverlaysFn() {
+    this.bannerImg = new AR.ImageResource(&quot;assets/bannerWithNameField.jpg&quot;);
+    this.bannerImgOverlay = new AR.ImageDrawable(this.bannerImg, 0.4, {
+        offsetX: 0,
+        offsetY: 0.6,
+    });
+
+    this.orderNowButtonImg = new AR.ImageResource(&quot;assets/orderNowButton.png&quot;);
+    this.orderNowButtonOverlay = new AR.ImageDrawable(this.orderNowButtonImg, 0.3, {
+        offsetX: 0,
+        offsetY: -0.6,
+    });
+},
+</code></pre>
+<p>The new augmentation we will display is an &quot;Order Now&quot; button. It is created in the same manner as the previous augmentations.</p>
+<p>All other changes took place in the &#39;onRecognition&#39; function shown below.</p>
+<pre><code class="lang-js">onRecognition: function onRecognitionFn(recognized, response) {
+    if (recognized) {
+        if (World.wineLabelOverlay !== undefined) {
+            World.wineLabel.destroy();
+        }
+
+        if (World.wineLabelOverlay !== undefined) {
+            World.wineLabelOverlay.destroy();
+        }
+
+        World.wineLabel = new AR.ImageResource(&quot;assets/&quot; + response.targetInfo.name + &quot;.jpg&quot;);
+        World.wineLabelOverlay = new AR.ImageDrawable(World.wineLabel, 0.2, {
+            offsetX: -0.37,
+            offsetY: 0.55,
+            zOrder: 1
+        });
+
+        World.wineName = new AR.Label(response.metadata.name, 0.06, {
+            offsetY: 0.72,
+            zOrder: 2
+        });
+
+        if (World.wineLabelAugmentation !== undefined) {
+            World.wineLabelAugmentation.destroy();
+        }
+
+        World.wineLabelAugmentation = new AR.Trackable2DObject(World.tracker, response.targetInfo.name , {
+            drawables: {
+                cam: [World.bannerImgOverlay, World.wineLabelOverlay, World.wineName]
+            }
+        });
+
+        World.orderNowButtonOverlay.onClick = function() {
+            AR.context.openInBrowser(response.metadata.shop_url);
+        }
+
+        if (World.orderNowAugmentation !== undefined) {
+            World.orderNowAugmentation.destroy();
+        }
+
+        World.orderNowAugmentation = new AR.Trackable2DObject(World.tracker, response.targetInfo.name, {
+            drawables: {
+                cam: World.orderNowButtonOverlay
+            }
+        });
+    }
+},
+</code></pre>
+<p>When the cloud archive was created custom metadata for every target was defined. You are a free to choose the content of the metadata depending on your needs. See the <a href="../Reference/Cloud%20Recognition%20REST%20API/index.html#api-Target-CreateTarget">Manager API documentation</a> on how to add metadata for a target. For this example, we created two fields:</p>
+<ul>
+<li><code>metadata.name</code> which represents the real name of the wine and </li>
+<li><code>metadata.shop_url</code> a url to a webshop stocking the particular wine were defined. </li>
+</ul>
+<p>The corresponding JSON when creating targets on the Manager API looks like the following:</p>
+<pre><code class="lang-js">    &quot;metadata&quot;:{
+         &quot;name&quot;:&quot;Lote 43 Cabernet Sauvignon-Merlot&quot;,
+        &quot;shop_url&quot;:&quot;http://loja.miolo.com.br/ch/index.aspx&quot;
+     }
+</code></pre>
+<p>To display the name of the wine in the banner overlay, an <a href="../Reference/JavaScript%20API/classes/Label.html"><code>AR.Label</code></a> is created. The first parameter defines the text of the label, the second its height in SDUs, the third parameter sets some optional options. To set the first parameter of the <a href="../Reference/JavaScript%20API/classes/Label.html"><code>AR.Label</code></a> we read the before mentioned <code>name</code> from the custom metadata object. Since the response object returned by the server is a JSON object it is possible to navigate it by dot notation.</p>
+<p>Like the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> objects we created before, we add the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.Label</code></a> to the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> which combines everything for our banner.</p>
+<p>Next we add a <code>onClick</code> handler to the <code>orderNowButtonOverlay</code> where we make use of the <a href="../Reference/JavaScript%20API/classes/context.html"><code>AR.context</code></a> class to open the shop&#39;s website in browser. Again we utilize the server response object and our custom metadata to read the url for the current target from <code>shop_url</code>.</p>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

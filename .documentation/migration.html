@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h1 id="migration">Migration</h1>
+<h2 id="migrate-from-5-2-to-5-3">Migrate from 5.2 to 5.3</h2>
+<p>iOS 10 now requires a camera usage description. Please make sure that you add the <code>NSCameraUsageDescription</code> key to your applications .plist. In case you use the screenshot feature of our SDK and would like to save screenshots to the iOS photo library, the <code>NSPhotoLibraryUsageDescription</code> key has to be present as well.</p>
+<p>In case Architect Worlds are loaded from a https URL, please make sure that the <code>architect.js</code> is included like this <code>&lt;script src=&quot;https://www.wikitude.com/libs/architect.js&quot;&gt;&lt;/script&gt;</code>. The old include statement (<code>&lt;script src=&quot;architect://architect.js&quot;&gt;&lt;/script&gt;</code>) is still valid but fails to load in https environments.</p>
+<ul>
+<li><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html"><code>WTArchitectView</code></a><ul>
+<li><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/-clearCache:"><code>-clearCache:</code></a> now clears all caches that are used by the Wikitude SDK</li>
+</ul>
+</li>
+</ul>
+<h2 id="migrate-from-5-0-to-5-2">Migrate from 5.0 to 5.2</h2>
+<ul>
+<li><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html"><code>WTArchitectViewDelegate</code></a><ul>
+<li>removed <code>-architectViewNeedsHeadingCalibration:</code> without previous deprecation</li>
+<li>new method <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html#//api/name/-architectViewNeedsDeviceSensorCalibration:"><code>-architectViewNeedsDeviceSensorCalibration:</code></a> which is called if the device needs sensor calibration. </li>
+<li>new method <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html#//api/name/-architectViewFinishedDeviceSensorsCalibration:"><code>-architectViewFinishedDeviceSensorsCalibration:</code></a> which is called once the device sensors are calibrated</li>
+<li>both new methods in combination replace the previously available <code>-architectViewNeedsHeadingCalibration:</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="migrate-from-4-1-to-5-0">Migrate from 4.1 to 5.0</h2>
+<ul>
+<li>Projects now require iOS7 or newer</li>
+</ul>
+<h2 id="migrate-from-4-1-to-4-1-1">Migrate from 4.1 to 4.1.1</h2>
+<p>The Wikitude SDK 4.1.1 adds new properties and methods to its public API.</p>
+<ul>
+<li><p><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html"><code>WTArchitectView</code></a></p>
+<ul>
+<li>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/-reloadArchitectView"><code>-reloadArchitectWorld</code></a>
+  Calling this method will reload the Architect World that was previously loaded using the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/-loadArchitectWorldFromURL:withRequiredFeatures:"><code>-loadArchitectWorldFromURL:withRequiredFeatures:</code></a> method. It does not matter if the Architect World finished loading previously or failed. In all cases a new reload is triggered.</li>
+</ul>
+</li>
+<li><p><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTNavigation.html"><code>WTNavigation</code></a></p>
+<ul>
+<li>new property <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTNavigation.html#//api/name/isLoading"><code>isLoading</code></a> indicates if the original URL is currently loading or not.</li>
+<li>new property <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTNavigation.html#//api/name/wasInterrupted"><code>wasInterrupted</code></a> indicates if the WTArchitectView&#39;s -stop method was called while an Architect World was still loading.</li>
+</ul>
+</li>
+</ul>
+<h2 id="migrate-from-4-0-2-to-4-1">Migrate from 4.0.2 to 4.1</h2>
+<p>There are several API changes in the Wikitude SDK 4.1 that improve the usage.
+Please note that the next major release will remove all deprecated APIs.</p>
+<p>This version requires the iOS SDK framework <code>SystemConfiguration.framework</code> to determine the network connectivity for cloud recognition.</p>
+<ul>
+<li><p>WTArchitectView</p>
+<ul>
+<li>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/+isDeviceSupportedForRequiredFeatures:error:"><code>+isDeviceSupportedForRequiredFeatures:error:</code></a>
+  Use this method to determine if the current device is supported with the given bit mask of required features. In case the method returns <code>NO</code>, a <code>NSError</code> object is available which describes the missing device features in more detail.</li>
+<li><p>deprecated <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/+isDeviceSupportedForAugmentedRealityMode:"><code>+isDeviceSupportedForAugmentedRealityMode:</code></a></p>
+</li>
+<li><p>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/+sdkVersion"><code>+sdkVersion</code></a></p>
+</li>
+<li><p>deprecated <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/+versionNumber"><code>+versionNumber</code></a></p>
+</li>
+<li><p>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/-loadArchitectWorldFromURL:withRequiredFeatures:"><code>-loadArchitectWorldFromURL:withRequiredFeatures:</code></a>
+  This method replaces <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/-loadArchitectWorldFromURL:withAugmentedRealityMode:"><code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></a> and uses the new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTFeatures.html"><code>WTFeatures</code></a> based API to load an ARchitect World from a URL with the specified required features.</p>
+</li>
+<li><p>deprecated <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/-loadArchitectWorldFromURL:withAugmentedRealityMode:"><code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></a></p>
+</li>
+<li><p>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/start:completion:"><code>-start:completion:</code></a>
+  The new SDK start mechanism allows to specifically alter the SDK startup behaviour. Right now it can be used to define which camera should be used at startup and which auto focus mode should be used. The first block provides a pre configured <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTStartupConfiguration.html"><code>WTStartupConfiguration</code></a> object which can be used to define a value different than the default one for any of the currently present member variables. The second block replaces the previous available <code>isRunning</code> property and provides more information if the SDK could be started successfully.</p>
+</li>
+<li>deprecated <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/start"><code>-start</code></a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTFeatures.html"><code>WTFeatures</code></a>: Features allows a more use case tailored usage of the Wikitude SDK. They&#39;re also more future proof when new functionality is added to the SDK. <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTFeatures.html"><code>WTFeatures</code></a> is implemented using a bit mask. To combine features, use the |= operator.</p>
+</li>
+<li><p>deprecated <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTAugmentedRealityMode.html"><code>WTAugmentedRealityMode</code></a>. Please adopt to the new WTFeatures based API.</p>
+</li>
+</ul>
+<ul>
+<li><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTStartupConfiguration.html"><code>WTStartupConfiguration</code></a><br>  This new class is used from <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/start:completion:"><code>-start:completion:</code></a> in order to define the startup procedure. Right now it allows setting the active camera position and the camera focus mode range restriction. Please read through the Apple iOS SDK documentation for more information about these two properties.</li>
+</ul>
+<ul>
+<li><a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDebugDelegate.html"><code>WTArchitectViewDebugDelegate</code></a> 
+  This new protocol provides hooks to react on internal SDK warnings and errors. It is useful to implement these methods during development but please consider removing them for any final App Store build. </li>
+</ul>
+<p>Besides the API changes version 4.1 of the Wikitude SDK also offers a new file format for client based 2d tracking. The new .wtc file is not compatible with older versions of the Wikitude SDK but version 4.1 can read older file formats. Please consider migrate your existing .wtc anyway because it delivers more accurate and faster target recognitions. See more details <a href="migration.html#migrate-from-40-to-41">here</a></p>
+<p>This version of the SDK also comes with a Quick Look Plugin for Mac OS X that allows introspection of any .wtc file. It displays all target images in a .wtc file and also shows the version number and the compatible SDK&#39;s. The Quick Look Plugin is bundled with the Wikitude 3D Encoder application that is part of the SDK download package.</p>
+<h2 id="migrate-from-4-0-to-4-0-2">Migrate from 4.0 to 4.0.2</h2>
+<p>The Wikitude SDK for iOS 4.0.2 introduces several API improvements when it comes to loading augmented reality experiences and error reporting.</p>
+<ul>
+<li><p>WTArchitectView</p>
+<ul>
+<li><p>new <code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></p>
+<p>  Use this method to load an augmented reality experience with a certain <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTAugmentedRealityMode.html"><code>WTAugmentedRealityMode</code></a>. Previously the augmented reality mode could only specified during the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html"><code>WTArchitectView</code></a> initialization. Since it was not possible to specify an augmented reality mode when the view was created by a storyboard the Wikitude SDK API now allows to specify the augmented reality mode when the augmented reality experience is loaded. This also allows to load different augmented reality experiences with different augmented reality modes by the same architect view object.</p>
+<p>  This method now also returns an object of type <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTNavigation.html"><code>WTNavigation</code></a>. A <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTNavigation.html"><code>WTNavigation</code></a> object represents the Architect World URL during its loading state. It might be the case that the URL that was passed to the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/loadArchitectWorldFromURL:withAugmentedRealityMode:"><code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></a> is causing some redirects during its loading. The returned navigation object can now be used to determine which augmented reality experience finished loading when the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html#//api/name/architectView:didFinishLoadArchitectWorldNavigation:"><code>-architectView:didFinishLoadArchitectWorldNavigation:</code></a> delegate method is called. A <code>-isEqual:</code> call on the navigation objects will return <code>YES</code> if the original URL is the same but the finally resolved URL differs. A simple scenario would be a short URL. Passing a short URL to the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/loadArchitectWorldFromURL:withAugmentedRealityMode:"><code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></a> method will return the finally resolved URL to the previously preferred <code>-architectView:didFinishLoad:</code> delegate method. The problem was that the initial load URL is no longer the same URL that finished loading. The new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html#//api/name/architectView:didFinishLoadArchitectWorldNavigation:"><code>-architectView:didFinishLoadArchitectWorldNavigation:</code></a> method now provides the navigation object that was returned by the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/loadArchitectWorldFromURL:withAugmentedRealityMode:"><code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></a> method. A simple <code>-isEqual:</code> call now provides the information if the original URL is the same as the final URL and if the load request finished successfully.</p>
+</li>
+<li><p>deprecated <code>-loadArchitectWorldFromUrl:</code></p>
+<p>Use <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Classes/WTArchitectView.html#//api/name/loadArchitectWorldFromURL:withAugmentedRealityMode:"><code>-loadArchitectWorldFromURL:withAugmentedRealityMode:</code></a> instead and refer to the documentation on how to use the <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTAugmentedRealityMode.html"><code>WTAugmentedRealityMode</code></a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>WTArchitectViewDelegate        <ul>
+<li>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html#//api/name/architectView:didFinishLoadArchitectWorldNavigation:"><code>-architectView:didFinishLoadArchitectWorldNavigation:</code></a></li>
+<li>new <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Protocols/WTArchitectViewDelegate.html#//api/name/architectView:didFailToLoadArchitectWorldNavigation:withError:"><code>-architectView:didFailLoadArchitectWorldNavigation:withError:</code></a></li>
+<li>deprecated <code>-architectView:didFinishLoad:</code></li>
+<li>deprecated <code>-architectView:didFailLoadWithError:</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>WTAugmentedRealityMode<ul>
+<li>deprecated <code>WTAugmentedRealityMode_IR</code>. Use <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTAugmentedRealityMode.html"><code>WTAugmentedRealityMode_ImageRecognition</code></a> instead.</li>
+<li>deprecated <code>WTAugmentedRealityMode_Both</code>. Use <a href="../Reference/iOS%20Architect%20SDK%20API/HTML/Constants/WTAugmentedRealityMode.html"><code>WTAugmentedRealityMode_GeoAndImageRecognition</code></a> instead.</li>
+</ul>
+</li>
+</ul>
+<p>iOS 8 changed the GPS location access management. All applications that want to use the user location now need to enter either the <code>NSLocationWhenInUseUsageDescription</code> or <code>NSLocationAlwaysUsageDescription</code> key. The Wikitude SDK only uses the users location when the application is active, so the <code>NSLocationWhenInUseUsageDescription</code> key must be set in the applications Info.plist. Note that this key is only required if the specified augmented reality mode is <code>WTAugmentedRealityMode_GeoAndImageRecognition</code> or <code>WTAugmentedRealityMode_Geo</code>. The mode <code>WTAugmentedRealityMode_ImageRecognition</code> does not start any GPS related APIs.
+The following snippet shows the source code representation for the required key/value pair. Please refer to the iOS example application on how the changes look in a real application.</p>
+<pre><code>    &lt;key&gt;NSLocationWhenInUseUsageDescription&lt;/key&gt;    
+    &lt;string&gt;Accessing GPS information is needed to display POIs around your current location&lt;/string&gt;
+</code></pre><p>Please note that there will be some more API changes in upcoming releases and methods that were deprecated in a Wikitude SDK 3.x version will be removed in the next release.</p>
+<h2 id="migrate-from-3-3-to-4-0">Migrate from 3.3 to 4.0</h2>
+<ul>
+<li>SDK 4.0 requires the iOS <code>Accelerate.framework</code>. Please refer to the <a href="setupguideios.html#configurebuildphases">iOS Setup Guide</a> on how to add additional frameworks to your project.</li>
+<li>Starting with Wikitude SDK 4.0 a valid license key is mandatory for starting the SDK. An empty license key will block the SDK. A free trial key can be generated on the <a href="http://www.wikitude.com/developer/licenses">license page</a> (free account required).</li>
+<li>The Wikitude SDK 4.0 introduces a new file format for target collections (wtc). In order to unleash the full power of the new Wikitude SDK 4.0 read <a href="migration.html#migrate-from-40-to-41">this section</a> and re-generate your targets. </li>
+</ul>
+<h2 id="migrate-from-3-2-to-3-3">Migrate from 3.2 to 3.3</h2>
+<h5 id="wtarchitectview">WTArchitectView</h5>
+<ul>
+<li><p><code>WTARMode</code> is now <code>WTAugmentedRealityMode</code> and is used in <code>+isDeviceSupportedForAugmentedRealityMode:</code> and <code>-initWithFrame:motionManager:augmentedRealityMode</code>.</p>
+</li>
+<li><p><code>-initializeWithKey:motionManager:</code> is now deprecated. Use the new designated initializer <code>-initWithFrame:motionManager:augmentedRealityMode</code> to pass a <code>CMMotionManager</code> instance into the SDK and <code>-setLicenseKey:</code> to set the license key.</p>
+</li>
+<li><p>The former instance method <code>-versionNumber</code> is now a class method <code>+versionNumber</code>. The instance method still exists but is deprecated.</p>
+</li>
+</ul>
+<h5 id="wtarchitectviewdelegate">WTArchitectViewDelegate</h5>
+<p>Added a new delegate method <code>-architectView:didFinishLoad:</code> which is called when the ARchitect World finished loading.</p>
+<h2 id="migrate-from-3-1-to-3-2">Migrate from 3.1 to 3.2</h2>
+<p>SDK 3.2 adds methods to the delegate protocol and updates existing methods to match a more common CocoaTouch style. Have a look at the WTArchitectView.h file for more information.</p>
+<p>If you have been previously using <code>-urlWasInvoked:</code> you now need to use <code>-architectView:invokedURL:</code>.</p>
+<h2 id="migrate-from-3-0-to-3-1">Migrate from 3.0 to 3.1</h2>
+<p>The image recognition engine of Wikitude SDK 3.1 has been updated resulting in shorter time interval to successfully recognize a target image. As a consequence the format of the digital footprint of target image changed. The format is backward compatible. Developers still can use target collections (.wtc) generated with Wikitude SDK 3.0 (prior to 27th August 2013) together with the SDK 3.1 and vice versa.</p>
+<p>However we recommend to generated your target collections again in the Target Manager Tool and update the files when you are using Wikitude SDK 3.1</p>
+<h3 id="html-drawables">HTML Drawables</h3>
+<p>Developers using HTML Drawables in projects prior to Wikitude SDK 3.1 and like to upgrade to 3.1 need to define the <code>viewportHeight</code> similar to the already defined <code>viewportWidth</code>. In addition HTML Drawables do not have to be created as static or dynamic anymore. All are created as dynamic ones.</p>
+<h2 id="migrate-from-2-0-to-3-0">Migrate from 2.0 to 3.0</h2>
+<p>Wikitude SDK version 3.0 introduces Wikitude&#39;s own image recognition and tracking solution and removes support for the Vuforia Plugin. </p>
+<ul>
+<li><p>-[WTArchitectView loadArchitectWorldFromUrl:] The URL parameter is now an NSURL object rather then a NSString. It is now more consistent and developer are able to load local ARchitect Worlds from bundles that contain white spaces in there name.</p>
+</li>
+<li><p>In case you are making use of image recognition features and want to switch from 2.0 to 3.0+ version remove any Qualcomm/Vuforia related assets (Static Library and Header files) from your project. Find a step-by-step guide about how to convert your existing target collection from Vuforia to Wikitude <a href="targetmanagement.html#migrate_targets">here</a>.</p>
+</li>
+<li><p>New property <code>isRunning</code> in WTArchitectView. Developer can use this property to determinate the current state of the WTArchitectView instance.</p>
+</li>
+<li><p><code>+[WTArchitectView isDeviceSupportedForARMode:]</code> The iPhone 3GS is no longer supported for <code>WTARMode_IR</code>.</p>
+</li>
+</ul>
+<h2 id="migrate-from-1-2-to-2-0">Migrate from 1.2 to 2.0</h2>
+<p>The Wikitude SDK 2.0 for iOS is a major update and requires some migration work to be done. The iOS SDK now ships as a .framework instead of a static library. This change requires some project setup changes. Furthermore the iOS SDK 2.0 allows the developer to select which Augmented Reality mode is used in within the ARchitect World. This way, developer can also run Image Recognition World on devices who are not able to run Geo Worlds (iPodTouch 4th and 5th generation).</p>
+<h3 id="framework">Framework</h3>
+<ol>
+<li>Remove the libWikitudeSDK.a (either by deleting the linker flag and library search path or removing all references from your project hierarchy.) and the WTArchitectView.h header file (either by deleting the header search path or by removing the reference from you project hierarchy) from your project.</li>
+<li>Add the WikitudeSDK.framework to your project (You can do this by either drag the framework into your projects Framework folder or by adding it to your link binary with libraries build phase make sure to copy the framework in either cases to your project first). </li>
+<li>Replace the import directive <code>#import &quot;WTArchitectView.h&quot;</code> with <code>#import &lt;WikitudeSDK/WTArchitectView.h&gt;</code></li>
+<li>Replace the linker flag <code>-lstdc++</code> with <code>-lc++</code> or add <code>libc++</code> instead of <code>libstdc++</code> in your <code>Link Binary With Libraries</code> build phase in Xcode.</li>
+</ol>
+<p>You should now be ready to compile, link and run you application again, using the Wikitude iOS SDK 2.0. (Don&#39;t forget to check for the <code>-ObjC</code> linker flag and all the required iOS public Frameworks listed in the Wikitude SDK documentation).</p>
+<h2 id="upgrading-targets-for-sdk-4-1">Upgrading targets for SDK 4.1</h2>
+<p>The Wikitude SDK 4.1 introduces an updated format for the target collection. The new format improves the recognition phase considerably. The updated format is not backward compatible with Wikitude SDK 3.x, 4.0 and can not be used in projects using Wikitude SDK 3.x or Wikitude SDK 4.0. </p>
+<p>However you can use wtc-3.x and wtc-4.0 formats with the Wikitude SDK 4.1, although we strongly recommend to updated to the newest (wtc-4.1) version.</p>
+<div class="warning">
+<strong>Support for wtc-3.x and wtc-4.0 is deprecated and will be not supported in Wikitude SDK 5.0 (later 2015)</strong>. 
+</div>
+
+<p>To use the new format you need to re-create your target collection in the <a href="http://targetmanager.wikitude.com/" target="_top">target manager</a> and download the <code>.wtc</code> file under the <code>Download 4.1</code> link. Put this <code>.wtc</code> file in your app and replace the previous one.</p>
+<div class="warning">
+    It is not possible to use a wtc 4.1 file together with Wikitude SDK 3.x or Wikitude SDK 4.0. Please download the respective wtc versions from the target manager and use them.
+</div>
+
+<table>
+    <tr>
+        <th></th>
+        <th>Wikitude SDK 3.x</th>
+        <th>Wikitude SDK 4.0</th>
+        <th>Wikitude SDK 4.1</th>
+    </tr>
+    <tr>
+        <td>wtc 3.x</td>
+        <td class="supported">supported</td>
+        <td class="supported">supported</td>
+        <td class="supported">supported</td>
+    </tr>
+    <tr>
+        <td>wtc 4.0</td>
+        <td class="not-supported">not supported</td>
+        <td class="supported">supported</td>
+        <td class="supported">supported</td><br>    </tr>
+     <tr>
+        <td>wtc 4.1</td>
+        <td class="not-supported">not supported</td>
+        <td class="not-supported">not supported</td>
+        <td class="supported">supported</td><br>    </tr>
+
+</table>
+
+
+
+<h2 id="migrating-targets-from-sdk-1-x">Migrating targets from SDK 1.x</h2>
+<p>If you have been using a dataset from the Qualcomm Vuforia target management, please follow these steps to convert your ARchitect World to the new approach:</p>
+<ol>
+<li>Create a new project with the Wikitude target management tool and upload your targets (see instructions above)</li>
+<li>Create a target collection and store it in the same location as the previously used <em>dataset</em></li>
+<li>In your ARchitect World, update the  <a href="../Reference/JavaScript%20API/classes/ClientTracker.html"><code>AR.ClientTracker</code></a> initialization to point to the URL of your new target collection</li>
+</ol>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

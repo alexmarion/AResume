@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="3d-models">3D Models</h2>
+<p>This example shows how to augment a target image with 3D content. It starts by displaying a 3D model on a target and advances by adding displayed animations, interactivity and demonstrates the snap-to-screen functionality. The last example shows how 3D content can be placed at a certain geographic location.</p>
+<p>If you are not yet familiar with how to create a vision based augmented reality scene (based on image recognition and tracking), please have a look at the previous example <a href="clientrecognition.html">Client Recognition</a>.</p>
+<p>3D content within Wikitude can only be loaded from <code>Wikitude 3D Format</code> files (.wt3).  This is a compressed binary format for describing 3D content which is optimized for fast loading and handling of 3D content on a mobile device. You still can use 3D models from your favorite 3D modeling tools (Autodesk® Maya® or Blender) but you&#39;ll need to convert them into the wt3 file format. The Wikitude 3D Encoder desktop application (Windows and Mac) encodes your 3D source file. The Encoder can handle Autodesk® FBX® files (.fbx)for encoding to <code>.wt3</code> .</p>
+<p>For more details on how to convert your 3D content please see the <a href="encoder.html">Wikitude 3D Encoder</a> section. In this example the .wt3 file has already been prepared and saved to assets/car.wt3.</p>
+<p>3D content is rendered on top of 2D objects. This limitation exists because of some SDK internal restrictions and might change in an upcoming release.</p>
+<p>This sample consists of four parts</p>
+<ol>
+<li><a href="#3dmodelontarget">3D Model on Target Image</a></li>
+<li><a href="#appearinganimation">Appearing Animation</a></li>
+<li><a href="#interactivity">Interactivity</a></li>
+<li><a href="#snapToScreen">Snap to Screen</a></li>
+<li><a href="#model_parts_animation">Animation of Model Parts</a></li>
+<li><a href="#3dModelAtGeoLocation">3D Model at GeoLocation</a></li>
+</ol>
+<p><img src="images/car.jpg" alt="Rendering of car model in Wikitude 3D Encoder" title="Rendering of the car model used in this example."></p>
+<p>The following fictional print advertisement is used as target image, which will be augmented with a 3D model of the car advertised in the print ad.</p>
+<p><img src="images/carAd.jpg" alt="Print ad used as image target" title="Car ad used as image target."></p>
+<p><a id="3dmodelontarget"></a></p>
+<h3 id="3d-model-on-target-1-6-">3D Model on Target (1/6)</h3>
+<p>First of all create an <a href="../Reference/JavaScript%20API/classes/Model.html"><code>AR.Model</code></a> and pass the URL to the actual .wt3 file of the model. Additional options allow for scaling, rotating and positioning the model in the scene.</p>
+<pre><code class="lang-js">this.modelCar = new AR.Model(&quot;assets/car.wt3&quot;, {
+    onLoaded: this.loadingStep,
+    scale: {
+        x: 0.045,
+        y: 0.045,
+        z: 0.045
+    },
+    translate: {
+        x: 0.0,
+        y: 0.05,
+        z: 0.0
+    },
+    rotate: {
+        roll: -25
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_1_3dModelOnTarget/js/3dmodelontarget.js#L31-L46">GitHub</a>
+</div>
+
+<p>In this example a function is attached to the <code>onLoaded</code> trigger to receive a notification once the 3D model is fully loaded. Depending on the size of the model and where it is stored (locally or remotely) it might take some time to completely load and it is recommended to inform the user about the loading time.</p>
+<p>Similar to 2D content the 3D model is added to the <code>drawables.cam</code> property of an <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a>. </p>
+<pre><code class="lang-js">var trackable = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        cam: [this.modelCar]
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_1_3dModelOnTarget/js/3dmodelontarget.js#L51-L55">GitHub</a>
+</div>
+
+<p>This is everything that is needed to allow the 3D model appear on an image target. To adjust scaling and position of the model pass the scale and translate properties as options to the <a href="../Reference/JavaScript%20API/classes/Model.html"><code>AR.Model</code></a>.</p>
+<p>To view the sample you can use the image in <a href="targetimages.html">on this page</a></p>
+<p><a id="appearinganimation"></a></p>
+<h3 id="appearing-animation-2-6-">Appearing Animation (2/6)</h3>
+<p>As a next step, an appearing animation is added which scales up the 3D model once the target is inside the field of vision. Creating an animation on a single property of an object is done using an <a href="../Reference/JavaScript%20API/classes/PropertyAnimation.html"><code>AR.PropertyAnimation</code></a>. Since the car model needs to be scaled up on all three axis, three animations are needed. These animations are grouped together utilizing an <a href="../Reference/JavaScript%20API/classes/AnimationGroup.html"><code>AR.AnimationGroup</code></a> that allows them to play them in parallel.</p>
+<pre><code class="lang-js">var sx = new AR.PropertyAnimation(model, &quot;scale.x&quot;, 0, scale, 1500, {
+    type: AR.CONST.EASING_CURVE_TYPE.EASE_OUT_QUAD
+});
+var sy = new AR.PropertyAnimation(model, &quot;scale.y&quot;, 0, scale, 1500, {
+    type: AR.CONST.EASING_CURVE_TYPE.EASE_OUT_QUAD
+});
+var sz = new AR.PropertyAnimation(model, &quot;scale.z&quot;, 0, scale, 1500, {
+    type: AR.CONST.EASING_CURVE_TYPE.EASE_OUT_QUAD
+});
+
+return new AR.AnimationGroup(AR.CONST.ANIMATION_GROUP_TYPE.PARALLEL, [sx, sy, sz]);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_2_AppearingAnimation/js/appearinganimation.js#L87-L97">GitHub</a>
+</div>
+
+<p>Each <a href="../Reference/JavaScript%20API/classes/PropertyAnimation.html"><code>AR.PropertyAnimation</code></a> targets one of the three axis and scales the model from 0 to the value passed in the <code>scale</code> variable. An <code>EASE_OUT_QUAD</code> easing curve is used to create a more dynamic effect of the animation.</p>
+<p>To get a notification once the image target is inside the field of vision the <code>onEnterFieldOfVision</code> trigger of the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> is used. In the example the function <code>appear()</code> is attached.</p>
+<pre><code class="lang-js">appear: function appearFn () {
+    World.appearingAnimation.start();
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_2_AppearingAnimation/js/appearinganimation.js#L100-L102">GitHub</a>
+</div>
+
+<p>Within the <code>appear</code> function the previously created <a href="../Reference/JavaScript%20API/classes/AnimationGroup.html"><code>AR.AnimationGroup</code></a> is started by calling its <code>start()</code> function which plays the animation once.</p>
+<p><a id="interactivity"></a></p>
+<h3 id="interactivity-3-6-">Interactivity (3/6)</h3>
+<p>To add more functionality, a rotating animation is added to the 3D model. It is started and paused by clicking on the button or on the 3D model.</p>
+<p>Additionally to the 3D model an image that will act as a button is added to the image target. This can be accomplished by loading an <a href="../Reference/JavaScript%20API/classes/ImageResource.html"><code>AR.ImageResource</code></a> and creating a drawable from it.</p>
+<pre><code class="lang-js">var imgRotate = new AR.ImageResource(&quot;assets/rotateButton.png&quot;);
+var buttonRotate = new AR.ImageDrawable(imgRotate, 0.2, {
+    offsetX: 0.35,
+    offsetY: 0.45,
+    onClick: this.toggleAnimateModel
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_3_Interactivity/js/interactivity.js#L67-L72">GitHub</a>
+</div>
+
+<p>To add the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> to the image target together with the 3D model both drawables are supplied to the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a>.</p>
+<pre><code class="lang-js">var trackable = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        cam: [this.modelCar, buttonRotate]
+    },
+    onEnterFieldOfVision: this.appear
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_3_Interactivity/js/interactivity.js#L79-L84">GitHub</a>
+</div>
+
+<p>The rotation animation for the 3D model is created by defining an <a href="../Reference/JavaScript%20API/classes/PropertyAnimation.html"><code>AR.PropertyAnimation</code></a> for the <code>rotate.roll</code> property.</p>
+<pre><code class="lang-js">// Rotation Animation
+this.rotationAnimation = new AR.PropertyAnimation(this.modelCar, &quot;rotate.roll&quot;, -25, 335, 10000);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_3_Interactivity/js/interactivity.js#L62">GitHub</a>
+</div>
+
+<p>The drawables are made clickable by setting their <code>onClick</code> triggers. Click triggers can be set in the options of the drawable when the drawable is created. Thus, when the 3D model <code>onClick: this.toggleAnimateModel</code> is set in the options it is then passed to the <a href="../Reference/JavaScript%20API/classes/Model.html"><code>AR.Model</code></a> constructor. Similar the button&#39;s <code>onClick: this.toggleAnimateModel</code> trigger is set in the options passed to the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> constructor. <code>toggleAnimateModel()</code> is therefore called when the 3D model or the button is clicked.</p>
+<p>Inside the <code>toggleAnimateModel()</code> function, it is checked if the animation is running and decided if it should be started, resumed or paused.</p>
+<pre><code class="lang-js">toggleAnimateModel: function toggleAnimateModelFn() {
+    if (!World.rotationAnimation.isRunning()) {
+        if (!World.rotating) {
+            World.rotationAnimation.start(-1);
+            World.rotating = true;
+        } else {
+            World.rotationAnimation.resume();
+        }
+    } else {
+        World.rotationAnimation.pause();
+    }
+
+    return false;
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_3_Interactivity/js/interactivity.js#L135-L151">GitHub</a>
+</div>
+
+<p>Starting an animation with <code>.start(-1)</code> will loop it indefinitely.</p>
+<p><a id="snapToScreen"></a></p>
+<h3 id="snap-to-screen-4-6-">Snap to Screen (4/6)</h3>
+<p>To finish things up, the snap to screen feature is added so that the 3D model can be explored in a more immersive way. Snap to screen will bring the drawables, attached to a <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a>, out of the augmented reality scene and directly onto the screen. Once snapped, the drawables will stay on the screen as long as they are not set back into the augmented reality context. Thereby users can explore content even if they don&#39;t look at the target image.</p>
+<p>The snap position on the screen is defined through a <code>div</code> element. During the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> creation, the <code>div</code> is passed as a additional option. In this example a <code>div</code> with id <code>snapContainer</code> is used.</p>
+<pre><code class="lang-js">this.trackable = new AR.Trackable2DObject(this.tracker, &quot;*&quot;, {
+    drawables: {
+        ...
+    },
+    snapToScreen: {
+        snapContainer: document.getElementById(&#39;snapContainer&#39;)
+    },
+    ...
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_4_SnapToScreen/js/snaptoscreen.js#L139-L147">GitHub</a>
+</div>
+
+<p>Snapping is then enabled through an additional button. The button is created and setup just the same way as the rotate button. The only difference is that the <code>onClick</code> function of the newly created button is pointing to a different function.</p>
+<pre><code class="lang-js">toggleSnapping: function toggleSnappingFn() {
+
+    World.snapped = !World.snapped;        
+    World.trackable.snapToScreen.enabled = World.snapped;
+
+    if ( !World.snapped ) {
+
+        World.applyLayout(World.layout.snapped);
+
+        World.addInteractionEventListener();
+
+    } else {
+
+        World.applyLayout(World.layout.normal);
+
+        World.removeInteractionEventListener();
+    }
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_4_SnapToScreen/js/snaptoscreen.js#L295-L312">GitHub</a>
+</div>
+
+<p>To enable snapping, set the <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html"><code>AR.Trackable2DObject</code></a> property <a href="../Reference/JavaScript%20API/classes/Trackable2DObject.html#property_snapToScreen.enabled"><code>snapToScreen.enabled</code></a> accordingly (either <code>true</code> or <code>false</code>). Based on the current snapping state, the drawables are positioned and scaled differently and event listeners are added or removed so that the 3D model can only be modified while it is snapped.</p>
+<p>In the sample the 3D model can be rotated and scaled through touch and gesture events once it is snapped to the screen. To apply the new rotation and scale values, the JavaScript events <code>touchmoved</code> and <code>gesturechange</code> are used. Inside these listener functions scale and rotation values are calculated and applied to the 3D model.</p>
+<p>JavaScript event listeners are attached to the snap container. This means that gestures are only recognised in a limited area of the web view. To visualise the snap container, simply change the opacity values of the div element in the samples .css file.</p>
+<p><a id="model_parts_animation"></a></p>
+<h3 id="animation-of-model-parts-5-6-">Animation of Model Parts (5/6)</h3>
+<p>A 3D model represents a set of triangle meshes which can further be subdivided in mesh parts. Each mesh or mesh part stores material properties and transformations which determines its appearance and spatial position. 
+In case of the red Lamborghini model discussed above the wheels, doors, roof and the hood, a.s.o. represent meshes. The car&#39;s door, for example, is further subdivided into mesh parts representing the door&#39;s frame, side mirror or door handle. The grouping of meshes parts allows to animate parts of the 3D model independently. In the Lamborghini example the door with all its parts can be opened (see figure below).</p>
+<p><img src="images/car_animated_door.png" alt="Animation of a model part in the 3D Encoder" title="Animation of a model part in the 3D Encoder."></p>
+<p>Meshes and mesh parts and can have identifiers which are passed to the <a href="../Reference/JavaScript%20API/classes/Model.html#event_onClick"><code>onClick</code></a> trigger function of the <a href="../Reference/JavaScript%20API/classes/Model.html#event_onClick"><code>AR.Model</code></a> as parameter <code>modelPart</code>. This allows to apply different actions when certain parts of a 3D model have been clicked/touched by the user. In the code snippet shown below the parameter <code>modelPart</code> is used in a switch instruction. If the <code>modelPart</code> reported is part of the car&#39;s left door an animation from the 3D model is created and started. Otherwise the identifier of the mesh or mesh part (parameter <code>modelPart</code>) is displayed in a pop-up window via the alert function.</p>
+<pre><code class="lang-js">var model = new AR.Model(&quot;assets/car_animated.wt3&quot;, {
+    ...
+    onClick : function( drawable, modelPart ) 
+    {
+        switch(modelPart) 
+        {
+            case &#39;WindFL&#39;: 
+            case &#39;DoorL[0]&#39;:
+            case &#39;DoorL[1]&#39;:
+            case &#39;DoorL[2]&#39;:
+            case &#39;DoorL[3]&#39;:
+                var anim = new AR.ModelAnimation( model, &quot;DoorOpenL_animation&quot; );
+                anim.start();
+                break;
+
+            default:
+                alert( &#39;clicked: &#39; + model_part );
+        }
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_5_AnimatedModelParts/js/3dmodels.js#L47-L81">GitHub</a>
+</div>
+
+<p>The identifiers of the mesh parts are provided by the 3D model. They are specified by the modeling tool the 3D model was created with (e.g. 3d Studio Max, Maya, Blender, ...). A list of meshes and mesh parts for a 3D model can be obtained from by the <a href="encoder.html">Wikitude 3D Encoder</a> (see figure below). If a mesh consists of single part, the identifier contains the name of the mesh, e.g., &#39;WindFL&#39;. If it consists of several parts, the identifier contains the index of the part in square brackets attached to its name, e.g., <code>DoorL[0]</code>. </p>
+<p><img src="images/car_animated_3dencoder.png" alt="Copy identifiers of model parts with the 3D Encoder" title="Copy identifiers of model parts with the 3D Encoder."></p>
+<p><a id="3dModelAtGeoLocation"></a></p>
+<h3 id="3d-model-at-geolocation-6-6-">3D Model at GeoLocation (6/6)</h3>
+<p>Beside rendering 3D models on top of recognized target images, the Wikitude SDK can also render 3D models at any kind of location. In the example below we are showing how to place a 3D model at a specific relative location. The location of the 3D model is relative to the user&#39;s current position and placed about 5 meters away to the north and 2 meters above. We are using a relative location so it is easier for you to try it out on your own, however it is easy to change that to a real geo-location. (See <a href="../Reference/JavaScript%20API/classes/GeoLocation.html"><code>AR.GeoLocation</code></a> and <a href="../Reference/JavaScript%20API/classes/RelativeLocation.html"><code>AR.RelativeLocation</code></a> for details)</p>
+<pre><code class="lang-js">/*
+    First a location where the model should be displayed will be defined. This location will be relative to the user.    
+*/
+var location = new AR.RelativeLocation(null, 5, 0, 2);
+
+/*
+    Next the model object is loaded.
+*/
+var modelEarth = new AR.Model(&quot;assets/earth.wt3&quot;, {
+    onLoaded: this.worldLoaded,
+    scale: {
+        x: 1,
+        y: 1,
+        z: 1
+    }
+});
+
+/*
+    Putting it all together the location and 3D model is added to an AR.GeoObject.
+*/
+var obj = new AR.GeoObject(location, {
+    drawables: {
+       cam: [modelEarth]
+    }
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/3_3dModels_6_3dModelAtGeoLocation/js/3dmodelatgeolocation.js#L14-L42">GitHub</a>
+</div>
+
+<p>When starting the experience you will need to point your camera a little bit to the east and little bit up and you will see a 3D model of the earth floating in front of you. </p>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="point-of-interest-poi-">Point Of Interest (POI)</h2>
+<p>The Point Of Interest (POI) example series will show how you can create a marker that is placed at a specific geolocation. The example is split into four different parts that depend on each other. You will have a complete and reusable marker at the end of the series which has a title, description, a selected and an idle state which animates smoothly from one to another.</p>
+<p>This sample consists of four parts</p>
+<ol>
+<li><a href="#poiatlocation">POI at Location</a></li>
+<li><a href="#poiwithlabel">POI with Label</a></li>
+<li><a href="#multiplepois">Multiple POIs</a></li>
+<li><a href="#selectingpois">Selecting POIs</a></li>
+</ol>
+<p><a id="poiatlocation"></a></p>
+<h3 id="poi-at-location-1-4-">POI at Location (1/4)</h3>
+<p>The first part of the series will present an image at a geolocation. To do so, we will use the <code>AR.context.onLocationChanged()</code> callback to get the current location. After the location has been retrieved, we will use it to place an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> there.</p>
+<p>All JavaScript code can be found in the file <code>poiatlocation.js</code>.</p>
+<p>The example <a href="clientrecognition.html">Client Recognition</a> already explained how images are loaded and displayed in the augmented reality view. This sample loads an <a href="../Reference/JavaScript%20API/classes/ImageResource.html"><code>AR.ImageResource</code></a> when the <code>World</code> variable was defined. It will be reused for each marker that we will create afterwards.</p>
+<p>The last line of the <code>poiatlocation.js</code> shows how to set a custom <code>AR.context.onLocationChanged</code> callback.</p>
+<pre><code class="lang-js">AR.context.onLocationChanged = World.onLocationChanged;
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_1_PoiAtLocation/js/poiatlocation.js#L76">GitHub</a>
+</div>
+
+<p>The custom function <code>World.onLocationChanged</code> checks with the flag <code>World.initiallyLoadedData</code> if  the function was already called. There is also a possibility to set <code>AR.context.onLocationChanged</code> to null. In this case the function will not be called anymore and no further location updates will be received.</p>
+<p>On the first call of <code>World.onLocationChanged</code> an object that contains geo information will be created which will be later used to create a marker using the <code>World.loadPoisFromJsonData</code> function.</p>
+<pre><code class="lang-js">locationChanged: function locationChangedFn(lat, lon, alt, acc) {
+    // request data if not already present
+    if (!World.initiallyLoadedData) {
+        var poiData = {
+            &quot;id&quot;: 1,
+            &quot;longitude&quot;: (lon + (Math.random() / 5 - 0.1)),
+            &quot;latitude&quot;: (lat + (Math.random() / 5 - 0.1)),
+            &quot;altitude&quot;: 100.0
+        };
+        World.loadPoisFromJsonData(poiData);
+        World.initiallyLoadedData = true;
+    }
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_1_PoiAtLocation/js/poiatlocation.js#L58-L69">GitHub</a>
+</div>
+
+<p>The <code>loadPoisFromJsonData</code> function creates an <a href="../Reference/JavaScript%20API/classes/ImageResource.html"><code>AR.ImageResource</code></a> which is later used as an image for the marker.</p>
+<pre><code class="lang-js">// start loading marker assets
+World.markerDrawable_idle = new AR.ImageResource(&quot;assets/marker_idle.png&quot;);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_1_PoiAtLocation/js/poiatlocation.js#L15">GitHub</a>
+</div>
+
+<p>For creating the marker a new object <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> will be created at the specified geolocation. An <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> connects one or more <code>AR.GeoLocations</code> with multiple <code>AR.Drawables</code>. The <code>AR.Drawables</code> can be defined for multiple targets. A target can be the camera, the radar or a direction indicator. Both the radar and direction indicators will be covered in more detail in later examples.</p>
+<pre><code class="lang-js">    // create the marker
+    var markerLocation = new AR.GeoLocation(poiData.latitude, poiData.longitude, poiData.altitude);
+    var markerImageDrawable_idle = new AR.ImageDrawable(markerDrawable_idle, 2.5, {
+        zOrder: 0,
+        opacity: 1.0
+    });
+I
+    // create GeoObject
+    var markerObject = new AR.GeoObject(markerLocation, {
+        drawables: {
+            cam: [markerImageDrawable_idle]
+        }
+    });
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_1_PoiAtLocation/js/poiatlocation.js#L20-L31">GitHub</a>
+</div>
+
+<p>Finally the status message is updated as a user feedback that everything was loaded properly:</p>
+<pre><code class="lang-js">World.updateStatusMessage(&#39;1 place loaded&#39;);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_1_PoiAtLocation/js/poiatlocation.js#L34">GitHub</a>
+</div>
+
+<p><a id="poiwithlabel"></a></p>
+<h3 id="poi-with-label-2-4-">POI with Label (2/4)</h3>
+<p>The second part adds a title and description label to our marker object and covers more drawable related options.</p>
+<p><img src="images/sample_poi_poiwithlabel.jpg" alt=""></p>
+<p>All JavaScript changes are in <code>poiwithlabel.js</code>. Note that the file is only renamed but its content is mostly identical to <code>poiatlocation.js</code>.</p>
+<p>The <code>locationChanged</code> function adds a description and a title to the marker:</p>
+<pre><code class="lang-js">var poiData = {
+    &quot;id&quot;: 1,
+    &quot;longitude&quot;: (lon + (Math.random() / 5 - 0.1)),
+    &quot;latitude&quot;: (lat + (Math.random() / 5 - 0.1)),
+    &quot;altitude&quot;: 100.0,
+    &quot;description&quot;: &quot;This is the description of POI#1&quot;,
+    &quot;title&quot;: &quot;POI#1&quot;
+};
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_2_PoiWithLabel/js/poiwithlabel.js#L49-L56">GitHub</a>
+</div>
+
+<p>Since there are additional changes concerning the marker it makes sense to extract the code to a separate <code>Marker</code> class (see <strong>marker.js</strong>). Parts of the code are moved from <code>loadPoisFromJsonData</code> to the <code>Marker</code>class: the creation of the <code>AR.GeoLocation</code>, the creation of the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> and the creation of the <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a>. Then instantiate the <code>Marker</code> in the function <code>loadPoisFromJsonData</code> like this:</p>
+<pre><code class="lang-js">    // create the marker
+    var marker = new Marker(poiData);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_2_PoiWithLabel/js/poiwithlabel.js#L20">GitHub</a>
+</div>
+
+<p>There are two major points that need to be considered while drawing multiple <code>AR.Drawables</code> at the same location. It has to be defined which one is before or behind another drawable (rendering order) and if they need a location offset. For both scenarios, ARchitect has some functionality to adjust the drawable behavior.</p>
+<p>To position the <code>AR.Label</code> in front of the background, the background drawable(<code>AR.ImageDrawable2D</code>) receives a <code>zOrder</code> of 0. Both labels have a <code>zOrder</code> of 1. This way it is guaranteed that the labels will be drawn in front of the background drawable.</p>
+<p>Assuming both labels will be drawn on the same geolocation connected with the same <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> they will overlap. To adjust their position change the <code>offsetX</code> and <code>offsetY</code> property of an <code>AR.Drawable2D</code> object. The unit for offsets are SDUs. See this chapter for more information about <a href="sdu-dbs.html">SDUs</a>.</p>
+<p>In the following both <code>AR.Labels</code> are initialized and positioned. Note that they are added to the cam property of the <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> the same way as an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a>.</p>
+<pre><code class="lang-js">function Marker(poiData) {
+
+    this.poiData = poiData;
+
+    var markerLocation = new AR.GeoLocation(poiData.latitude, poiData.longitude, poiData.altitude);
+    this.markerDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
+        zOrder: 0,
+        opacity: 1.0
+    });
+
+    this.titleLabel = new AR.Label(poiData.title.trunc(10), 1, {
+        zOrder: 1,
+        offsetY: 0.55,
+        style: {
+            textColor: &#39;#FFFFFF&#39;,
+            fontStyle: AR.CONST.FONT_STYLE.BOLD
+        }
+    });
+
+    this.descriptionLabel = new AR.Label(poiData.description.trunc(15), 0.8, {
+        zOrder: 1,
+        offsetY: -0.55,
+        style: {
+            textColor: &#39;#FFFFFF&#39;
+        }
+    });
+
+    // Changed: 
+    this.markerObject = new AR.GeoObject(markerLocation, {
+        drawables: {
+            cam: [this.markerDrawable_idle, this.titleLabel, this.descriptionLabel]
+        }
+    });
+
+    return this;
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_2_PoiWithLabel/js/marker.js#L1-L49">GitHub</a>
+</div>
+
+<p>Additionally a function which truncates a text string that is longer than the given length is added. This function is used to shorten titles or descriptions.</p>
+<pre><code class="lang-js">String.prototype.trunc = function(n) {
+       return this.substr(0, n - 1) + (this.length &gt; n ? &#39;...&#39; : &#39;&#39;);
+};
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_2_PoiWithLabel/js/marker.js#L53-L55">GitHub</a>
+</div>
+
+<p><a id="multiplepois"></a></p>
+<h3 id="multiple-pois-3-4-">Multiple POIs (3/4)</h3>
+<p>The third example consist of two parts. The first part shows how to create multiple markers and in the second part an implementation of a marker selection is described. </p>
+<p><img src="images/sample_poi_multiple_poi.jpg" alt=""></p>
+<p>For creating multiple markers change the class <code>World</code>. Add a function <code>requestDataFromLocal</code> with the geo information as parameters (latitude, longitude) which are used for creating different poi data to a random location in the user&#39;s vicinity. The new function is called from <code>locationChanged</code> instead of calling <code>loadPoisFromJsonData</code> like in the previous example:</p>
+<pre><code class="lang-js">World.requestDataFromLocal(lat, lon);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/multiplepois.js#L71">GitHub</a>
+</div>
+
+<p>The function <code>loadPoisFromJsonData</code> will be called within the new function <code>requestDataFromLocal</code> after the POI data was created:</p>
+<pre><code class="lang-js">
+    // request POI data
+    requestDataFromLocal: function requestDataFromLocalFn(centerPointLatitude, centerPointLongitude) {
+        var poisToCreate = 20;
+        var poiData = [];
+
+        for (var i = 0; i &lt; poisToCreate; i++) {
+            poiData.push({
+                &quot;id&quot;: (i + 1),
+                &quot;longitude&quot;: (centerPointLongitude + (Math.random() / 5 - 0.1)),
+                &quot;latitude&quot;: (centerPointLatitude + (Math.random() / 5 - 0.1)),
+                &quot;description&quot;: (&quot;This is the description of POI#&quot; + (i + 1)),
+                &quot;altitude&quot;: &quot;100.0&quot;,
+                &quot;name&quot;: (&quot;POI#&quot; + (i + 1))
+            });
+        }
+        World.loadPoisFromJsonData(poiData);
+    }
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/multiplepois.js#L100-L114">GitHub</a>
+</div>
+
+<p>Since the argument of <code>loadPoisFromJsonData</code> is used as an array and not like a single object as before some adaptations are necessary. The POI information array which is delivered as an argument in the function <code>loadPoisFromJsonData</code> is used to create poiData objects. In a for loop iterate through all the poi information objects. For each object create a new object <code>singlePoi</code>. To create multiple markers <code>new Marker(poiData)</code> can be called multiple times with different locations, titles and descriptions as defined in the poiData object. Now create the <code>Marker</code> objects and store them in an array <code>markerList</code> which is defined as a member variable in the <code>World</code> class. The <code>markerList</code> array is needed for selection/deselection of markers and will be described later in this example. Finally the status message is updated with the number of POIs loaded.</p>
+<pre><code class="lang-js">
+        // called to inject new POI data
+        loadPoisFromJsonData: function loadPoisFromJsonDataFn(poiData) {
+
+            // empty list of visible markers
+            World.markerList = [];
+
+            // start loading marker assets
+            World.markerDrawable_idle = new AR.ImageResource(&quot;assets/marker_idle.png&quot;);
+
+            // loop through POI-information and create an AR.GeoObject (=Marker) per POI
+            for (var currentPlaceNr = 0; currentPlaceNr &lt; poiData.length; currentPlaceNr++) {
+                var singlePoi = {
+                    &quot;id&quot;: poiData[currentPlaceNr].id,
+                    &quot;latitude&quot;: parseFloat(poiData[currentPlaceNr].latitude),
+                    &quot;longitude&quot;: parseFloat(poiData[currentPlaceNr].longitude),
+                    &quot;altitude&quot;: parseFloat(poiData[currentPlaceNr].altitude),
+                    &quot;title&quot;: poiData[currentPlaceNr].name,
+                    &quot;description&quot;: poiData[currentPlaceNr].description
+                };
+
+                World.markerList.push(new Marker(singlePoi));
+            }
+
+            World.updateStatusMessage(currentPlaceNr + &#39; places loaded&#39;);
+        }
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/multiplepois.js#L17-L43">GitHub</a>
+</div>
+
+<p>At this point the implementation for displaying multiple markers is finished. Let&#39;s have a look on how to change the marker background image after it was selected and handle the different selection states.</p>
+<p>A second <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> is defined in <code>marker.js</code>.</p>
+<p>To react on user interaction, an <code>onClick</code> property can be set for each <code>AR.Drawable</code>. The property is a function which will be called each time the user taps on the drawable. The following snippet shows the adapted <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> creation.</p>
+<pre><code class="lang-js">this.markerDrawable_idle = new AR.ImageDrawable(World.markerDrawable_idle, 2.5, {
+    zOrder: 0,
+    opacity: 1.0,
+    onClick: Marker.prototype.getOnClickTrigger(this)
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/marker.js#L13-L20">GitHub</a>
+</div>
+
+<p>The function called on each tap is returned from the following helper function defined in <code>marker.js</code>. The function returns a function which checks the selected state with the help of the variable <code>isSelected</code> and executes the appropriate function. The clicked marker is passed as an argument.</p>
+<pre><code class="lang-js">Marker.prototype.getOnClickTrigger = function(marker) {
+
+    return function() {
+            if (marker.isSelected) {
+                Marker.prototype.setDeselected(marker);
+
+            } else {
+                Marker.prototype.setSelected(marker);
+                try {
+                    World.onMarkerSelected(marker);
+                } catch (err) {
+                    alert(err);
+                }
+            }
+    };
+};
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/marker.js#L58-L84">GitHub</a>
+</div>
+
+<p>The <code>setSelected</code> and <code>setDeselected</code> functions are prototype <code>Marker</code> functions.</p>
+<p>Both functions perform the same steps but inverted, hence only one function (<code>setSelected</code>) is covered in detail. Three steps are necessary to select the marker. First the state will be set appropriately. Second the background drawable will be enabled and the standard background disabled. This is done by setting the opacity property to 1.0 for the visible state and to 0.0 for an invisible state. Third the <code>onClick</code> function is set only for the background drawable of the selected marker.</p>
+<pre><code class="lang-js">Marker.prototype.setSelected = function(marker) {
+
+    marker.isSelected = true;
+
+    marker.markerDrawable_idle.opacity = 0.0;
+    marker.markerDrawable_selected.opacity = 1.0;
+
+    marker.markerDrawable_idle.onClick = null;
+    marker.markerDrawable_selected.onClick = Marker.prototype.getOnClickTrigger(marker);
+};
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/marker.js#L86-L94">GitHub</a>
+</div>
+
+<p>To be able to deselect a marker while the user taps on the empty screen, the <code>World</code> object holds an array that contains each marker.</p>
+<pre><code class="lang-js">World.markerList.push( new Marker(poiData) );
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/multiplepois.js#L40">GitHub</a>
+</div>
+
+<p>To detect clicks where no drawable was hit set a custom function on <code>AR.context.onScreenClick</code> where the currently selected marker is deselected.</p>
+<pre><code class="lang-js">onScreenClick: function onScreenClickFn() {
+    if (World.currentMarker) {
+        World.currentMarker.setDeselected(World.currentMarker);
+    }
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_3_MultiplePois/js/multiplepois.js#L93-L97">GitHub</a>
+</div>
+
+<p><a id="selectingpois"></a></p>
+<h3 id="selecting-pois-4-4-">Selecting POIs (4/4)</h3>
+<p><img src="images/sample_poi_selecting_poi.jpg" alt=""></p>
+<p>The last part describes the concepts behind <code>AR.PropertyAnimations</code> and <code>AR.AnimationGroups</code>. It also explains how direction indicators can be used to visualize selected objects that are currently not visible in the viewfinder.</p>
+<p>With <code>AR.PropertyAnimations</code> you are able to animate almost any property of ARchitect objects. This sample will animate the opacity of both background drawables so that one will fade out while the other one fades in. The scaling is animated too. The marker size changes over time so the labels need to be animated too in order to keep them relative to the background drawable. <code>AR.AnimationGroups</code> are used to synchronize all animations in parallel or sequentially.</p>
+<p>In <code>marker.js</code> there are two new variables declared. They hold a reference to an <a href="../Reference/JavaScript%20API/classes/AnimationGroup.html"><code>AR.AnimationGroup</code></a> that is used to either start or stop the animations.</p>
+<pre><code class="lang-js">this.animationGroup_idle = null;
+this.animationGroup_selected = null;
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_4_SelectingPois/js/marker.js#L13-L14">GitHub</a>
+</div>
+
+<p>The functions <code>setSelected</code> and <code>setDeselected</code> in <code>marker.js</code> have to be adapted. Again only the changes in <code>setSelected</code> are explained. </p>
+<p>There are two types of <code>AR.AnimationGroups</code>. Parallel animations are running at the same time, sequential animations are played one after another. This example uses a parallel <a href="../Reference/JavaScript%20API/classes/AnimationGroup.html"><code>AR.AnimationGroup</code></a>.</p>
+<pre><code class="lang-js">if (marker.animationGroup_selected === null) {
+
+    var hideIdleDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle, &quot;opacity&quot;, null, 0.0, kMarker_AnimationDuration_ChangeDrawable);
+        var showSelectedDrawableAnimation = new AR.PropertyAnimation(marker.markerDrawable_selected, &quot;opacity&quot;, null, 0.8, kMarker_AnimationDuration_ChangeDrawable);
+
+        var idleDrawableResizeAnimation = new AR.PropertyAnimation(marker.markerDrawable_idle, &#39;scaling&#39;, null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
+            amplitude: 2.0
+        }));
+        var selectedDrawableResizeAnimation = new AR.PropertyAnimation(marker.markerDrawable_selected, &#39;scaling&#39;, null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
+            amplitude: 2.0
+        }));
+
+        var titleLabelResizeAnimation = new AR.PropertyAnimation(marker.titleLabel, &#39;scaling&#39;, null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
+            amplitude: 2.0
+        }));
+        var descriptionLabelResizeAnimation = new AR.PropertyAnimation(marker.descriptionLabel, &#39;scaling&#39;, null, 1.2, kMarker_AnimationDuration_Resize, new AR.EasingCurve(AR.CONST.EASING_CURVE_TYPE.EASE_OUT_ELASTIC, {
+            amplitude: 2.0
+        }));
+
+        marker.animationGroup_selected = new AR.AnimationGroup(AR.CONST.ANIMATION_GROUP_TYPE.PARALLEL, [hideIdleDrawableAnimation, showSelectedDrawableAnimation, idleDrawableResizeAnimation, selectedDrawableResizeAnimation, titleLabelResizeAnimation, descriptionLabelResizeAnimation]);
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_4_SelectingPois/js/marker.js#L163-L190">GitHub</a>
+</div>
+
+<p>Launch the <a href="../Reference/JavaScript%20API/classes/AnimationGroup.html"><code>AR.AnimationGroup</code></a> using the <code>start</code> function.</p>
+<pre><code class="lang-js">    marker.animationGroup_selected.start();
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_4_SelectingPois/js/marker.js#L156">GitHub</a>
+</div>
+
+<p>In the function <code>Marker.prototype.getOnClickTrigger</code> the selection functions are only called if no animation is currently running:</p>
+<pre><code class="lang-js">if (!Marker.prototype.isAnyAnimationRunning(marker)) {
+    if (marker.isSelected) {
+
+        Marker.prototype.setDeselected(marker);
+
+    } else {
+        Marker.prototype.setSelected(marker);
+        try {
+            World.onMarkerSelected(marker);
+        } catch (err) {
+            alert(err);
+        }
+
+    }
+    } else {
+        AR.logger.debug(&#39;a animation is already running&#39;);
+    }
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_4_SelectingPois/js/marker.js#L86-L102">GitHub</a>
+</div>
+
+<p>Create an <a href="../Reference/JavaScript%20API/classes/ImageResource.html"><code>AR.ImageResource</code></a> referencing the image that should be displayed for a direction indicator. Then create an <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> using the <a href="../Reference/JavaScript%20API/classes/ImageResource.html"><code>AR.ImageResource</code></a>. Set options regarding the offset and anchor of the image so that it will be displayed correctly on the edge of the screen.</p>
+<pre><code class="lang-js">this.directionIndicatorDrawable = new AR.ImageDrawable(World.markerDrawable_directionIndicator, 0.5, {
+    enabled: false
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_4_SelectingPois/js/marker.js#L59-L62">GitHub</a>
+</div>
+
+<p>The last step is to define the <a href="../Reference/JavaScript%20API/classes/ImageDrawable.html"><code>AR.ImageDrawable</code></a> as an <code>indicator</code> target on the marker <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a>. The direction indicator is displayed automatically when necessary. <code>AR.Drawable</code> subclasses (e.g. <a href="../Reference/JavaScript%20API/classes/Circle.html"><code>AR.Circle</code></a>) can be used as direction indicators.</p>
+<pre><code class="lang-js">this.markerObject = new AR.GeoObject(markerLocation, {
+    drawables: {
+        cam: [    this.markerDrawable_idle, 
+                this.markerDrawable_selected, 
+                this.titleLabel, 
+                this.descriptionLabel
+             ],
+            indicator: this.directionIndicatorDrawable
+        }
+    });
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/4_PointOfInterest_4_SelectingPois/js/marker.js#L67-L75">GitHub</a>
+</div>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

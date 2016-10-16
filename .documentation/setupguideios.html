@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="setup-guide-ios">Setup Guide iOS</h2>
+<div style="float: right">
+
+<img src="images/WT_HG_Developer_GetStarted_iOS_IMG.png" />
+
+</div>
+
+<p>There are only a few steps necessary to add the Wikitude SDK to your iOS application. This guide will explain them in detail. </p>
+<h3 id="load-your-xcode-project">Load your Xcode project</h3>
+<p>The first step is to open an existing Xcode project. If there is no project available, create one using the Xcode project setup wizard.</p>
+<h3 id="adding-the-wikitude-sdk-framework">Adding the Wikitude SDK Framework</h3>
+<p>At first, create a new directory in your project structure and name it e.g. <code>Frameworks</code>. Copy the downloaded WikitudeSDK.framework into this directory afterwards.</p>
+<p><img src="images/CopyWikitudeFramework.png" alt=" "></p>
+<p>After the Wikitude SDK Framework was copied into an appropriate location, it can be added using the <code>Linked Frameworks and Libraries</code> panel from your targets <code>General</code> project setting.</p>
+<p><img src="images/LinkedFrameworksAndLibraries.png" alt=" "></p>
+<p>In the open dialog, navigate to the Framework location and click <code>Open</code>.</p>
+<p><img src="images/SelectWikitudeFramework.png" alt=""></p>
+<p><a id="configurebuildphases"></a></p>
+<h4 id="configure-build-phases">Configure Build Phases</h4>
+<p>Now add all the required iOS Frameworks listed below. You can add them as described above using the <code>Link Binary With Libraries</code> build phase.</p>
+<ul>
+<li>Accelerate.framework</li>
+<li>AssetLibrary.framework</li>
+<li>AVFoundation.framework</li>
+<li>CFNetwork.framework</li>
+<li>CoreGraphics.framework</li>
+<li>CoreLocation.framework</li>
+<li>CoreMotion.framework</li>
+<li>CoreVideo.framework</li>
+<li>JavaScriptCore.framework</li>
+<li>Foundation.framework</li>
+<li>MediaPlayer.framework</li>
+<li>OpenGLES.framework</li>
+<li>QuartzCore.framework</li>
+<li>Security.framework</li>
+<li>SystemConfiguration.framework</li>
+<li>UIKit.framework</li>
+</ul>
+<p>Also add the following dynamic libraries</p>
+<ul>
+<li>libc++.dylib</li>
+<li>libz.dylib</li>
+</ul>
+<p><img src="images/AddingiOSFrameworksAndLibraries.png" alt=" "></p>
+<p>The following image shows a project that is properly configured and includes all required Frameworks.
+<img src="images/CompleteLinkWithLibrariesList.png" alt=" "></p>
+<h5 id="configure-build-settings">Configure Build Settings</h5>
+<p>The Wikitude SDK requires the <code>-ObjC</code> linker flag. Linker flags can be adjusted in the projects <code>Build Settings</code> tab. Search for <code>Other Linker Flags</code> and add a new entry if it does not already exist.
+<img src="images/AddLinkerFlag.png" alt=" "></p>
+<h3 id="using-the-sdk-in-your-application">Using the SDK in your Application</h3>
+<p>After all setup steps are completed, the Wikitude SDK is ready to be used within an iOS application. The class to work with is <code>WTArchitectView</code>. This <code>UIView</code> subclass allows you to load ARchitect Worlds.</p>
+<p>Since the Wikitude SDK is a Framework, the header import should look like this: <code>#import &lt;*FrameworkName*/*HeaderFile.h*&gt;</code>. This import is typically done in the <code>UIViewController</code> subclass which manages the <code>WTArchitectView</code> instance.</p>
+<pre><code>#import &lt;WikitudeSDK/WTArchitectView.h&gt;
+</code></pre><p>It is common practice to add a <code>WTArchitectView</code> and <code>WTNavigation</code> property to the <code>UIViewController</code> subclass.</p>
+<pre><code>@property (nonatomic, strong) WTArchitectView               *architectView;    
+@property (nonatomic, weak) WTNavigation                    *architectWorldNavigation;
+</code></pre><p>To initialize an instance of type <code>WTArchitectView</code>, use the <code>-initWithFrame:motionManager:</code> method. If the project uses Autolayout, then the frame parameter can be <code>CGRectZero</code>, otherwise the parameter defines the origin and size of the architect view. 
+If the iOS application has already initialized a <code>CMMotionManager</code> instance, this instance should be passed as motionManager parameter, otherwise this parameter should be nil and the Wikitude SDK will create its own <code>CMMotionManager</code> instance.</p>
+<p>The following snippet shows a complete <code>WTArchitectView</code> initialization.</p>
+<pre><code class="lang-objc">- (void)viewDidLoad
+{
+    // ... other initialization code ...
+
+    NSError *deviceNotSupportedError = nil;
+    if ( [WTArchitectView isDeviceSupportedForRequiredFeatures:WTFeature_Geo | WTFeature_2DTracking error:&amp;deviceNotSupportedError] ) { // 1
+        self.architectView = [[WTArchitectView alloc] initWithFrame:self.view.bounds motionManager:nil];
+        self.architectView.delegate = self;
+        [self.architectView setLicenseKey:@&quot;YOUR_LICENSE_KEY&quot;];
+        [self.view addSubview:self.architectView];
+    } else {
+        NSLog(@&quot;device is not supported - reason: %@&quot;, [deviceNotSupportedError localizedDescription]);
+    }
+    // ... continue initialization ...
+}
+</code></pre>
+<ol>
+<li><p>Use the <code>isDeviceSupportedForRequiredFeatures:error:</code> method to determine if the current device is capable of running Architect Worlds with certain feature requirements. See the class reference of <code>WTArchitectView</code> for more information.</p>
+</li>
+<li><p>The <code>setLicenseKey:</code> method allows you to pass a string containing the trial license key. Read this chapter on how to <a href="triallicense.html">obtain a free trial key</a>.</p>
+</li>
+<li><p>The WTArchitectView instance needs to be added to the applications view hierarchy.</p>
+</li>
+</ol>
+<p>To start the camera, the <code>WTArchitectViews</code> <code>-start:completion</code> and <code>-stop</code> methods need to be called. The <code>UIViewControllers</code> <code>-viewWillAppear:</code> and <code>-viewWillDisappear:</code> methods can be used for this purpose. If the UIViewController which manages the WTArchitectView, is present at the moment the application will resign active (User pressed the Home button or an UIAlert is shown) or will become active again, the <code>WTArchitectView</code> needs to be started/stopped accordingly. </p>
+<p><strong> Note: </strong> You can find a Xcode project on <a href="https://github.com/Wikitude/wikitude-sdk-basic-projects/blob/master/iOS/AugmentedRealityApplication/ViewController.m">GitHub</a> which covers proper <code>WTArchitectView</code> handling in every detail.</p>
+<h3 id="loading-an-architect-world">Loading an ARchitect World</h3>
+<p>All the necessary steps to include an ARchitect World into an iOS application are very similar on how to add the Wikitude SDK Framework to an iOS application. </p>
+<ol>
+<li>The ARchitect World files need to be added to the Xcode projects folder structure</li>
+<li>the Xcode project itself and </li>
+<li>finally used within the iOS application. </li>
+</ol>
+<p>The following image shows a basic Xcode project structure. A new folder named <code>ArchitectWorld</code> was created and an Architect World was added.
+<img src="images/AddARchitectWorldInFinder.png" alt=" "></p>
+<p>Back in Xcode, the ARchitect World can be added by choosing <code>Add Files to &quot;*Project_Name*&quot;</code> from the <code>File</code> menu.
+<img src="images/AddARchitectWorldResourcesInXcode_I.png" alt=" "></p>
+<p>In the <code>File -&gt; Open</code> dialog, select the main <code>ArchitectWorld</code> folder. </p>
+<p><strong> Note: </strong> Please make sure to select the <code>Create folder references for any added Folders</code> option. This will copy all the files and subfolders to the applications resource bundle in the same structure. Additionally, any files that will be added later in time are automatically added to the resource bundle when you build your application.
+<img src="images/AddARchitectWorldResourcesInXcode_II.png" alt=" "></p>
+<p>This is how your project should look like after all steps are properly completed.
+<img src="images/FinalProjectSetup.png" alt=" "></p>
+<p>Architect Worlds can be loaded using the <code>loadArchitectWorldFromURL:withRequiredFeatures</code> method provided by <code>WTArchitectView</code>. To get the Architect World URL, use <code>NSBundle</code>s method <code>-URLForResource:withExtension:subdirectory</code>.</p>
+<p>The following listing shows how both methods should be used. </p>
+<pre><code class="lang-objc">NSURL *architectWorldURL = [[NSBundle mainBundle] URLForResource:@&quot;index&quot; withExtension:@&quot;html&quot; subdirectory:@&quot;ArchitectWorld&quot;];
+[self.architectView loadArchitectWorldFromURL:architectWorldURL withRequiredFeatures:WTFeature_Geo | WTFeature_2DTracking];
+</code></pre>
+<p>Note that the required features can be set differently for your project. Depending on what features the Architect World uses, only the necessary features should be passed to this method call.</p>
+<p>Typically this will be done when the <code>WTArchitectView</code> instance was created. The <code>-start:completion</code>/<code>-stop</code> and <code>-loadArchitectWorldFromURL:withRequiredFeatures</code> methods do not depend on each other, so the order in which they are called does not matter. </p>
+<p>It is not necessary to load the Architect World again if the WTArchitectView will be started again. Loading a new Architect World while another one is already loaded will unload the current Architect World and release all its associated objects and resources.</p>
+<p>Your final <code>UIViewController</code> implementation should look like the one in the following image. Of course you can do additional coding in your <code>UIViewController</code> implementation.</p>
+<pre><code class="lang-objc">
+    //
+    //  ViewController.m
+    //  AugmentedRealityApplication
+    //
+    //  Created by Wikitude GmbH on 22/04/15.
+    //  Copyright (c) 2015 Wikitude. All rights reserved.
+    //
+
+    #import &quot;ViewController.h&quot;
+
+    #import &lt;WikitudeSDK/WikitudeSDK.h&gt;
+    /* Wikitude SDK debugging */
+    #import &lt;WikitudeSDK/WTArchitectViewDebugDelegate.h&gt;
+
+
+
+    @interface ViewController () &lt;WTArchitectViewDelegate, WTArchitectViewDebugDelegate&gt;
+
+    /* Add a strong property to the main Wikitude SDK component, the WTArchitectView */
+    @property (nonatomic, strong) WTArchitectView               *architectView;
+
+    /* And keep a weak property to the navigation object which represents the loading status of your Architect World */
+    @property (nonatomic, weak) WTNavigation                    *architectWorldNavigation;
+
+    @end
+
+    @implementation ViewController
+
+    - (void)dealloc
+    {
+        /* Remove this view controller from the default Notification Center so that it can be released properly */
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        // Do any additional setup after loading the view, typically from a nib.
+
+        /* It might be the case that the device which is running the application does not fulfil all Wikitude SDK hardware requirements.
+           To check for this and handle the situation properly, use the -isDeviceSupportedForRequiredFeatures:error class method.
+
+           Required features specify in more detail what your Architect World intends to do. Depending on your intentions, more or less devices might be supported.
+           e.g. an iPod Touch is missing some hardware components so that Geo augmented reality does not work, but 2D tracking does.
+
+           NOTE: On iOS, an unsupported device might be an iPhone 3GS for image recognition or an iPod Touch 4th generation for Geo augmented reality.
+         */
+        NSError *deviceSupportError = nil;
+        if ( [WTArchitectView isDeviceSupportedForRequiredFeatures:WTFeature_2DTracking error:&amp;deviceSupportError] ) {
+
+            /* Standard WTArchitectView object creation and initial configuration */
+            self.architectView = [[WTArchitectView alloc] initWithFrame:CGRectZero motionManager:nil];
+            self.architectView.delegate = self;
+            self.architectView.debugDelegate = self;
+
+            /* Use the -setLicenseKey method to unlock all Wikitude SDK features that you bought with your license. */
+            [self.architectView setLicenseKey:@&quot;YOUR_LICENSE_KEY&quot;];
+
+            /* The Architect World can be loaded independently from the WTArchitectView rendering.
+
+               NOTE: The architectWorldNavigation property is assigned at this point. The navigation object is valid until another Architect World is loaded.
+             */
+            self.architectWorldNavigation = [self.architectView loadArchitectWorldFromURL:[[NSBundle mainBundle] URLForResource:@&quot;index&quot; withExtension:@&quot;html&quot; subdirectory:@&quot;ArchitectWorld&quot;] withRequiredFeatures:WTFeature_2DTracking];
+
+            /* Because the WTArchitectView does some OpenGL rendering, frame updates have to be suspended and resumend when the application changes it&#39;s active state.
+               Here, UIApplication notifications are used to respond to the active state changes.
+
+               NOTE: Since the application will resign active even when an UIAlert is shown, some special handling is implemented in the UIApplicationDidBecomeActiveNotification.
+             */
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+
+            /* Standard subview handling using Autolayout */
+            [self.view addSubview:self.architectView];
+            self.architectView.translatesAutoresizingMaskIntoConstraints = NO;
+
+            NSDictionary *views = NSDictionaryOfVariableBindings(_architectView);
+            [self.view addConstraints: [NSLayoutConstraint constraintsWithVisualFormat:@&quot;|[_architectView]|&quot; options:0 metrics:nil views:views] ];
+            [self.view addConstraints: [NSLayoutConstraint constraintsWithVisualFormat:@&quot;V:|[_architectView]|&quot; options:0 metrics:nil views:views] ];
+        }
+        else {
+            NSLog(@&quot;This device is not supported. Show either an alert or use this class method even before presenting the view controller that manages the WTArchitectView. Error: %@&quot;, [deviceSupportError localizedDescription]);
+        }
+    }
+
+    #pragma mark - View Lifecycle
+    - (void)viewWillAppear:(BOOL)animated {
+        [super viewWillAppear:animated];
+
+        /* WTArchitectView rendering is started once the view controllers view will appear */
+        [self startWikitudeSDKRendering];
+    }
+
+    - (void)viewDidDisappear:(BOOL)animated {
+        [super viewDidDisappear:animated];
+
+        /* WTArchitectView rendering is stopped once the view controllers view did disappear */
+        [self stopWikitudeSDKRendering];
+    }
+
+    - (void)didReceiveMemoryWarning {
+        [super didReceiveMemoryWarning];
+        // Dispose of any resources that can be recreated.
+    }
+
+    #pragma mark - View Rotation
+    - (BOOL)shouldAutorotate {
+
+        return YES;
+    }
+
+    - (NSUInteger)supportedInterfaceOrientations {
+
+        return UIInterfaceOrientationMaskAll;
+    }
+
+    - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+
+        /* When the device orientation changes, specify if the WTArchitectView object should rotate as well */
+        [self.architectView setShouldRotate:YES toInterfaceOrientation:toInterfaceOrientation];
+    }
+
+    #pragma mark - Private Methods
+
+    /* Convenience methods to manage WTArchitectView rendering. */
+    - (void)startWikitudeSDKRendering{
+
+        /* To check if the WTArchitectView is currently rendering, the isRunning property can be used */
+        if ( ![self.architectView isRunning] ) {
+
+            /* To start WTArchitectView rendering and control the startup phase, the -start:completion method can be used */
+            [self.architectView start:^(WTStartupConfiguration *configuration) {
+
+                /* Use the configuration object to take control about the WTArchitectView startup phase */
+                /* You can e.g. start with an active front camera instead of the default back camera */
+
+                // configuration.captureDevicePosition = AVCaptureDevicePositionFront;
+
+            } completion:^(BOOL isRunning, NSError *error) {
+
+                /* The completion block is called right after the internal start method returns.
+
+                   NOTE: In case some requirements are not given, the WTArchitectView might not be started and returns NO for isRunning.
+                   To determine what caused the problem, the localized error description can be used.
+                 */
+                if ( !isRunning ) {
+                    NSLog(@&quot;WTArchitectView could not be started. Reason: %@&quot;, [error localizedDescription]);
+                }
+            }];
+        }
+    }
+
+    - (void)stopWikitudeSDKRendering {
+
+        /* The stop method is blocking until the rendering and camera access is stopped */
+        if ( [self.architectView isRunning] ) {
+            [self.architectView stop];
+        }
+    }
+
+    /* The WTArchitectView provides two delegates to interact with. */
+    #pragma mark - Delegation
+
+    /* The standard delegate can be used to get information about:
+       * The Architect World loading progress
+       * architectsdk:// protocol invocations using document.location inside JavaScript
+       * Managing view capturing
+       * Customizing view controller presentation that is triggered from the WTArchitectView
+     */
+    #pragma mark WTArchitectViewDelegate
+    - (void)architectView:(WTArchitectView *)architectView didFinishLoadArchitectWorldNavigation:(WTNavigation *)navigation {
+        /* Architect World did finish loading */
+    }
+
+    - (void)architectView:(WTArchitectView *)architectView didFailToLoadArchitectWorldNavigation:(WTNavigation *)navigation withError:(NSError *)error {
+
+        NSLog(@&quot;Architect World from URL &#39;%@&#39; could not be loaded. Reason: %@&quot;, navigation.originalURL, [error localizedDescription]);
+    }
+
+    /* The debug delegate can be used to respond to internal issues, e.g. the user declined camera or GPS access. 
+
+       NOTE: The debug delegate method -architectView:didEncounterInternalWarning is currently not used.
+     */
+    #pragma mark WTArchitectViewDebugDelegate
+    - (void)architectView:(WTArchitectView *)architectView didEncounterInternalWarning:(WTWarning *)warning {
+
+        /* Intentionally Left Blank */
+    }
+
+    - (void)architectView:(WTArchitectView *)architectView didEncounterInternalError:(NSError *)error {
+
+        NSLog(@&quot;WTArchitectView encountered an internal error &#39;%@&#39;&quot;, [error localizedDescription]);
+    }
+
+    #pragma mark - Notifications
+    #pragma mark - Notifications
+    /* UIApplication specific notifications are used to pause/resume the architect view rendering */
+    - (void)didReceiveApplicationWillResignActiveNotification:(NSNotification *)notification
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            /* Standard WTArchitectView rendering suspension when the application resignes active */
+            [self stopWikitudeSDKRendering];
+        });
+    }
+
+    - (void)didReceiveApplicationDidBecomeActiveNotification:(NSNotification *)notification
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            /* When the application starts for the first time, several UIAlert&#39;s might be shown to ask the user for camera and/or GPS access.
+             Because the WTArchitectView is paused when the application resigns active (See line 86), also Architect JavaScript evaluation is interrupted.
+             To resume properly from the inactive state, the Architect World has to be reloaded if and only if an active Architect World load request was active at the time the application resigned active.
+             This loading state/interruption can be detected using the navigation object that was returned from the -loadArchitectWorldFromURL:withRequiredFeatures method.
+             */
+            if ( self.architectWorldNavigation.wasInterrupted )
+            {
+                [self.architectView reloadArchitectWorld];
+            }
+
+            /* Standard WTArchitectView rendering resuming after the application becomes active again */
+            [self startWikitudeSDKRendering];
+        });
+    }
+
+
+
+    @end
+</code></pre>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

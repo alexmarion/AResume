@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="plugins-api">Plugins API</h2>
+<p>This guide consists of multiple sections, first we discuss Wikitude SDK Plugins in general, than we talk about platform specifics and how to register a plugin with the Wikitude SDK and then we go through each of the sample plugins included with the Wikitude Example Applications.</p>
+<ol>
+<li><a href="#about">About Wikitude SDK Plugins</a></li>
+<li><a href="#platformspecifics">Platform Specifics</a></li>
+<li><a href="#registerplugin">Registering Plugins</a></li>
+<li><a href="#barcode">QR &amp; Barcode Plugin</a></li>
+<li><a href="#facedetection">Face Detection Plugin</a></li>
+</ol>
+<p><a id="about"></a></p>
+<h3 id="about-wikitude-sdk-plugins">About Wikitude SDK Plugins</h3>
+<p>Technically a plugin is a class, either written in C++ or Java, that is derived from the Wikitude Plugin base class. Beside lifecycle handling and options to enable and disable the plugin, the Plugin class has four main methods that you can override <code>cameraFrameAvailable</code> which is called each time the camera has a new frame, <code>update</code> which is called after each image recognition cycle as well as <code>startRender</code> and <code>endRender</code> which are called before and after the Wikitude SDK does its rendering.</p>
+<p>The most important thing to remember when working with plugins is that they need to have a unique identifier! If the attempt is made to register a plugin with an identifier that is already known to the Wikitude SDK, the register method call will return false.</p>
+<h3 id="plugin-base-class">Plugin Base Class</h3>
+<pre><code>class Plugin {
+   public:
+      Plugin(std::string identifier_);
+      ~Plugin();
+      string getIdentifier() const; // returns a unique plugin identifier
+      bool processesColorCameraFrames(); // returns true if the plugins wants to process color frames instead of bw
+
+      void setEnabled(bool enabled_);
+      bool isEnabled();
+
+      string callJavaScript(string javaScriptSnippet); // evaluates the given JavaScript snippet in the currently loaded ARchitect World context.
+
+   protected:
+      void initialize(); // called when the plugin is initially added to the Wikitude SDK
+      void pause(); // called when the Wikitude SDK is paused e.g. the application state changes from active to background
+      void resume(uint pausedTime_); // called when the Wikitude SDK resumes e.g. from background to active state. pausedTime represents the time in milliseconds that the plugin was not updated.
+      void destroy(); // called when the plugin is removed from the Wikitude SDK
+
+      void cameraFrameAvailable(const Frame&amp;; cameraFrame_); // called each time the camera has a new frame
+      void update(const vector&lt;RecognizedTarget&gt; recognizedTargets_); // called each time the Wikitude SDK renders a new frame
+
+      void startRender(); // called before any Wikitude SDK internal rendering is done
+      void endRender(); // called right after any Wikitude SDK internal rendering is done
+
+   protected:
+      string      _identifier;
+      bool        _enabled;
+};
+</code></pre><p>With those methods in place your plugin will be able to read the full camera image for your own purpose, where the YUV image is also processed in wikitude’s computer vision engine.</p>
+<h3 id="information-about-recognized-targets">Information about Recognized Targets</h3>
+<p>In case you have the wikitude SDK running with ongoing image recognition, the plugin API will populate the <code>RecognizedTarget</code> in the <code>update</code> method once an image has been recognized. The plugin can then work with class <code>RecognizedTarget</code>, which wraps the details of the target image in the camera view. With that you can read out the pose of the target image and use it for your purposes. Additionally the call contains the calculated distance to the recognized target</p>
+<pre><code>class RecognizedTarget {
+   public:
+      const string&amp;    getIdentifier() const; // the identifier of the target. The identifier is defined when the target is added to a target collection
+      const Mat4&amp;      getModelViewMatrix() const; // the model view matrix that defines the transformation of the target in the camera frame (translation, rotation, scale)
+      const Mat4&amp;      getProjectionMatrix() const;
+      const float      getDistanceToCamera() const; // represents the distance from the target to the camera in millimeter
+};
+</code></pre><p>Passing values from within the plugin to the JavaScript part of your augmented reality experience is done via the <code>addToJavaScriptQueue()</code> method of the Plugin class. Using this function will execute any JavaScript code in the context of your augmented reality experience.</p>
+<p><a id="platformspecifics"></a></p>
+<h3 id="platform-specifics">Platform Specifics</h3>
+<p>Thanks to Objective-C++, C++ plugins can be loaded very easily on iOS. Simply create a new C++ file, include and derive from <code>wikitude::sdk::Plugin</code> and create a <code>std::shared_ptr</code> from your plugin class. The created shared pointer can then be supplied to the Wikitude SDK specific plugin registration/removal API.</p>
+<p>To mark a Objective-C file as Objective-C++, change its file extension from .m to .mm or change the type manually to Objective-C++ using Xcodes Identity and Type inspector.</p>
+<p><a id="registerplugin"></a></p>
+<h3 id="registering-plugins">Registering Plugins</h3>
+<h3 id="register-c-plugin">Register C++ Plugin</h3>
+<p>The Wikitude Native SDK for iOS offers three methods to register/remove C++ plugins. All of them are accessible through the <code>WTArchitectView</code> class category <code>WTArchitectView+Plugins</code> which is implemented in <code>WTArchitectView+Plugins.h</code>. Note that this header file has to be specifically imported and is not part of the Wikitude SDK umbrella header.</p>
+<h4 id="registering-a-c-plugin">Registering a C++ Plugin</h4>
+<p>To register a C++ plugin, call the <code>-registerPlugin:</code> method and pass a <code>std::shared_ptr</code> wrapping your C++ plugin pointer. The following snippet shows how to define a property for a shared pointer, its initialization and the registration call. </p>
+<pre><code class="lang-objc">@property (nonatomic, assign) std::shared_ptr&lt;BarcodePlugin&gt; barcodePlugin;
+// ...
+_barcodePlugin = std::make_shared&lt;BarcodePlugin&gt;(640, 480, self); // arguments are passed to the C++ class constructor
+// ...
+[self.wikitudeSDK registerPlugin:_barcodePlugin];
+</code></pre>
+<h4 id="removing-a-c-plugin">Removing a C++ Plugin</h4>
+<p>To remove a already known C++ plugin, call either the <code>-removePlugin:</code> or <code>-removeNamedPlugin:</code> method. The first one takes a shared pointer as argument and tries to find a plugin that matches this plugins identifier. The second one tries to remove a C++ plugin based on a string parameter. The second one is interesting because it allows you to not have a property that holds the shared pointer, but to directly call <code>std::make_shared</code> when calling <code>-registerPlugin:</code>. If this is done, the hosting application has no reference to the plugin pointer anymore, but can still remove it using its unique identifier (which has to be known by the hosting application/developer).</p>
+<pre><code class="lang-objc">[self.architectView removePlugin:_faceDetectionPlugin];
+//...
+[self.architectView removeNamedPlugin:@&quot;com.wikitude.plugin.face_detection&quot;];
+</code></pre>
+<p><a id="barcode"></a></p>
+<h3 id="barcode-and-qr-code-reader">Barcode and QR code reader</h3>
+<p>This samples shows a full implementation of the popular barcode library ZBar into the Wikitude SDK. As ZBar is licensed under LGPL2.1 this sample can also be used for other projects.</p>
+<p>ZBar is an open source software suite for reading bar codes from various sources, such as video streams, image files and raw intensity sensors. It supports many popular symbologies (types of bar codes) including EAN-13/UPC-A, UPC-E, EAN-8, Code 128, Code 39, Interleaved 2 of 5 and QR Code.</p>
+<p>First let&#39;s have a look at the <code>BarcodePlugin.h</code> file. To create the bar code plugin we derive our <code>BarcodePlugin</code> class from the <code>wikitude::sdk::Plugin</code> class and override <code>initialize</code>, <code>destroy</code>, <code>cameraFrameAvailable</code> and <code>update</code>. We also declare the following member variables: <code>_worldNeedsUpdate</code>, <code>_image</code> and <code>_imageScanner</code>. The <code>_worldNeedsUpdate</code> variable will later be used as an indicator if we need to update the <code>ArchitectView</code>, <code>_image</code> and <code>_imageScanner</code> are classes from <code>zBar</code> which we&#39;ll use to scan for bar codes.</p>
+<pre><code class="lang-c++">class BarcodePlugin : public wikitude::sdk::Plugin {
+public:
+    BarcodePlugin(int cameraFrameWidth, int cameraFrameHeight);
+    virtual ~BarcodePlugin();
+
+    virtual void initialize();
+    virtual void destroy();
+
+    virtual void cameraFrameAvailable(const wikitude::sdk::Frame&amp; cameraFrame_);
+    virtual void update(const std::list&lt;wikitude::sdk::RecognizedTarget&gt;&amp; recognizedTargets_);
+
+protected:
+    int                             _worldNeedsUpdate;
+
+    zbar::Image                     _image;
+    zbar::ImageScanner              _imageScanner;
+};
+</code></pre>
+<p>We now go through each method of the <code>BarcodePlugin</code> class, starting with the constructor and destructor. In the constructor we set <code>_worldNeedsUpdate</code> to zero indicating that there is no update necessary and initialize the <code>zBar::Image</code> member variable passing its constructor the width and height of the camera frame, the image format of <code>Y800</code>, set its data pointer to null and the data length to zero. Since we didn&#39;t allocate any data dynamically, there is nothing to do in the destructor.</p>
+<pre><code class="lang-c++">BarcodePlugin::BarcodePlugin(int cameraFrameWidth, int cameraFrameHeight) :
+Plugin(&quot;com.wikitude.ios.barcodePluign&quot;),
+_worldNeedsUpdate(0),
+_image(cameraFrameWidth, cameraFrameHeight, &quot;Y800&quot;, nullptr, 0)
+{
+}
+
+BarcodePlugin::~BarcodePlugin()
+{
+}
+</code></pre>
+<p>In the <code>initialize</code> method we configure the <code>zbar::ImageScanner</code> by calling <code>setConfig</code>, enabling all supported bar codes. If you are only interested in one or some particular types of bar codes, first disabling all bar code types and manually enabling each particular type would be the better idea. That way performance could be greatly improved.</p>
+<pre><code class="lang-c++">void BarcodePlugin::initialize() {    
+    _imageScanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
+}
+</code></pre>
+<p>We react to the <code>destroy</code> event by setting the current data pointer of the <code>zbar::Image</code> member to null and length to zero.</p>
+<pre><code class="lang-c++">void BarcodePlugin::destroy() {
+    _image.set_data(nullptr, 0);
+}
+</code></pre>
+<p>The last but most interesting methods are <code>cameraFrameAvailable</code> and <code>update</code>. In the <code>cameraFrameAvailable</code> method we set the data of our previously initialized <code>zbar::Image</code> member variable to the frame data we just received and the length of the data to frame width * frame height by calling <code>set_data</code>. We then start the scanning process by calling the <code>scan</code> method of our <code>zBar::ImageScanner</code> passing the <code>zBar::Image</code> member instance. The <code>zBar::ImageScanner::scan</code> method returns the number of detected bar codes in the image frame, we save this number in a local variable <code>n</code>. If <code>n</code> is not equal to the result of the last frame, which we saved to <code>_worldNeedsUpdate</code> member variable, we know there was a new bar code detected (meaning there was no bar code in the last frame) or that there was a bar code in the last frame and now there isn&#39;t. When that&#39;s the case, we do another check if there really was a bar code detected this frame and if there was we create a javascript code fragment which we pass to the <code>addToJavaScriptQueue</code> method from the <code>sdk::Plugin</code> base class. The javascript fragment contains code to set the html contents of the <code>loadingMessage</code> div element which is placed in the top of the view. We use the <code>zbar::Image::SymbolIterator</code> to get the first detected symbol and retrieve its data. That means even if there were multiple bar codes detected in the last frame we only use the first detected.</p>
+<p>Since we aren&#39;t interested in the results of the Wikitude SDK image recognition and aren&#39;t rendering anything with OpenGL in this example we implement the <code>update</code> method empty.</p>
+<pre><code class="lang-c++">void BarcodePlugin::cameraFrameAvailable(const wikitude::sdk::Frame&amp; cameraFrame_) {
+    int frameWidth = cameraFrame_.getSize().width;
+    int frameHeight = cameraFrame_.getSize().height;
+
+    _image.set_data(cameraFrame_.getLuminanceData(), frameWidth * frameHeight);
+
+    int n = _imageScanner.scan(_image);
+
+    if ( n != _worldNeedsUpdate ) {
+        if ( n ) {
+            std::ostringstream javaScript;
+            javaScript &lt;&lt; &quot;document.getElementById(&#39;loadingMessage&#39;).innerHTML = &#39;Code Content: &quot;;
+
+            zbar::Image::SymbolIterator symbol = _image.symbol_begin();
+            javaScript &lt;&lt; symbol-&gt;get_data();
+
+            javaScript &lt;&lt; &quot;&#39;;&quot;;
+
+            addToJavaScriptQueue(javaScript.str());
+
+        }
+    }
+
+    _worldNeedsUpdate = n;
+}
+
+void BarcodePlugin::update(const std::list&lt;wikitude::sdk::RecognizedTarget&gt;&amp; recognizedTargets_) {
+}
+</code></pre>
+<p><a id="facedetection"></a></p>
+<h3 id="face-detection">Face Detection</h3>
+<p>This samples shows how to add face detection to your Wikitude augmented reality experience using OpenCV.</p>
+<p>The Face detection plugin example consists of the C++ classes <code>FaceDetectionPlugin</code>, <code>FaceDetectionPluginConnector</code> and the Objective-C classes <code>WTFaceDetectionPluginWrapper</code> and <code>WTAugmentedRealityViewController+PluginLoading</code>. We will use OpenCV to detect faces in the current camera frame and OpenGL to render a rectangle around detected faces.</p>
+<p>The Architect example application is based on one view controller that manages the <code>WTArchitectView</code> object. Since some examples require some more Objective-C code, various class extension exist which implement this specific example code. For this example its the <code>WTAugmentedRealityViewController+PluginLoading</code> class extension. The extension loads Wikitude SDK plugins based on a string identifier. Because this example requires some more Objective-C code than the previous one, a wrapper object is created which takes care about object (e.g. plugin) creation and management. This class is named <code>WTFaceDetectionPluginWrapper</code> and an instance is set as a associated Objective-C object to <code>WTAugmentedRealityViewController</code> (Because class extensions can only define new methods and no instance variables).</p>
+<p><code>FaceDetectionPluginConnector</code> is used to connect the <code>FaceDetectionPlugin</code> class with the <code>WTFaceDetectionPluginWrapper</code> class extension. Since this class mainly exists to ease the implementation of a cross platform plugin, we will not go into any implementation details for this class. We also don&#39;t go into any OpenCV or OpenGL details. If one is interested in such topics, the source code is part of the Wikitude SDK example application.</p>
+<p>The plugin wrapper handles the face detection plugin as described in the previously barcode example. New for this example is a class method that converts UIDeviceOrientations into an int that is used by the face detection plugin to rotate the camera frame in order to always have faces in the right orientation. This class method is then used every time the device changes its orientation.</p>
+<pre><code class="lang-objc">__weak typeof(self) weakSelf = self;
+[[NSNotificationCenter defaultCenter] addObserverForName:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice] queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+
+        weakSelf.faceDetectionPlugin-&gt;setFlipFlag( [WTFaceDetectionPluginViewController flipFlagForDeviceOrientation:[[UIDevice currentDevice] orientation]] );
+}];
+</code></pre>
+<p>Next we have a look at the <code>FaceDetectionPlugin</code> class. Again we we will leave out implementation details and focus on how we use the plugin itself. In the <code>cameraFrameAvailable</code> method we use OpenCV to detect faces in the current camera frame which the Wikitude SDK passes to the plugin. We call the observer which is an instance of the <code>FaceDetectionPluginConnector</code> to notify the view controller about the result. The plugin base class defines <code>startRender</code> and <code>endRender</code>, depending on, if you would like to render on top of or below of all rendering the Wikitude SDK does, you choose one of them, or both to override. To render below all Wikitude rendering we choose <code>startRender</code> and again call the <code>FaceDetectionPluginConnector</code> instance which in turn calls the plugin wrapper. Since we do not react on the result of the Wikitude SDK image recognition we leave <code>update</code> blank. </p>
+<pre><code class="lang-c++">
+... ctor/dtor ...
+
+void FaceDetectionPlugin::cameraFrameAvailable(const wikitude::sdk::Frame&amp; cameraFrame_) {
+
+    wikitude::sdk::Size frameSize = cameraFrame_.getSize();
+    _scaledCameraFrameWidth = cameraFrame_.getScaledWidth();
+    _scaledCameraFrameHeight = cameraFrame_.getScaledHeight();
+
+    std::memcpy(_grayFrame.data,cameraFrame_.getLuminanceData(), frameSize.height*frameSize.width*sizeof(unsigned char));
+
+    //... Control Open CV ...        
+
+    if ( _result.size() ) {
+        convertFaceRectToModelViewMatrix(croppedImg, _result.at(0));
+        _observer-&gt;faceDetected(_modelViewMatrix);
+    } else {
+        _observer-&gt;faceLost();
+    }
+}
+
+void FaceDetectionPlugin::startRender() {
+    _observer-&gt;renderDetectedFaceAugmentation();
+}
+
+void FaceDetectionPlugin::update(const std::list&lt;wikitude::sdk::RecognizedTarget&gt; &amp;recognizedTargets_) {
+    /* Intentionally Left Blank */
+}
+
+//... other internally used methods ...
+</code></pre>
+<p>To render a frame around detected faces we created an instance of the <code>StrokedRectangle</code> class which takes care of rendering a rectangle around faces. When the plugin detects, looses or recalculated the projection matrix it will call the appropriate plugin wrapper methods which we use to update the <code>StrokedRectangle</code> instance. If the plugin decides it is time to render a frame around a detected face it will call <code>renderDetectedFaceAugmentation</code>. Since the plugin will only call this method in the <code>startRender</code> method, we know the current thread is the OpenGL thread and are able to dispatch OpenGL calls.</p>
+<pre><code class="lang-c++">void FaceDetectionPluginConnector::faceDetected(const float *modelViewMatrix) {
+
+    [_faceDetectionPluginWrapper setFaceDetected:YES];
+    [_faceDetectionPluginWrapper.faceAugmentation setModelViewMatrix:modelViewMatrix];
+}
+
+void FaceDetectionPluginConnector::faceLost() {
+
+    [_faceDetectionPluginWrapper setFaceDetected:NO];
+}
+
+void FaceDetectionPluginConnector::projectionMatrixChanged(const float *projectionMatrix) {
+
+    [_faceDetectionPluginWrapper.faceAugmentation setProjectionMatrix:projectionMatrix];
+}
+
+void FaceDetectionPluginConnector::renderDetectedFaceAugmentation() {
+
+    if ( [_faceDetectionPluginWrapper faceDetected] ) {
+        [_faceDetectionPluginWrapper.faceAugmentation drawInContext:[EAGLContext currentContext]];
+    }
+}
+</code></pre>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>

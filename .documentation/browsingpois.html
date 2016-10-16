@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Wikitude SDK iOS 5.3.0 Documentation</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/docs.css">
+    <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="css/github.min.css">
+    <link type="text/css" rel="stylesheet" href="css/default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/lightbox.min-0.5.1.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery.treemenu.css">
+
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/highlight-8.6.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min-0.5.11.js"></script>
+    <script type="text/javascript" src="js/deprecated.js"></script>
+    <script type="text/javascript" src="js/lightbox.min-0.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.treemenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Every image referenced from a Markdown document
+            $("#content img").each(function() {
+                // Let's put a caption if there is one
+                if($(this).attr("alt"))
+                    $(this).wrap('<figure class="image"></figure>')
+                        .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if(isVersionDeprecated())
+                document.getElementById('deprecatedNote').style.display='block';
+                document.getElementById("documentationSelect").onchange = function() {
+                var selectedOption = this.value;
+                 console.log(selectedOption);
+                 window.top.location.href = "http://www.wikitude.com/developer/documentation/" + selectedOption;
+                }
+        });
+    </script>
+
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+         
+
+<div id="sidebar">
+    <div id="topnav">
+    <img src="images/150610_WT_SDK_Logo.png">
+    <h1><a href="">Documentation</a></h1>
+    <h2>Wikitude SDK iOS</h2>
+    
+    <div id="version">version: 5.3.0</div>
+    
+
+    
+    <select id="documentationSelect">
+        
+            <option value=""  > ---Android--- </option>
+        
+            <option value="android"  > Android Javascript API </option>
+        
+            <option value="androidnative"  > Android Native API </option>
+        
+            <option value=""  > ---iOS--- </option>
+        
+            <option value="ios"  selected > iOS Javascript API </option>
+        
+            <option value="iosnative"  > iOS Native API </option>
+        
+            <option value=""  > ---Extensions--- </option>
+        
+            <option value="phonegap"  > Cordova </option>
+        
+            <option value="titanium"  > Titanium </option>
+        
+            <option value="unity"  > Unity </option>
+        
+            <option value="xamarin"  > Xamarin </option>
+        
+            <option value=""  > ---Smart Glasses--- </option>
+        
+            <option value="epson"  > Epson </option>
+        
+            <option value="glass"  > Google Glass </option>
+        
+            <option value="odg"  > ODG </option>
+        
+            <option value="vuzix"  > Vuzix </option>
+        
+            <option value=""  > ---Services--- </option>
+        
+            <option value="cloudrecognition"  > Cloud Recognition </option>
+        
+            <option value="targetsapi"  > Targets API </option>
+        
+    </select>
+    
+
+    <div id="deprecatedNote" class="warning" style="display:none;">Note you are viewing the documentation of a deprecated version. Please check <a href="http://www.wikitude.com/developer/documentation">www.wikitude.com/developer/documentation</a></div>
+
+    </div>
+
+    <input id="showNav" class="toggleNav" type="checkbox">
+    <label class="showNavLbl" for="showNav">Show Navigation</label>
+    <label class="hideNavLbl" for="showNav">Hide Navigation</label>
+
+    <div id="mainnav">
+    <form action="search.html"><input id="search" type="text" placeholder="Search documentation" name="q" /></form>
+    <nav id="toc">
+        
+    <ul>
+    
+        <li>
+            <a href="gettingstartedios.html#getting-started">Getting started</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="setupguideios.html#setup-guide-ios">Setup Guide iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="supporteddevicesios.html#supported-devices-ios">Supported Devices iOS</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#how-to-obtain-a-free-trial-license">How to obtain a free trial license</a>
+            
+        </li>
+    
+        <li>
+            <a href="triallicense.html#where-should-i-enter-the-license-key">Where should I enter the license key</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="samples.html#examples">Examples</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="clientrecognition.html#client-recognition">Client Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognition.html#cloud-recognition">Cloud Recognition</a>
+            
+        </li>
+    
+        <li>
+            <a href="3dmodels.html#3d-models">3D Models</a>
+            
+        </li>
+    
+        <li>
+            <a href="poi.html#point-of-interest-poi">Point Of Interest (POI)</a>
+            
+        </li>
+    
+        <li>
+            <a href="retrievingpoidata.html#retrieving-poi-data">Retrieving POI Data</a>
+            
+        </li>
+    
+        <li>
+            <a href="browsingpois.html#browsing-pois">Browsing POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="video.html#video-drawables">Video Drawables</a>
+            
+        </li>
+    
+        <li>
+            <a href="2dtrackingandgeo.html#combine-client-recognition-and-pois">Combine Client Recognition and POIs</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemir.html#solar-system-ir">Solar System (IR)</a>
+            
+        </li>
+    
+        <li>
+            <a href="solarsystemgeo.html#solar-system-geo">Solar System (Geo)</a>
+            
+        </li>
+    
+        <li>
+            <a href="hardwarecontrol.html#hardware-control">Hardware control</a>
+            
+        </li>
+    
+        <li>
+            <a href="pluginsapi.html#plugins-api">Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="inputpluginsapi.html#input-plugins-api">Input Plugins API</a>
+            
+        </li>
+    
+        <li>
+            <a href="positionable.html#positionable">Positionable</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetimages.html#target-images">Target Images</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#wikitude-cloud-recognition">Wikitude Cloud Recognition</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#general-definitions">General Definitions</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#getting-started-with-the-cloud-recognition-service">Getting Started with the Cloud Recognition Service</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="gettingstartedcloudrecognition.html#quota-and-limits">Quota and Limits</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#your-first-target-collections">Your first Target Collections</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#add-target-images">Add Target Images</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-cloud-archive">Generate a Cloud Archive</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#generate-a-wtc-file">Generate a WTC file</a>
+            
+        </li>
+    
+        <li>
+            <a href="cloudrecognitionworkflow.html#additional-calls">Additional calls</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#development-workflow">Development Workflow</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="workflow.html#code-test-debug">Code, Test, Debug</a>
+            
+        </li>
+    
+        <li>
+            <a href="workflow.html#on-device-debugging">On-Device Debugging</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#3d-assets-workflow">3D Assets Workflow</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#good-practice">Good practice</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#working-with-3d-animations">Working with 3D Animations</a>
+            
+        </li>
+    
+        <li>
+            <a href="assetsworkflow.html#lighting">Lighting</a>
+            
+        </li>
+    
+        <li>
+            <a href="workingwithvideos.html#augmented-reality-videos">Augmented reality videos</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="tools.html#tools">Tools</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="ade.html#ade">ADE</a>
+            
+        </li>
+    
+        <li>
+            <a href="logger.html#logger">Logger</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#target-management">Target Management</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetmanagement.html#web-targetmanager-wikitude-studio">Web Targetmanager - Wikitude Studio</a>
+            
+        </li>
+    
+        <li>
+            <a href="targetguide.html#best-practice-for-target-images">Best practice for target images</a>
+            
+        </li>
+    
+        <li>
+            <a href="encoder.html#wikitude-3d-encoder">Wikitude 3D Encoder</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#reference">Reference</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="referenceios.html#ios-reference">iOS Reference</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#javascript-api">JavaScript API</a>
+            
+        </li>
+    
+        <li>
+            <a href="referenceios.html#cloud-recognition-manager-api">Cloud Recognition Manager API</a>
+            
+        </li>
+    
+        <li>
+            <a href="sdu-dbs.html#sdu-and-dbs">SDU and DBS</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migration">Migration</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="migration.html#migrate-from-52-to-53">Migrate from 5.2 to 5.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-50-to-52">Migrate from 5.0 to 5.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-50">Migrate from 4.1 to 5.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-41-to-411">Migrate from 4.1 to 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-402-to-41">Migrate from 4.0.2 to 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-40-to-402">Migrate from 4.0 to 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-33-to-40">Migrate from 3.3 to 4.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-32-to-33">Migrate from 3.2 to 3.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-31-to-32">Migrate from 3.1 to 3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-30-to-31">Migrate from 3.0 to 3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-20-to-30">Migrate from 2.0 to 3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrate-from-12-to-20">Migrate from 1.2 to 2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#upgrading-targets-for-sdk-41">Upgrading targets for SDK 4.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="migration.html#migrating-targets-from-sdk-1x">Migrating targets from SDK 1.x</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-ios-release-notes">Wikitude SDK iOS Release Notes</a>
+            
+                
+    <ul>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-530">Wikitude SDK JavaScript API 5.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-520">Wikitude SDK JavaScript API 5.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-514">Wikitude SDK JavaScript API 5.1.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-513">Wikitude SDK JavaScript API 5.1.3</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-512">Wikitude SDK JavaScript API 5.1.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-511">Wikitude SDK JavaScript API 5.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-510">Wikitude SDK JavaScript API 5.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-500">Wikitude SDK JavaScript API 5.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-411">Wikitude SDK JavaScript API 4.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-410">Wikitude SDK JavaScript API 4.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-402">Wikitude SDK JavaScript API 4.0.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-400">Wikitude SDK JavaScript API 4.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-332">Wikitude SDK JavaScript API 3.3.2</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-331">Wikitude SDK JavaScript API 3.3.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-330">Wikitude SDK JavaScript API 3.3.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-321">Wikitude SDK JavaScript API 3.2.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-320">Wikitude SDK JavaScript API 3.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-310">Wikitude SDK JavaScript API 3.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-300">Wikitude SDK JavaScript API 3.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-201">Wikitude SDK JavaScript API 2.0.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-200">Wikitude SDK JavaScript API 2.0.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-120">Wikitude SDK JavaScript API 1.2.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-111">Wikitude SDK JavaScript API 1.1.1</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-110">Wikitude SDK JavaScript API 1.1.0</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-105">Wikitude SDK JavaScript API 1.0.5</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-104">Wikitude SDK JavaScript API 1.0.4</a>
+            
+        </li>
+    
+        <li>
+            <a href="changelog.html#wikitude-sdk-javascript-api-103">Wikitude SDK JavaScript API 1.0.3</a>
+            
+        </li>
+    
+</ul>
+
+            
+        </li>
+    
+</ul>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+    </div>
+</div>
+        <div id="content">
+            <h2 id="browsing-pois">Browsing POIs</h2>
+<p>Displaying numerous POIs in the camera is a challenge. How many POIs should be offered? How to deal with POIs in same direction? What is the maximum range to show POIs and how to display a long description?
+The following example cover frequently asked questions related to the POI browser use case and consists of five parts plus a bonus section</p>
+<ol>
+<li><a href="#presentingdetails">Presenting Details</a></li>
+<li><a href="#poiarradar">POI and AR Radar</a></li>
+<li><a href="#limitingvisiblepois">Limiting Visible POIs</a></li>
+<li><a href="#reloadingpoidata">Reloading POI Data</a></li>
+<li><a href="#nativedetailscreen">Native Detail Screen</a></li>
+<li><a href="#capturescreen">Capture Screen Bonus</a></li>
+</ol>
+<p><a id="presentingdetails"></a></p>
+<h3 id="presenting-details-1-6-">Presenting Details (1/6)</h3>
+<p>POIs usually have a name and sometimes a quite long description. Depending on your content type you may e.g. display a marker with its name and cropped description but allow the user to get more information after selecting it.</p>
+<p><img src="images/sample_poi_details.jpg" alt=""></p>
+<p><a href="http://jquerymobile.com/" target="_top">jQuery Mobile</a> is an easy way to create appealing user interfaces for mobile devices. It takes the &quot;write less, do more&quot; mantra to the next level: Instead of writing unique apps for each mobile device or OS, the jQuery mobile framework allows you to design a single highly-branded web site or application that will work on all popular smartphones, tablets, and desktop platforms (quote from their website).
+We recommend to use jQuery mobile for the implementation of the UI in the augmented reality view. It is well documented and can even be bundled into the app or hosted on your own web server.</p>
+<p>In this sample a POI detail panel appears when pressing a cam-marker (the blue box with title &amp; description), compare <strong>index.html</strong> in the sample&#39;s directory.</p>
+<pre><code>&lt;!-- panel containing POI detail information --&gt;
+&lt;div data-role=&quot;panel&quot; id=&quot;panel-poidetail&quot; data-position=&quot;right&quot; data-display=&quot;overlay&quot; style=&quot;background-color:#F0F0F0;&quot; data-theme=&quot;c&quot;&gt;
+
+&lt;!-- header with &quot;close&quot; button --&gt;
+&lt;div data-role=&quot;header&quot; data-theme=&quot;c&quot;&gt;
+    &lt;h1&gt;Details&lt;/h1&gt;
+    &lt;a href=&quot;#header&quot; data-rel=&quot;close&quot;&gt;Close&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- content of POI detail page, you may also add thumbnails etc. here if you like --&gt;
+&lt;div data-role=&quot;content&quot;&gt;
+    &lt;!-- title --&gt;
+    &lt;h3 id=&quot;poi-detail-title&quot;&gt;&lt;/h3&gt;
+
+    &lt;!-- description --&gt;
+    &lt;h4 id=&quot;poi-detail-description&quot;&gt;&lt;/h4&gt;
+
+    &lt;!-- distance --&gt;
+    &lt;h4&gt;Distance: &lt;a id=&quot;poi-detail-distance&quot;&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;/div&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_1_PresentingDetails/index.html#L53-L73">GitHub</a>
+</div>
+
+<p>When selecting a marker the content shown in the POI detail <code>div</code> is updated. At the same time the panel is animated from right to left.</p>
+<p>To deselect the marker the <code>panelbeforeclose</code> event is used, compare <strong>presentingPoiDetails.js</strong></p>
+<pre><code class="lang-js">onMarkerSelected: function onMarkerSelectedFn(marker) {
+
+    World.currentMarker = marker;
+
+    // update panel values
+    $(&quot;#poi-detail-title&quot;).html(marker.poiData.title);
+    $(&quot;#poi-detail-description&quot;).html(marker.poiData.description);
+
+    var distanceToUserValue = (marker.distanceToUser &gt; 999) ? ((marker.distanceToUser / 1000).toFixed(2) + &quot; km&quot;) : (Math.round(marker.distanceToUser) + &quot; m&quot;);
+
+    $(&quot;#poi-detail-distance&quot;).html(distanceToUserValue);
+
+    // show panel
+    $(&quot;#panel-poidetail&quot;).panel(&quot;open&quot;, 123);
+
+    $(&quot;#panel-poidetail&quot;).on(&quot;panelbeforeclose&quot;, function(event, ui) {
+    World.currentMarker.setDeselected(World.currentMarker);
+});
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_1_PresentingDetails/js/presentingdetails.js#L106-L131">GitHub</a>
+</div>
+
+<p><a id="poiarradar"></a></p>
+<h3 id="poi-and-ar-radar-2-6-">POI and AR Radar (2/6)</h3>
+<p>It is recommended to give the user a hint where places are located in the user&#39;s vicinity. The easiest way to provide orientation assistance is an <a href="../Reference/JavaScript%20API/classes/radar.html"><code>AR.Radar</code></a> element. Every <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> (e.g. a cam marker) can have a representation in the radar element, usually indicated by a small dot.</p>
+<p><img src="images/sample_poi_radar.jpg" alt=""></p>
+<p>The representation of an <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> in the radar is defined in its drawables set (second argument of <a href="../Reference/JavaScript%20API/classes/GeoObject.html"><code>AR.GeoObject</code></a> constructor). Once <code>drawables.radar</code> is set the object is also shown on the radar e.g. as an <a href="../Reference/JavaScript%20API/classes/Circle.html"><code>AR.Circle</code></a>, compare <strong>marker.js</strong>:</p>
+<pre><code class="lang-js">this.radarCircle = new AR.Circle(0.03, {
+    horizontalAnchor: AR.CONST.HORIZONTAL_ANCHOR.CENTER,
+    opacity: 0.8,
+    style: {
+        fillColor: &quot;#ffffff&quot;
+    }
+}); 
+this.radardrawables = [];
+this.radardrawables.push(this.radarCircle);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/js/marker.js#L64-L81">GitHub</a>
+</div>
+
+<p>Additionally create circles with a different color for the selected state, compare <strong>marker.js</strong>:</p>
+<pre><code class="lang-js">this.radarCircleSelected = new AR.Circle(0.05, {
+       horizontalAnchor: AR.CONST.HORIZONTAL_ANCHOR.CENTER,
+       opacity: 0.8,
+       style: {
+           fillColor: &quot;#0066ff&quot;
+       }
+   });
+
+this.radardrawablesSelected = [];
+   this.radardrawablesSelected.push(this.radarCircleSelected);
+
+this.markerObject = new AR.GeoObject(markerLocation, {
+       drawables: {
+           cam: [    this.markerDrawable_idle, 
+                   this.markerDrawable_selected, 
+                   this.titleLabel, 
+                   this.descriptionLabel ],
+           indicator: this.directionIndicatorDrawable,
+           radar: this.radardrawables
+       }
+   });
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/js/marker.js#L83-L95">GitHub</a>
+</div>
+
+<p>To highlight a selected marker in the radar update the drawables in the function </p>
+<p><img src="images/sample_poi_focus_radar.jpg" alt=""> <img src="images/sample_poi_focus_radar_selected.jpg" alt=""></p>
+<p><code>Marker.prototype.setSelected</code> and <code>Marker.prototype.setDeselected</code>, compare <strong>marker.js</strong>:</p>
+<pre><code class="lang-js">marker.markerObject.drawables.radar = marker.radardrawablesSelected;
+[...]
+marker.markerObject.drawables.radar = marker.radardrawables;
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/js/marker.js#L178-L188">GitHub</a>
+</div>
+
+<p>The position of the radar and its size are defined using a DOM element. In our example a <code>div</code> element with id <code>radarContainer</code>, compare <strong>index.html</strong>:</p>
+<pre><code>&lt;div class=&quot;radarContainer_left&quot; id=&quot;radarContainer&quot;&gt;&lt;/div&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/index.html#L49">GitHub</a>
+</div>
+
+<p>The size and position of the radar is defined in a css class, see <strong>poi-radar.css</strong>:</p>
+<pre><code>/* position of POI-radar*/
+
+.radarContainer_left {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100px;
+    height:100px;
+}
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/css/poi-radar.css#L7-L13">GitHub</a>
+</div>
+
+<p>We advise you to use an absolute position for the element which will be referred to the radar container. Keep in mind: In case the DOM element is updated on the fly via jQuery or responsive design use <code>AR.radar.notifyUpdateRadarPosition();</code> to force radar position/size updates, otherwise the very first position/size will be used.</p>
+<p>The radar itself can be customized and should be implemented as a separate component in your JavaScript code, compare <strong>radar.js</strong>.</p>
+<pre><code class="lang-js">var PoiRadar = {
+
+    hide: function hideFn() {
+        AR.radar.enabled = false;
+    },
+
+    show: function initFn() {
+
+        // the div defined in the index.htm
+        AR.radar.container = document.getElementById(&quot;radarContainer&quot;);
+
+        // set the back-ground image for the radar
+        AR.radar.background = new AR.ImageResource(&quot;assets/radar_bg.png&quot;);
+
+        // set the north-indicator image for the radar 
+        // (not necessary if you don&#39;t want to display a north-indicator)
+        AR.radar.northIndicator.image = new AR.ImageResource(&quot;assets/radar_north.png&quot;);
+
+        // center of north indicator and radar-points in the radar asset, 
+        // usually center of radar is in the exact middle of the background, 
+        // meaning 50% X and 50% Y axis --&gt; 0.5 for centerX/centerY
+        AR.radar.centerX = 0.5;
+        AR.radar.centerY = 0.5;
+
+        AR.radar.radius = 0.3;
+        AR.radar.northIndicator.radius = 0.0;
+
+        AR.radar.enabled = true;
+    },
+
+    updatePosition: function updatePositionFn() {
+        if (AR.radar.enabled) {
+            AR.radar.notifyUpdateRadarPosition();
+        }
+    },
+
+    // you may define some custom action when user pressed radar, 
+    // e.g. display distance, custom filtering etc.
+    clickedRadar: function clickedRadarFn() {
+        alert(&quot;Radar Clicked&quot;);
+    },
+
+    setMaxDistance: function setMaxDistanceFn(maxDistanceMeters) {
+        AR.radar.maxDistance = maxDistanceMeters;
+    }
+};
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/js/radar.js#L1-L42">GitHub</a>
+</div>
+
+<p>Call the <code>PoiRadar.show</code> function to activate the radar component. You may even define a click action if requested, compare <strong>addingradar.js</strong>:</p>
+<pre><code class="lang-js">// show radar &amp; set click-listener
+PoiRadar.show();
+$(&#39;#radarContainer&#39;).unbind(&#39;click&#39;);
+$(&quot;#radarContainer&quot;).click(PoiRadar.clickedRadar);
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_2_AddingRadar/js/addingradar.js#L34-L38">GitHub</a>
+</div>
+
+<p><a id="limitingvisiblepois"></a></p>
+<h3 id="limiting-visible-pois-3-6-">Limiting Visible POIs (3/6)</h3>
+<p>Users are sometimes only interested to see POIs within a certain range. This sample provides an additional button in the titlebar button to allow users to change the range of interest.</p>
+<p><img src="images/sample_poi_range.jpg" alt=""></p>
+<p>First of all add a button in the titlebar</p>
+<p><strong>index.html</strong></p>
+<pre><code>&lt;!-- header of UI holding feature buttons --&gt;
+&lt;div id =&quot;header-status&quot; data-role=&quot;header&quot; data-position=&quot;fixed&quot; data-theme=&quot;c&quot;&gt;
+    &lt;a href=&quot;javascript: World.showRange();&quot; data-icon=&quot;gear&quot; data-inline=&quot;true&quot; data-mini=&quot;true&quot;&gt;Range&lt;/a&gt;
+    &lt;h1&gt;&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_3_LimitingRange/index.html#L43-L47">GitHub</a>
+</div>
+
+<p>Afterwards define the panel layout for distance range. In this case the current range in meters and the number of visible POIs is shown in the panel.</p>
+<p><strong>index.html</strong></p>
+<pre><code>&lt;!-- range panel --&gt;
+&lt;div data-role=&quot;panel&quot; id=&quot;panel-distance&quot; data-position=&quot;left&quot; data-display=&quot;overlay&quot; style=&quot;background-color:#F0F0F0;&quot; data-theme=&quot;c&quot;&gt;
+
+    &lt;!-- header with close button --&gt;
+    &lt;div data-role=&quot;header&quot; data-theme=&quot;c&quot;&gt;
+        &lt;h1&gt;Range&lt;/h1&gt;
+        &lt;a href=&quot;#header&quot; data-rel=&quot;close&quot;&gt;Close&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- distance information, calculated/updated in code  --&gt;
+    &lt;div data-role=&quot;content&quot;&gt;
+
+    &lt;!-- Range in m/km--&gt;
+    &lt;h4&gt; Range: &lt;a id=&quot;panel-distance-value&quot;&gt;&lt;/a&gt;&lt;/h4&gt;
+
+    &lt;!-- Amount of visible places --&gt;
+    &lt;h4&gt; Visible: &lt;a id=&quot;panel-distance-places&quot;&gt;&lt;/a&gt;&lt;/h4&gt;
+
+    &lt;!-- default slider --&gt;
+    &lt;input id=&quot;panel-distance-range&quot; type=&quot;range&quot; data-highlight=&quot;true&quot; name=&quot;rangeSlider&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;100&quot; data-show-value=&quot;false&quot; step=&quot;5&quot; data-popup-enabled=&quot;false&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_3_LimitingRange/index.html#L94-L115">GitHub</a>
+</div>
+
+<p>The function <code>World.updateRangeValues</code> is executed every time a user changes the slider value.
+Besides proper calculation of the maximum distance and total number of visible places <a href="../Reference/JavaScript%20API/classes/context.html#property_scene.cullingDistance"><code>AR.context.scene.cullingDistance</code></a> and <code>PoiRadar.setMaxDistance</code> are executed to update rendering of markers and drawables in the radar, compare <strong>limitingrange.js</strong></p>
+<pre><code class="lang-js">    // updates values show in &quot;range panel&quot;
+updateRangeValues: function updateRangeValuesFn() {
+
+    // get current slider value (0..100);
+    var slider_value = $(&quot;#panel-distance-range&quot;).val();
+
+    // max range relative to the maximum distance of all visible places
+    var maxRangeMeters = Math.round(World.getMaxDistance() * (slider_value / 100));
+
+    // range in meters including metric m/km
+    var maxRangeValue = (maxRangeMeters &gt; 999) ? ((maxRangeMeters / 1000).toFixed(2) + &quot; km&quot;) : (Math.round(maxRangeMeters) + &quot; m&quot;);
+
+    // number of places within max-range
+    var placesInRange = World.getNumberOfVisiblePlacesInRange(maxRangeMeters);
+
+    // update UI labels accordingly
+    $(&quot;#panel-distance-value&quot;).html(maxRangeValue);
+    $(&quot;#panel-distance-places&quot;).html((placesInRange != 1) ? (placesInRange + &quot; Places&quot;) : (placesInRange + &quot; Place&quot;));
+
+    // update culling distance, so only places within given range are rendered
+    AR.context.scene.cullingDistance = Math.max(maxRangeMeters, 1);
+
+    // update radar&#39;s maxDistance so radius of radar is updated too
+    PoiRadar.setMaxDistance(Math.max(maxRangeMeters, 1));
+},
+
+// returns number of places with same or lower distance than given range
+getNumberOfVisiblePlacesInRange: function getNumberOfVisiblePlacesInRangeFn(maxRangeMeters) {
+
+    // sort markers by distance
+    World.markerList.sort(World.sortByDistanceSorting);
+
+    // loop through list and stop once a placemark is out of range ( -&gt; very basic implementation )
+    for (var i = 0; i &lt; World.markerList.length; i++) {
+        if (World.markerList[i].distanceToUser &gt; maxRangeMeters) {
+            return i;
+        }
+    };
+
+    // in case no placemark is out of range -&gt; all are visible
+    return World.markerList.length;
+},
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_3_LimitingRange/js/limitingrange.js#L162-L203">GitHub</a>
+</div>
+
+<p>The position of the radar component can be updated using another CSS style (using e.g. <code>removeClass</code> and <code>addClass</code> of jQuery) and calling <code>PoiRadar.updatePosition();</code>. In this sample the radar element moves to the right when the distance panel. Compare <strong>limitingrange.js</strong></p>
+<pre><code class="lang-js">handlePanelMovements: function handlePanelMovementsFn() {
+
+    $(&quot;#panel-distance&quot;).on(&quot;panelclose&quot;, function(event, ui) {
+        $(&quot;#radarContainer&quot;).addClass(&quot;radarContainer_left&quot;);
+        $(&quot;#radarContainer&quot;).removeClass(&quot;radarContainer_right&quot;);
+        PoiRadar.updatePosition();
+    });
+
+    $(&quot;#panel-distance&quot;).on(&quot;panelopen&quot;, function(event, ui) {
+        $(&quot;#radarContainer&quot;).removeClass(&quot;radarContainer_left&quot;);
+        $(&quot;#radarContainer&quot;).addClass(&quot;radarContainer_right&quot;);
+        PoiRadar.updatePosition();
+    });
+},
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_3_LimitingRange/js/limitingrange.js#L207-L217">GitHub</a>
+</div>
+
+<p>The <code>World.showRange</code> function is executed when a user presses the <code>Range</code> button.</p>
+<pre><code class="lang-js">// display range slider
+showRange: function showRangeFn() {
+    if (World.markerList.length &gt; 0) {
+
+        // update labels on every range movement
+        $(&#39;#panel-distance-range&#39;).change(function() {
+            World.updateRangeValues();
+        });
+
+        World.updateRangeValues();
+        World.handlePanelMovements();
+
+        // open panel
+        $(&quot;#panel-distance&quot;).trigger(&quot;updatelayout&quot;);
+        $(&quot;#panel-distance&quot;).panel(&quot;open&quot;, 1234);
+    } else {
+
+        // no places are visible, because the are not loaded yet
+        World.updateStatusMessage(&#39;No places available yet&#39;, true);
+    }
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_3_LimitingRange/js/limitingrange.js#L221-L240">GitHub</a>
+</div>
+
+<p><a id="reloadingpoidata"></a></p>
+<h3 id="reloading-poi-data-4-6-">Reloading POI Data (4/6)</h3>
+<p>You may need to reload POI information because of user movements or manually for various reasons. In this example POIs are reloaded when user presses the refresh button. The button is defined in <strong>index.html</strong> and calls <code>World.reloadPlaces()</code> on click.</p>
+<pre><code>&lt;a href=&quot;javascript: World.reloadPlaces()&quot; data-icon=&quot;refresh&quot; &gt;Reload&lt;/a&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_4_ReloadingContent/index.html#L46">GitHub</a>
+</div>
+
+<p>The implementation of <code>World.reloadPlaces()</code> is part of the ARchitect World (<strong>reloadingPois.js</strong>) and executes <code>World.requestDataFromServer</code> which retrieves data according to the user&#39;s current location from a web service.</p>
+<p>Sidenote: In certain circumstances your web service may not be available or other connection issues can occur. To notify the user about connection problems a status message is updated, In your own implementation you may e.g. use an info popup or similar.</p>
+<pre><code class="lang-js">var World = {
+
+    […]
+
+    // reload places from content source
+    reloadPlaces: function reloadPlacesFn() {
+        if (!World.isRequestingData) {
+            if (World.userLocation) {
+                World.requestDataFromServer(World.userLocation.latitude,
+                                            World.userLocation.longitude);
+            } else {
+                World.updateStatusMessage(&#39;Unknown user-location.&#39;, true);
+            }
+        } else {
+            World.updateStatusMessage(&#39;Already requesting places...&#39;, true);
+        }
+    }
+
+    […]
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_4_ReloadingContent/js/reloadingcontent.js#L251-L262">GitHub</a>
+</div>
+
+<p><a id="nativedetailscreen"></a></p>
+<h3 id="displaying-native-detail-screen-5-6-">Displaying Native Detail Screen (5/6)</h3>
+<p>It may make sense to display POI details in your native style. In this sample a very simple native screen opens when user presses the &#39;More&#39; button in HTML. This demoes the interaction between JavaScript and native code.</p>
+<p><img src="images/sample_poi_native.jpg" alt=""></p>
+<p>A More button is added to <strong>index.html</strong> which calls the function <code>World.onPoiDetailMoreButtonClicked</code>.</p>
+<pre><code>&lt;!-- more button--&gt;
+&lt;a href=&quot;javascript: World.onPoiDetailMoreButtonClicked();&quot; 
+   data-role=&quot;button&quot; data-icon=&quot;arrow-r&quot; data-iconpos=&quot;right&quot; data-inline=&quot;true&quot;&gt;
+    More
+&lt;/a&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_5_NativeDetailScreen/index.html#L96">GitHub</a>
+</div>
+
+<p><code>World.onPoiDetailMoreButtonClicked</code> is implemented in <strong>nativedetailscreen.js</strong> and executes <code>document.location = architectsdk://...</code>. The urlListener of the native project intercepts this call and parses the arguments. This is the only way to pass information from JavaScript to your native code. Ensure to properly encode and decode arguments.</p>
+<pre><code class="lang-js">var World = {
+    […]
+
+    // user clicked &quot;More&quot; button in POI-detail panel -&gt; fire event to open native screen
+    onPoiDetailMoreButtonClicked: function onPoiDetailMoreButtonClickedFn() {
+
+        var currentMarker = World.currentMarker;
+        var architectSdkUrl = &quot;architectsdk://markerselected?id=&quot; +
+                            encodeURIComponent(currentMarker.poiData.id) + 
+                            &quot;&amp;title=&quot; + 
+                            encodeURIComponent(currentMarker.poiData.title) + 
+                            &quot;&amp;description=&quot; + 
+                            encodeURIComponent(currentMarker.poiData.description);
+        document.location = architectSdkUrl;
+
+    }
+
+    […]
+}
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js#L105-L117">GitHub</a>
+</div>
+
+<p>Please have a look at the <a href="#nativedetailscreenplatform">this</a> section which describes the custom url scheme native part.</p>
+<p><a id="nativedetailscreenplatform"></a></p>
+<p>The sample 5/6 uses the custom url scheme architectsdk:// to communicate between JS and ObjC. You can send any time an architectsdk:// call but must implement the optional <code>WTArchitectViewDelegate</code> method <code>-architectView:invokedURL:</code> in order to get the corresponding calls in ObjC.
+To set the <code>WTArchitectView</code> delegate make sure that your delegate object conforms to the <code>WTArchitectViewDelegate</code> protocol and implements the above mentioned optional method. Once you set the <code>delegate</code> on your <code>WTArchitectView</code> object you will receive all custom url calls. When the delegate method is called the following parameter are given: </p>
+<ul>
+<li>The first parameter is the <code>WTArchitectView</code> instance in which JS context the custom url was called. </li>
+<li>The second parameter is the full url given as <code>NSURL</code> object.</li>
+</ul>
+<p>The following snippet shows the class definition with the corresponding protocol adoptions.</p>
+<pre><code class="lang-objc">@interface WTPresentingPoiDetailsARViewController () &lt;WTArchitectViewDelegate&gt;
+
+@end
+</code></pre>
+<p>Once the class conforms to the protocol set the delegate after the <code>WTArchitectView</code> instance is created.</p>
+<pre><code class="lang-objc">self.architectView.delegate = self;
+</code></pre>
+<p>Finally provide a implementation for the optional <code>WTArchitectViewDelegate</code> method <code>-architectView:invokedURL:</code>. The following snippet shows the implementation how it is used in the iOS sample application (<code>WTPresentingPoiDetailsARViewController.m</code>).</p>
+<pre><code class="lang-objc">- (void)architectView:(WTArchitectView *)architectView invokedURL:(NSURL *)url
+{
+    if ([[url absoluteString] hasPrefix:@&quot;architectsdk://markerselected&quot;]) {
+
+        NSDictionary *parameters = [WTPresentingPoiDetailsARViewController parseURLParameterFromURL:[url absoluteString]];
+
+        if (parameters) {
+            NSUInteger poiId = [[parameters objectForKey:@&quot;id&quot;] integerValue];
+
+            WTPoi *poi = [self.poiManager poiForId:poiId];
+            if (poi) {
+
+                WTPoiDetailViewController *poiDetailViewController = [[WTPoiDetailViewController alloc] initWithNibName:@&quot;WTPoiDetailViewController&quot; bundle:nil];
+                poiDetailViewController.poi = poi;
+                [self.navigationController pushViewController:poiDetailViewController animated:YES];
+            }
+        }
+    }
+}
+</code></pre>
+<p><a id="capturescreen"></a></p>
+<h3 id="capture-screen-bonus-6-6-">Capture Screen Bonus (6/6)</h3>
+<p>This sample shows you how to use the function <code>captureScreen</code>  to share a snapshot with your friends. Concept of interaction between JavaScript and native code is same as in the POI Detail page sample but the <code>urlListener</code> now handles picture sharing instead. The &quot;Snapshot&quot;-button is on top right in the title bar. Once clicked the current screen is captured and user is prompted to share it.</p>
+<pre><code> &lt;!-- header of UI holding feature buttons --&gt;
+        &lt;div id =&quot;header-status&quot; data-role=&quot;header&quot; data-position=&quot;fixed&quot; data-theme=&quot;c&quot;&gt;
+            &lt;a href=&quot;javascript: World.showRange();&quot; data-icon=&quot;gear&quot; data-inline=&quot;true&quot; data-mini=&quot;true&quot;&gt;Range&lt;/a&gt;
+            &lt;a href=&quot;javascript: World.captureScreen()&quot; data-icon=&quot;refresh&quot; &gt;Snapshot&lt;/a&gt;
+            &lt;h1&gt;&lt;/h1&gt;
+        &lt;/div&gt;
+</code></pre><div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_5_NativeDetailScreen/js/nativedetailscreen.js#L105-L117">GitHub</a>
+</div>
+
+<p>Handling of picture sharing is done in native code.</p>
+<pre><code class="lang-js">    // tell native (urlListener) that user pressed &#39;Snapshot&#39; button
+    captureScreen: function captureScreenFn() {
+        document.location = &quot;architectsdk://button?action=captureScreen&quot;;
+    },
+</code></pre>
+<div class="githubnote">
+view source code on <a target="_blank" href="https://github.com/Wikitude/wikitude-sdk-samples/blob/master/6_BrowsingPois_6_Bonus-CaptureScreen/js/capturescreen.js#L275-L280">GitHub</a>
+</div>
+
+<p><img src="images/sample_poi_snapshot.jpg" alt="">
+ No newline at end of file</p>
+
+            <footer id="footer">
+                &copy; 2012 -2016 <a href="http://www.wikitude.com">Wikitude GmbH</a> · <a href="http://www.wikitude.com/imprint">Imprint</a>
+            </footer>  
+        </div>    
+    </div>
+
+    <!-- TO DO: Reactivate when problems with nav are fixed
+    <script>
+    $(function(){
+            $("#toc ul").treemenu({delay:300}).openActive();
+        });
+    </script>
+    -->
+
+</body>
+    <script>
+    var lightbox = new Lightbox();
+    lightbox.load();
+    </script>
+
+</html>
