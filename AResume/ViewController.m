@@ -45,20 +45,18 @@
     self.wikitudeSDK = [[WTWikitudeNativeSDK alloc] initWithRenderingMode:WTRenderingMode_External delegate:self];
     [self.wikitudeSDK setLicenseKey:kWTLicenseKey];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"test0");
     [super viewDidAppear:animated];
-    NSLog(@"test");
+    
     [self.renderer setupRenderingWithLayer:[self.eaglView eaglLayer]];
     [self.renderer startRenderLoopWithRenderBlock:[self renderBlock]];
-    NSLog(@"test2");
+    
     [self.wikitudeSDK start:nil completion:^(BOOL isRunning, NSError * __nonnull error) {
-        NSLog(@"test4");
         if ( !isRunning ) {
             NSLog(@"Wikitude SDK is not running. Reason: %@", [error localizedDescription]);
         }
@@ -68,7 +66,6 @@
             self.clientTracker = [self.wikitudeSDK.trackerManager create2DClientTrackerFromURL:clientTrackerURL extendedTargets:nil andDelegate:self];
         }
     }];
-    NSLog(@"test3");
 }
 
 - (void)viewDidDisappear:(BOOL)animated
