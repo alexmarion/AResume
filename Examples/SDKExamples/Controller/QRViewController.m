@@ -28,15 +28,16 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [_session startRunning];
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(sessionStartRunning)
-//                                                 name:UIApplicationWillEnterForegroundNotification
-//                                               object:[UIApplication sharedApplication]];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(sessionStartRunning)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:[UIApplication sharedApplication]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [_session stopRunning];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)sessionStartRunning {
